@@ -1,8 +1,8 @@
 $(function(){
   formPlayers();
-  positionPlayers();
-
-  $(window).resize();
+  window.setTimeout(function(){
+    positionPlayers();
+  },100);
 });
 
 $(window).resize(positionPlayers);
