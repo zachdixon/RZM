@@ -2,8 +2,11 @@ $(function(){
   formPlayers();
   positionPlayers();
 
-  $(window).resize(positionPlayers);
+  $(window).resize();
 });
+
+$(window).resize(positionPlayers);
+
 
 
 function formPlayers(){
