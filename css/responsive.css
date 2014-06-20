@@ -1,0 +1,9 @@
+@media (max-width: 1365px) {
+  .player-wrapper {
+    float: none;
+    margin: 10px auto;
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
