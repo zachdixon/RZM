@@ -6,9 +6,10 @@ $(function(){
   window.setTimeout(function(){
     positionPlayers();
   },100);
-});
+  $(window).resize(positionPlayers);
 
-$(window).resize(positionPlayers);
+  $('.randomize-players').on('click', randomizePlayers);
+});
 
 function imagesLoaded(){
   var $images = $('img'), images_loaded = 0;
@@ -37,6 +38,7 @@ function formPlayers(){
   var $clone;
   for(var x=2; x <= 10; x++){
     $clone = $player.clone().attr('data-player',x).attr('data-place',x)
+    $clone.find('.player-name').text("Player " + x);
     $clone.appendTo('#players-wrapper')
   }
 }
@@ -61,6 +63,31 @@ function positionPlayers(){
   });
 }
 
+function shuffle(array) {
+  var tmp, current, top = array.length;
+
+  if(top) while(--top) {
+  	current = Math.floor(Math.random() * (top + 1));
+  	tmp = array[current];
+  	array[current] = array[top];
+  	array[top] = tmp;
+  }
+
+  return array;
+}
+
+function randomizePlayers(e){
+  if(e){e.preventDefault()};
+  var arr = [];
+  //create array of 1..10
+  for(var i=1;i<=10;i++){
+    arr.push(i);
+  }
+  //shuffle array
+  arr = shuffle(arr);
+  movePlayers(arr);
+}
+
 
 // Pass array of player ids in order
 // i.e [5,4,7,8,6,2,1,10,9,3]
@@ -79,7 +106,6 @@ function movePlayers(new_order){
   $players.animate({top: middle_top, left: middle_left}, 500, 'swing', function(){
     var place = new_order.indexOf($(this).data('player'));
     var new_position = positions[place];
-    $(this).find('.player-position').text(place + 1)
     $(this).animate({top: new_position.top, left: new_position.left}, 500);
   });
 

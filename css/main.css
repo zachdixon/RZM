@@ -6,6 +6,12 @@
     green: #0F0
     dark_green: #00A000
 
+    FLAT
+    green: #2ecc71
+    dark_green: #27ae60
+    red: #e74c3c
+    dark_red: #c0392b
+
 */
 
 /* Z-Index
@@ -13,6 +19,14 @@
     .loading: 10
 
 */
+
+/* TEMPORARY */
+.randomize-players {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 5;
+}
 
 html, body, #main-wrapper {
   height: 100%;
@@ -157,6 +171,7 @@ img.avatar {
   margin-bottom: 10px;
   position: absolute;
   min-width: 645px;
+  overflow: hidden;
 }
 
 .player-wrapper:first-of-type {
@@ -207,6 +222,24 @@ img.avatar {
 }
 .player-wrapper:nth-of-type(10) .player-position:after {
   content: "10";
+}
+
+.player-wrapper .player-total-score {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0 3px 0 5px;
+  border-radius: 0 0 0 9px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.7em;
+  box-shadow: inset 2px -2px 3px rgba(0, 0, 0, 0.4), 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+.player-total-score.score-positive {
+  color: #2ecc71;
+}
+.player-total-score.score-negative {
+  color: #e74c3c;
 }
 
 
@@ -275,19 +308,19 @@ img.avatar {
 }
 
 .winning .point-value {
-  color: #0F0;
+  color: #2ecc71;
 }
 
 .won .point-value {
-  color: #0F0;
+  color: #2ecc71;
 }
 
 .losing .point-value {
-  color: #F00;
+  color: #e74c3c;
 }
 
 .lost .point-value {
-  color: #F00;
+  color: #e74c3c;
 }
 
 .game-wrapper .helmet-wrapper {
@@ -301,19 +334,19 @@ img.avatar {
 }
 
 .winning .helmet-wrapper {
-  border-color: #0F0;
+  border-color: #2ecc71;
 }
 
 .won .helmet-wrapper {
-  background: #00A000;
+  background: #2ecc71;
 }
 
 .losing .helmet-wrapper {
-  border-color: #F00;
+  border-color: #e74c3c;
 }
 
 .lost .helmet-wrapper {
-  background: #A00000;
+  background: #e74c3c;
 }
 
 .helmet-wrapper img.img-helmet {
