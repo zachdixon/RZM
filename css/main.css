@@ -48,7 +48,7 @@ body {
   z-index: 10;
 }
 .loading-image {
-  width: 100%;
+  width: 50%;
   max-width: 1250px;
   margin: 0 auto;
   display: block;
