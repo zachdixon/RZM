@@ -15,6 +15,67 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 655px) {
+  .mobile-show {
+    display: initial;
+  }
+  #main-container {
+    padding: 0 10px;
+  }
 
+  .player-wrapper {
+    width: 100%;
+    min-width: 100%;
+    padding: 5px;
+  }
+
+  .player-wrapper .player-position:after {
+    text-align: center;
+    left: 5px;
+    top: 6px;
+    font-size: 30px;
+    letter-spacing: -2px;
+    line-height: 1em;
+    width: 30px;
+  }
+
+  .player-wrapper .player-total-score {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3px 5px 0 5px;
+    top: 0;
+    right: 0;
+    font-size: 1.7em;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .player-info-wrapper {
+    margin-left: 40px;
+    width: calc(80% - 30px);
+    min-width: 200px;
+  }
+
+  .player-avatar-wrapper {
+    float: left;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .player-avatar-wrapper p.player-name {
+    display: none;
+  }
+
+  .player-wrapper p.player-name.mobile-show {
+    float: left;
+    font-size: 1.5em;
+    max-width: 155px;
+    overflow: auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .player-games-wrapper {
+    display: none;
+  }
 }
