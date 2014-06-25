@@ -20,6 +20,9 @@ $(function(){
   // Temp button to show animation
   $('.randomize-players').on('click', randomizePlayers);
 
+  // Toggle player's games for mobile UI
+  $('.player-wrapper').on('click', toggleGames);
+
   // Add temp classes to show different styles
   fakeClasses();
 });
@@ -141,4 +144,16 @@ function movePlayers(new_order){
   new_order.forEach(function(id, index, new_order){
     $('.player-wrapper[data-player='+id+']').attr('data-place', index+1).appendTo('#players-wrapper');
   });
+}
+
+function toggleGames(e) {
+  e.preventDefault();
+  // If mobile UI
+  if($(window).width() <= 655){
+    var $player;
+    $player = $(e.currentTarget);
+    $player.find('.player-games-wrapper').slideToggle();
+  } else {
+    return false;
+  }
 }

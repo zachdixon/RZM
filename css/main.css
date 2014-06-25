@@ -176,10 +176,11 @@ img.avatar {
 
 .player-wrapper:first-of-type {
   background: url('../images/backgrounds/gold-texture.jpg');
-/*  background: url('../images/backgrounds/gold-texture-2.jpg') 100% 100%;*/
   border: 1px solid #FFD700;
-/*  border: 1px solid #ffc888;*/
   box-shadow: inset 0 0 3px rgba(255,255,255,0.5),0px 0px 10px 1px rgba(255,215,0,0.7);
+
+/*  background: url('../images/backgrounds/gold-texture-2.jpg') 100% 100%;*/
+/*  border: 1px solid #ffc888;*/
 /*  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.5),0px 0px 10px 1px rgba(255, 200, 136, 0.7);*/
 }
 .player-wrapper:nth-of-type(2) {
@@ -271,7 +272,7 @@ img.avatar {
   font-size: 1.7em;
   box-shadow: inset 2px -2px 3px rgba(0, 0, 0, 0.4), 0px 0px 3px rgba(255, 255, 255, 0.5);
 }
-.player-wrapper:first-of-type .player-total-score {
+.player-wrapper:first-of-type .player-total-score, .player-wrapper:nth-of-type(2) .player-total-score, .player-wrapper:nth-of-type(3) .player-total-score {
 /*  background: none;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4), inset 1px -1px 5px rgba(255, 255, 255, 0.5);*/
   background: rgba(0,0,0,0.7);
@@ -442,7 +443,7 @@ img.avatar {
   font-size: 0.9em;
 }
 
-.player-wrapper:first-of-type .game-scores {
+.player-wrapper:first-of-type .game-scores, .player-wrapper:nth-of-type(2) .game-scores, .player-wrapper:nth-of-type(3) .game-scores {
   background: rgba(0, 0, 0, 0.7);
 }
 
