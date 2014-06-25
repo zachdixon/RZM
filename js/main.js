@@ -1,15 +1,41 @@
 $(function(){
+  // Show loading screen
   startLoading();
+  // Temp function to clone player
   formPlayers();
+  // Hide loading when all images are loaded
   imagesLoaded();
 
+  // Initialize tooltips
+  $('.pqt').tooltip();
+
+  // Wait a little to account for height so absolute positions are calculated correctly
   window.setTimeout(function(){
     positionPlayers();
   },100);
+
+  // Position players absolutely
   $(window).resize(positionPlayers);
 
+  // Temp button to show animation
   $('.randomize-players').on('click', randomizePlayers);
+
+  // Add temp classes to show different styles
+  fakeClasses();
 });
+
+function fakeClasses(){
+  var $player_2, $p2_game_4, $player_3, $p3_game4;
+  $player_2 = $('.player-wrapper:nth-of-type(2)');
+  $p2_game_4 = $player_2.find('.game-wrapper:nth-of-type(4)');
+  $player_3 = $('.player-wrapper:nth-of-type(3)');
+  $p3_game_4 = $player_3.find('.game-wrapper:nth-of-type(4)');
+  // $player_2.addClass('details-left');
+  $player_2.addClass('tied');
+  $player_3.addClass('tied blue_pqt');
+  $p2_game_4.removeClass('losing').addClass('tied_gray');
+  $p3_game_4.removeClass('losing').addClass('tied_blue');
+}
 
 function imagesLoaded(){
   var $images = $('img'), images_loaded = 0;
