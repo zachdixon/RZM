@@ -34,7 +34,10 @@ function fakeClasses(){
   $player_2.addClass('tied');
   $player_3.addClass('tied blue_pqt');
   $p2_game_4.removeClass('losing').addClass('tied_gray');
+  $player_2.find('.game-wrapper:first').addClass('tying_gray');
   $p3_game_4.removeClass('losing').addClass('tied_blue');
+  $player_3.find('.game-wrapper:first').addClass('tying_blue');
+
 }
 
 function imagesLoaded(){
