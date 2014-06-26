@@ -27,7 +27,18 @@
     width: 100%;
     min-width: 100%;
     padding: 5px;
+
+    max-height: 45px;
+    height: auto;
+    -webkit-transition: max-height 1s ease-in-out;
+    -moz-transition: max-height 1s ease-in-out;
+    -o-transition: max-height 1s ease-in-out;
+    transition: max-height 1s ease-in-out;
   }
+  .player-wrapper.expanded {
+    max-height: 1000px;
+  }
+
 
   .player-wrapper .player-position {
     text-align: left;
@@ -91,10 +102,10 @@
   }
 
   .player-games-wrapper {
-    display: none;
     width: 100%;
     margin-top: 15px;
   }
+
   .player-games-wrapper .game-wrapper {
     width: 100%;
     padding: 0 10px;

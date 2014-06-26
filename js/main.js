@@ -21,7 +21,7 @@ $(function(){
   $('.randomize-players').on('click', randomizePlayers);
 
   // Toggle player's games for mobile UI
-  $('.player-wrapper').on('click', toggleGames);
+  $('.player-wrapper').on('click', function(e){$(e.currentTarget).toggleClass('expanded');});
 
   // Add temp classes to show different styles
   fakeClasses();
