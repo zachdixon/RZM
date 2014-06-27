@@ -21,25 +21,24 @@ $(function(){
   $('.randomize-players').on('click', randomizePlayers);
 
   // Toggle player's games for mobile UI
-  $('.player-wrapper').on('click', function(e){$(e.currentTarget).toggleClass('expanded');});
+  // $('.player-wrapper').on('click', function(e){$(e.currentTarget).toggleClass('expanded');});
+  $('.player-wrapper').on('click', toggleGames);
+
 
   // Add temp classes to show different styles
   fakeClasses();
 });
 
 function fakeClasses(){
-  var $player_2, $p2_game_4, $player_3, $p3_game4;
+  var $player_2, $p2_game_4;
   $player_2 = $('.player-wrapper:nth-of-type(2)');
   $p2_game_4 = $player_2.find('.game-wrapper:nth-of-type(4)');
-  $player_3 = $('.player-wrapper:nth-of-type(3)');
-  $p3_game_4 = $player_3.find('.game-wrapper:nth-of-type(4)');
   // $player_2.addClass('details-left');
-  $player_2.addClass('tied');
-  $player_3.addClass('tied blue_pqt');
-  $p2_game_4.removeClass('losing').addClass('tied_gray');
-  $player_2.find('.game-wrapper:first').addClass('tying_gray');
-  $p3_game_4.removeClass('losing').addClass('tied_blue');
-  $player_3.find('.game-wrapper:first').addClass('tying_blue');
+  $player_2.addClass('players-tied');
+  $p2_game_4.removeClass('losing').addClass('tied game-over');
+  $p2_game_4.find('.point-value').text('0');
+  $player_2.find('.game-wrapper:first').addClass('tying');
+  $player_2.find('.game-wrapper:first .point-value').text('0');
 
 }
 

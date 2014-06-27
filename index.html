@@ -6,6 +6,7 @@
     <title>RedZone Mania</title>
 
 <!--     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/slate.bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
@@ -127,11 +128,43 @@
 <!--         <div class="my-games mobile-show">
           <h3>My Games</h3>
         </div> -->
+        <div class="page-header clearfix">
+          <h1 class="league-name pull-left">"Beat the Monkey" Classic</h1>
+          <div class="options-wrapper pull-right">
+            <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
+              <option value="1" selected="">Week 1</option>
+              <option value="2">Week 2</option>
+              <option value="3">Week 3</option>
+              <option value="4">Week 4</option>
+              <option value="5">Week 5</option>
+              <option value="6">Week 6</option>
+              <option value="7">Week 7</option>
+              <option value="8">Week 8</option>
+              <option value="9">Week 9</option>
+              <option value="10">Week 10</option>
+              <option value="11">Week 11</option>
+              <option value="12">Week 12</option>
+              <option value="13">Week 13</option>
+              <option value="14">Week 14</option>
+              <option value="15">Week 15</option>
+              <option value="16">Week 16</option>
+              <option value="17">Week 17</option>
+            </select>
+            <div class="btn-group pull-left" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="ats-options" value="even"> Even
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="ats-options" value="ats"> ATS
+              </label>
+            </div>
+          </div>
+        </div>
         <div id="players-wrapper" class="clearfix">
           <div class="player-wrapper clearfix" data-player="1" data-place="1">
             <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
             <p class="player-total-score score-positive">200</p>
-            <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
+            <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">+10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
             <div class="player-info-wrapper pull-left">
               <div class="player-avatar-wrapper">
                 <img src="images/players/1.png" alt="Player 1" class="img-player-avatar">
@@ -150,6 +183,7 @@
                   <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
                   <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
                 </div>
+                <p class="pick-quality label label-primary mobile-show">-0.5</p>
               </div><!-- /.game-wrapper -->
               <div class="game-wrapper winning">
                 <p class="point-value">200</p>
@@ -160,16 +194,19 @@
                   <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
                   <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                 </div>
+                <p class="pick-quality label label-primary mobile-show">-0.5</p>
               </div><!-- /.game-wrapper -->
-              <div class="game-wrapper won">
+              <div class="game-wrapper won game-over">
                 <p class="point-value">150</p>
                 <div class="helmet-wrapper">
                   <img src="images/helmets/cowboys.png" alt="" class="img-helmet">
+                  <div class="star"><span class="glyphicon glyphicon-star"></span></div>
                 </div>
                 <div class="game-scores">
                   <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
                   <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                 </div>
+                <p class="pick-quality label label-primary mobile-show">-0.5</p>
               </div><!-- /.game-wrapper -->
               <div class="game-wrapper losing">
                 <p class="point-value">100</p>
@@ -180,8 +217,9 @@
                   <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
                   <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                 </div>
+                <p class="pick-quality label label-primary mobile-show">-0.5</p>
               </div><!-- /.game-wrapper -->
-              <div class="game-wrapper lost">
+              <div class="game-wrapper lost game-over">
                 <p class="point-value">50</p>
                 <div class="helmet-wrapper">
                   <img src="images/helmets/cowboys.png" alt="" class="img-helmet">
@@ -190,6 +228,7 @@
                   <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
                   <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                 </div>
+                <p class="pick-quality label label-primary mobile-show">-0.5</p>
               </div><!-- /.game-wrapper -->
             </div><!-- /.player-games-wrapper -->
           </div><!-- /.player-wrapper -->
