@@ -151,7 +151,7 @@ function toggleGames(e) {
   if($(window).width() <= 655){
     var $player;
     $player = $(e.currentTarget);
-    $player.find('.player-games-wrapper').slideToggle();
+    $player.find('.player-games-wrapper').toggle();
   } else {
     return false;
   }
