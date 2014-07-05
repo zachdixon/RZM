@@ -44,4 +44,20 @@ $(document).ready(function() {
       monkeyFaceLoop();
     }, rand);
   }());
+
+  $('.btn-splash-action').on('click',function(e){
+    e.preventDefault();
+    showForm($(this).data('form'));
+  });
 });
+
+function showForm(form_id){
+  var $wrapper = $('.splash-form-wrapper')
+  $('.splash-form:visible').toggleClass('hide show');
+  $('#'+form_id).toggleClass('hide show');
+  if(!$wrapper.is(':visible')){
+    $wrapper.slideDown();
+  }
+
+
+}

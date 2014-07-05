@@ -41,21 +41,38 @@
       <div class="row">
         <div class="col-md-12">
           <div class="splash-actions">
-            <a href="html/rzm.html" class="btn-splash-action">LOG IN</a>
-            <a href="#" class="btn-splash-action">REGISTER</a>
+            <a href="#" class="btn-splash-action" data-form="splash-login-form">LOG IN</a>
+            <a href="#" class="btn-splash-action" data-form="splash-register-form">REGISTER</a>
           </div>
         </div>
       </div>
     </div>
   </div><!-- end splash-actions-wrapper -->
-  <div class="splash-form-wrapper">
+  <div class="splash-form-wrapper" id="splash-form-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="splash-login-form">
-
+          <div id="splash-login-form" class="hide splash-form">
+            <form method="post" id="new_user" class="new_user" action="/users/sign_in" accept-charset="UTF-8">
+              <div class="form-group">
+                <label for="user_email">Email</label>
+                <input type="email" value="" name="user[email]" id="user_email" autofocus="autofocus" placeholder="Email" required="">
+              </div>
+              <div class="form-group">
+                <label for="user_password">Password <a href="#" tabindex="-1" class="forgot-password-link">Forgot?</a></label>
+                <input type="password" name="user[password]" id="user_password" placeholder="Password" required="">
+              </div>
+              <div class="clearfix">
+                <input type="hidden" value="0" name="user[remember_me]"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+                <label for="user_remember_me" class="login_remember_me_label">Remember me</label>
+              </div>
+              <!-- FIXME only needed in demo to go next page -->
+              <div class="login_btn_wrapper"><a href="html/rzm.html" class="btn btn-large btn-primary login_btn">Log In</a><label class="login_btn_label"><i class="icon-off"></i>Log In</label></div>
+              <!-- FIXME Use this one for actual rails app -->
+              <!-- <div class="login_btn_wrapper"><button type="submit" name="commit" class="btn btn-large btn-primary login_btn">Log In</button><label class="login_btn_label"><i class="icon-off"></i>Log In</label></div> -->
+            </form>
           </div>
-          <div class="splash-register-form">
+          <div id="splash-register-form" class="hide splash-form">
 
           </div>
         </div>
@@ -119,7 +136,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="splash-actions">
-            <a href="html/rzm.html" class="btn-splash-action">LOG IN</a>
+            <a href="#splash-form-wrapper" class="btn-splash-action" data-form="splash-login-form">LOG IN</a>
             <a href="#" class="btn-splash-action">REGISTER</a>
           </div>
         </div>
