@@ -29,6 +29,9 @@
 
 /* Mobile */
 @media (max-width: 655px) {
+  body {
+    padding-top: 40px;
+  }
   .mobile-show {
     display: initial;
   }
