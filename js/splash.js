@@ -52,8 +52,14 @@ $(document).ready(function() {
 });
 
 function showForm(form_id){
-  var $wrapper = $('.splash-form-wrapper')
+  var $wrapper = $('.splash-form-wrapper');
+  var $container = $('body');
+  var $scrollTo = $('.splash-actions-wrapper .splash-actions');
+  var $scroll_to_pos = $scrollTo.offset().top;
   $('.splash-form:visible').toggleClass('hide show');
+  $container.animate({
+    scrollTop: $scroll_to_pos
+  });
   $('#'+form_id).toggleClass('hide show');
   if(!$wrapper.is(':visible')){
     $wrapper.slideDown();

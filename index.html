@@ -41,8 +41,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="splash-actions">
-            <a href="#" class="btn-splash-action" data-form="splash-login-form">LOG IN</a>
-            <a href="#" class="btn-splash-action" data-form="splash-register-form">REGISTER</a>
+            <a href="#" class="btn-splash-action btn-login" data-form="splash-login-form">LOG IN</a>
+            <a href="#" class="btn-splash-action btn-register" data-form="splash-register-form">REGISTER</a>
           </div>
         </div>
       </div>
@@ -54,6 +54,9 @@
         <div class="col-md-12">
           <div id="splash-login-form" class="hide splash-form">
             <form method="post" id="new_user" class="new_user" action="/users/sign_in" accept-charset="UTF-8">
+              <header class="form-header">
+                <h2>Log In</h2>
+              </header>
               <div class="form-group">
                 <label for="user_email">Email</label>
                 <input type="email" value="" name="user[email]" id="user_email" autofocus="autofocus" placeholder="Email" required="">
@@ -73,7 +76,62 @@
             </form>
           </div>
           <div id="splash-register-form" class="hide splash-form">
-
+            <form novalidate="novalidate" method="post" id="new_user" class="simple_form new_user" action="/users" accept-charset="UTF-8">
+              <header class="form-header">
+                <h2>Register</h2>
+              </header>
+              <div class="form-group">
+                <div class="control-group string required user_first_name">
+                  <label for="user_first_name" class="string required control-label"><abbr title="required">*</abbr> First name</label>
+                  <div class="controls">
+                    <input type="text" size="50" name="user[first_name]" id="user_first_name" class="string required">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="control-group string required user_last_name">
+                  <label for="user_last_name" class="string required control-label"><abbr title="required">*</abbr> Last name</label>
+                  <div class="controls">
+                    <input type="text" size="50" name="user[last_name]" id="user_last_name" class="string required">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="control-group email required user_email">
+                  <label for="user_email" class="email required control-label"><abbr title="required">*</abbr> Email</label>
+                  <div class="controls">
+                    <input type="email" value="" size="50" name="user[email]" id="user_email" class="string email required">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="control-group password required user_password">
+                  <label for="user_password" class="password required control-label"><abbr title="required">*</abbr> Password</label>
+                  <div class="controls">
+                    <input type="password" size="50" placeholder="At least 8 characters" name="user[password]" id="user_password" class="password required">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="control-group password required user_password_confirmation">
+                  <label for="user_password_confirmation" class="password required control-label"><abbr title="required">*</abbr> Password Confirmation</label>
+                  <div class="controls">
+                    <input type="password" size="50" placeholder="At least 8 characters" name="user[password_confirmation]" id="user_password_confirmation" class="password required">
+                  </div>
+                </div>
+              </div>
+              <div class="submit_registration_form form-group row">
+                <div class="col-md-4 col-xs-12">
+                  <button type="submit" name="button" id="create_league_reg_button" disabled="disabled" class="btn btn-primary">Create League</button>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                  <button type="submit" name="button" id="join_league_reg_button" disabled="disabled" class="btn btn-primary">Join League</button>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                  <input type="submit" value="Free Agent" name="commit" class="submit_user_form btn btn-primary">
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -136,8 +194,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="splash-actions">
-            <a href="#splash-form-wrapper" class="btn-splash-action" data-form="splash-login-form">LOG IN</a>
-            <a href="#" class="btn-splash-action">REGISTER</a>
+            <a href="#" class="btn-splash-action btn-login" data-form="splash-login-form">LOG IN</a>
+            <a href="#" class="btn-splash-action btn-register" data-form="splash-register-form">REGISTER</a>
           </div>
         </div>
       </div><!-- end row -->
@@ -150,8 +208,8 @@
           <div class="footer-logo pull-left"><img src="images/logo.png" alt="Logo" width="100px"/>&copy; 2014</div>
           <div class="footer-details pull-right">
             <nav class="footer-nav">
-              <a href="#">FAQ</a>|
-              <a href="#">Privacy Policy</a>|
+              <a href="#">FAQ</a>
+              <a href="#">Privacy Policy</a>
               <a href="#">Terms and Conditions</a>
             </nav>
           </div>

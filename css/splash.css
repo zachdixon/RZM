@@ -118,6 +118,11 @@
   height: 100%;
   padding: 15px;
 }
+@media (max-width: 320px) {
+  #splash_page .container {
+    padding: 10px;
+  }
+}
 
 .splash-header-wrapper {
 
@@ -131,6 +136,13 @@
   text-align: center;
 }
 
+@media (max-width: 320px) {
+  .splash-header {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 /* Middle content that contains logo and forms */
 .splash-actions-wrapper {
   background: #000;
@@ -141,15 +153,37 @@
   padding: 15px 30px;
   font-size: 20px;
   border: 1px solid #FFF;
-  border-radius: 20%;
+  /*border-radius: 20%;*/
   width: 160px;
   display: inline-block;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 320px) {
+  .btn-splash-action {
+    display: block;
+    width: 100%;
+    border-radius: 0 !important;
+    padding: 10px;
+  }
+  .btn-login {
+    margin: 0 0 15px 0;
+  }
+}
+.btn-login {
+  border-radius: 0 50%;
+}
+.btn-register {
+  border-radius: 50% 0;
 }
 
 .btn-splash-action:hover {
   background: #fff;
   color: #000;
   text-decoration: none;
+  border-radius: 20%;
 }
 
 .btn-splash-action:first-of-type {
@@ -167,6 +201,8 @@
   text-align: center;
 }
 
+/* FORMS */
+
 /* Hide until login or register buttons clicked */
 .splash-form-wrapper {
   display: none;
@@ -174,10 +210,24 @@
 }
 
 .splash-form {
-  width: 400px;
+  width: 450px;
   max-width: 100%;
   margin: 0 auto;
   color: #fff;
+}
+
+.splash-form-wrapper .form-header h2 {
+  color: #222;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+}
+@media (max-width: 320px) {
+  .splash-form-wrapper .form-header h2 {
+    font-size: 2em;
+    margin: 5px;
+  }
 }
 
 .splash-form-wrapper label {
@@ -199,6 +249,11 @@
   transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
 }
+@media (max-width: 320px) {
+  .splash-form-wrapper input[type="email"], .splash-form-wrapper input[type="password"], .splash-form-wrapper input[type="text"] {
+    padding: 10px;
+  }
+}
 .splash-form-wrapper input[type="email"]:focus, .splash-form-wrapper input[type="password"]:focus, .splash-form-wrapper input[type="text"]:focus {
   outline: none;
   box-shadow: 0 0 3px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.5);
@@ -210,11 +265,20 @@
 label[for="user_remember_me"] {
   display: inline-block;
 }
+.splash-form-wrapper abbr[title] {
+  border: none;
+}
 .forgot-password-link {
   font-size: 14px;
   font-weight: normal;
   text-decoration: underline;
 }
+
+#splash-register-form [type="submit"] {
+  width: 100%;
+}
+
+/* End forms */
 
 
 .splash-monkey-wrapper {
@@ -247,6 +311,12 @@ label[for="user_remember_me"] {
   margin-top: -20%;
   margin-bottom: 20%;
 }
+@media (max-width: 320px) {
+  #quote_box {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 
 .featurette-header {
   text-align: center;
@@ -261,6 +331,26 @@ label[for="user_remember_me"] {
 }
 
 
-.footer-nav a {
-  margin: 0 10px;
+.footer-nav a:not(:last-of-type) {
+  border-right: 1px solid #fff;
+  padding-right: 10px;
+  margin-right: 5px;
+}
+
+@media (max-width: 320px) {
+  .splash-footer {
+    text-align: center;
+  }
+  .footer-logo.pull-left {
+    float: none !important;
+  }
+  .footer-details.pull-right {
+    float: none !important;
+  }
+  .footer-nav a {
+    display: block;
+    margin: 5px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
 }
