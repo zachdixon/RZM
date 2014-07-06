@@ -3,6 +3,12 @@
 .bg-navy-blue {
   background: url('../images/backgrounds/navy_blue.png');
 }
+.bg-mocha-grunge {
+  background: url('../images/backgrounds/mochaGrunge.png');
+}
+.bg-white-brick {
+  background: url('../images/backgrounds/brickwall.png');
+}
 
 .dark-half-rule {
   width: 100px;
@@ -10,6 +16,13 @@
   margin-right: auto;
   border-top: 2px solid #000;
   border-bottom: 1px solid #444;
+}
+.light-half-rule {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #BBB;
+  border-bottom: 1px solid #666;
 }
 
 /* Circle button */
@@ -308,13 +321,14 @@ label[for="user_remember_me"] {
   text-align: center;
   font-size: 20px;
   width: 100%;
-  margin-top: -20%;
-  margin-bottom: 20%;
+  position: absolute;
+  bottom: 30%;
 }
 @media (max-width: 400px) {
   #quote_box {
     font-size: 14px;
     line-height: 20px;
+    bottom: 0;
   }
 }
 
@@ -353,4 +367,37 @@ label[for="user_remember_me"] {
     padding: 0 !important;
     border: none !important;
   }
+}
+
+/* About section */
+
+#about {
+  color: #fff;
+}
+
+.about-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.about-header {
+  text-align: center;
+}
+.about-video {
+  text-align: center;
+}
+
+/* History section */
+
+#history {
+  background: #000;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#history p {
+  margin-bottom: 30px;
+  font-size: 16px;
 }
