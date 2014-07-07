@@ -315,6 +315,14 @@ label[for="user_remember_me"] {
 .featurette {
   padding: 60px 0;
 }
+@media (max-width: 400px) {
+  .featurette {
+    padding: 0;
+  }
+  .featurette-section:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
 
 .featurette .dark-half-rule {
   margin: 40px auto;
@@ -339,6 +347,12 @@ label[for="user_remember_me"] {
   color: #fff;
   padding: 60px 0;
 }
+@media (max-width: 400px) {
+  #about {
+    padding: 0;
+  }
+}
+
 
 #about .light-half-rule {
   margin: 40px auto;
@@ -376,6 +390,15 @@ label[for="user_remember_me"] {
   border: 5px solid #222;
   box-shadow: 0 0 3px #FFF;
 }
+@media (max-width: 400px) {
+  .about-details {
+    border-radius: 0 !important;
+    padding: 0 20px;
+    margin: 30px -20px 0;
+    border-left: none;
+    border-right: none;
+  }
+}
 
 .about-details.left {
   border-radius: 5px 30% 30% 5px;
@@ -386,6 +409,11 @@ label[for="user_remember_me"] {
 #history {
   background: #000;
   padding: 60px 0;
+}
+@media (max-width: 400px) {
+  #history {
+    padding: 0;
+  }
 }
 
 .history-header {
