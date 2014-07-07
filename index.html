@@ -68,9 +68,9 @@
                 <label for="user_remember_me" class="login_remember_me_label">Remember me</label>
               </div>
               <!-- FIXME only needed in demo to go next page -->
-              <div class="login_btn_wrapper"><a href="html/rzm.html" class="btn btn-large btn-primary login_btn">Log In</a><label class="login_btn_label"><i class="icon-off"></i>Log In</label></div>
+              <div class="circle_btn_wrapper"><a href="html/rzm.html" class="btn btn-large btn-primary circle_btn btn-login-submit">Log In</a><label class="circle_btn_label"><i class="icon-off"></i>Log In</label></div>
               <!-- FIXME Use this one for actual rails app -->
-              <!-- <div class="login_btn_wrapper"><button type="submit" name="commit" class="btn btn-large btn-primary login_btn">Log In</button><label class="login_btn_label"><i class="icon-off"></i>Log In</label></div> -->
+              <!-- <div class="circle_btn_wrapper"><button type="submit" name="commit" class="btn btn-large btn-primary circle_btn btn-login-submit">Log In</button><label class="circle_btn_label"><i class="icon-off"></i>Log In</label></div> -->
             </form>
           </div>
           <div id="splash-register-form" class="hide splash-form">
@@ -118,16 +118,12 @@
                   </div>
                 </div>
               </div>
-              <div class="submit_registration_form form-group row">
-                <div class="col-md-4 col-xs-12">
-                  <button type="submit" name="button" id="create_league_reg_button" disabled="disabled" class="btn btn-primary">Create League</button>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                  <button type="submit" name="button" id="join_league_reg_button" disabled="disabled" class="btn btn-primary">Join League</button>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                  <input type="submit" value="Free Agent" name="commit" class="submit_user_form btn btn-primary">
-                </div>
+              <div class="circle_btn_wrapper">
+                <!-- FIXME use button instead of a tag in rails app -->
+                <a href="#" class="btn btn-large btn-primary circle_btn btn-register-submit">Register</a>
+                <label class="circle_btn_label"><i class="icon-off"></i>Register</label>
+                <!-- <button type="submit" name="commit" class="btn btn-large btn-primary circle_btn btn-register-submit">Register</button>
+                <label class="circle_btn_label"><i class="icon-off"></i>Register</label> -->
               </div>
             </form>
           </div>
