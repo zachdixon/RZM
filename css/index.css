@@ -1,28 +1,7 @@
 @import url('../fonts/destroy_regular_macroman/stylesheet.css');
 
-.bg-navy-blue {
-  background: url('../images/backgrounds/navy_blue.png');
-}
-.bg-mocha-grunge {
-  background: url('../images/backgrounds/mochaGrunge.png');
-}
-.bg-white-brick {
-  background: url('../images/backgrounds/brickwall.png');
-}
-
-.dark-half-rule {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  border-top: 2px solid #000;
-  border-bottom: 1px solid #444;
-}
-.light-half-rule {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  border-top: 1px solid #BBB;
-  border-bottom: 1px solid #666;
+body {
+  padding-top: 0;
 }
 
 /* Circle button */
@@ -345,30 +324,6 @@ label[for="user_remember_me"] {
   margin-right: 10px;
 }
 
-
-.footer-nav a:not(:last-of-type) {
-  border-right: 1px solid #fff;
-  padding-right: 10px;
-  margin-right: 5px;
-}
-
-@media (max-width: 400px) {
-  .splash-footer {
-    text-align: center;
-  }
-  .footer-logo.pull-left {
-    float: none !important;
-  }
-  .footer-details.pull-right {
-    float: none !important;
-  }
-  .footer-nav a {
-    display: block;
-    margin: 5px 0 !important;
-    padding: 0 !important;
-    border: none !important;
-  }
-}
 
 /* About section */
 

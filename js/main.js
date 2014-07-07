@@ -27,6 +27,13 @@ $(function(){
 
   // Add temp classes to show different styles
   fakeClasses();
+
+  // Add fullscreen click handler
+  $('.btn-fullscreen').on('click', toggleFullscreen);
+  $(document).on("fullscreenchange", fullscreenChanged);
+  $(document).on("webkitfullscreenchange", fullscreenChanged);
+  $(document).on("mozfullscreenchange", fullscreenChanged);
+  $(document).on("MSFullscreenChange", fullscreenChanged);
 });
 
 function fakeClasses(){
@@ -154,5 +161,41 @@ function toggleGames(e) {
     $player.find('.player-games-wrapper').toggle();
   } else {
     return false;
+  }
+}
+
+function toggleFullscreen(e) {
+  e.preventDefault();
+  var i = $('#main-container')[0];
+
+  if (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement
+  ){} else {
+    $('#main-container').addClass('fullscreen')
+    // go full-screen
+    if (i.requestFullscreen) {
+        i.requestFullscreen();
+    } else if (i.webkitRequestFullscreen) {
+        i.webkitRequestFullscreen();
+    } else if (i.mozRequestFullScreen) {
+        i.mozRequestFullScreen();
+    } else if (i.msRequestFullscreen) {
+        i.msRequestFullscreen();
+    }
+
+  }
+}
+
+function fullscreenChanged() {
+  if (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement
+  ){} else {
+    $('#main-container').removeClass('fullscreen');
   }
 }
