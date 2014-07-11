@@ -4,7 +4,10 @@ $(function(){
   // Temp function to clone player
   formPlayers();
   // Hide loading when all images are loaded
-  imagesLoaded();
+  // imagesLoaded();
+  imagesLoaded(function(){
+    finishedLoading();
+  });
 
   // Initialize tooltips
   $('.pqt').tooltip();
@@ -12,7 +15,7 @@ $(function(){
   // Wait a little to account for height so absolute positions are calculated correctly
   window.setTimeout(function(){
     positionPlayers();
-  },100);
+  },200);
 
   // Position players absolutely
   $(window).resize(positionPlayers);
@@ -34,6 +37,18 @@ $(function(){
   $(document).on("webkitfullscreenchange", fullscreenChanged);
   $(document).on("mozfullscreenchange", fullscreenChanged);
   $(document).on("MSFullscreenChange", fullscreenChanged);
+
+  // Initialize Masonry after all images loaded
+  // var $players = $('#players-wrapper');
+  // $players.imagesLoaded(function(){
+  //   finishedLoading();
+  //   $players.masonry({
+  //     "columnWidth": ".player-wrapper",
+  //     "itemSelector": ".player-wrapper",
+  //     "gutter": 30
+  //   });
+  // });
+
 });
 
 function fakeClasses(){

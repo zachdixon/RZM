@@ -12,7 +12,16 @@
     <link href="../css/pick_em_panel.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <!-- // <script src="../js/jquery-ui.min.js"></script> -->
+    <!-- // <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script> -->
+    <!-- // <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script> -->
+
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="../js/pick_em_panel.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -115,7 +124,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="page-header clearfix">
-                <h1 class="league-name pull-left">My Pick`em Panel</h1>
+                <h1 class="league-name pull-left">Pick`em Panel</h1>
                 <div class="options-wrapper pull-right">
                   <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
                     <option value="1" selected="">Week 1</option>
@@ -141,69 +150,246 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div id="pickem-panel" class="bg-tweed">
-                <div class="player-wrapper clearfix">
-                  <div class="player-games-wrapper pull-left">
-                    <div class="game-wrapper">
-                      <p class="point-value">250</p>
-                      <div class="helmet-wrapper">
-                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+            <div id="pickem-panel" class="bg-tweed">
+              <div class="player-wrapper clearfix">
+                <div class="col-xs-4">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h2>Your Picks</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="player-games-wrapper pull-left">
+                        <div class="game-wrapper clearfix">
+                          <p class="point-value">250</p>
+                          <div class="helmet-wrapper accept-rzm">
+                            <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                          </div>
+                          <div class="scoreboard-wrapper hidden-sm hidden-xs">
+                            <p class="game-time">Thursday 9/04 - 7:30pm</p>
+                            <p class="scoreboard-team">Green Bay Packers (0-1) <strong>+5.5</strong></p>
+                            <p class="scoreboard-team">SEATLLE SEAHAWKS (1-0) <strong>-5.5</strong></p>
+                          </div>
+                        </div><!-- /.game-wrapper -->
+                        <div class="game-wrapper clearfix">
+                          <p class="point-value">200</p>
+                          <div class="helmet-wrapper empty accept-rzm">
+                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                          </div>
+                        </div><!-- /.game-wrapper -->
+                        <div class="game-wrapper clearfix">
+                          <p class="point-value">150</p>
+                          <div class="helmet-wrapper empty accept-rzm">
+                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                          </div>
+                        </div><!-- /.game-wrapper -->
+                        <div class="game-wrapper clearfix">
+                          <p class="point-value">100</p>
+                          <div class="helmet-wrapper empty accept-rzm">
+                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                          </div>
+                        </div><!-- /.game-wrapper -->
+                        <div class="game-wrapper clearfix">
+                          <p class="point-value">50</p>
+                          <div class="helmet-wrapper empty accept-rzm">
+                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                          </div>
+                        </div><!-- /.game-wrapper -->
+                      </div><!-- /.player-games-wrapper -->
+                    </div>
+
+                  </div>
+                </div>
+                <!-- FIXME Make 2 games into tabs -->
+                <div class="col-md-4 col-sm-2 col-xs-4 lms-games-col hide">
+                  <div class="lms-games-wrapper">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <h2>LMS Picks</h2>
                       </div>
-                      <div class="game-scores">
-                        <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
-                        <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="player-games-wrapper pull-right">
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">Lock of the Week</p>
+                            <div class="helmet-wrapper pull-right">
+                              <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                            </div>
+                            <div class="scoreboard-wrapper hidden-sm hidden-xs">
+                              <p class="game-time">Thursday 9/04 - 7:30pm</p>
+                              <p class="scoreboard-team">Green Bay Packers (0-1) <strong>+5.5</strong></p>
+                              <p class="scoreboard-team">SEATLLE SEAHAWKS (1-0) <strong>-5.5</strong></p>
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">Upset Special</p>
+                            <div class="helmet-wrapper empty choosing">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">Survivor</p>
+                            <div class="helmet-wrapper empty">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">Monday Night Football</p>
+                            <div class="helmet-wrapper empty">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                        </div><!-- /.player-games-wrapper -->
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                    </div><!-- /.game-wrapper -->
-                    <div class="game-wrapper winning">
-                      <p class="point-value">200</p>
-                      <div class="helmet-wrapper">
-                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-8">
+                  <div class="games-wrapper">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <h2>Pick Your Teams</h2>
                       </div>
-                      <div class="game-scores">
-                        <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                        <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                    </div>
+                    <div class="row rzm-games">
+                      <div class="col-xs-12">
+                        <p class="game-day">
+                          <strong>Thursday 09/04</strong>
+                        </p>
+                        <ul class="game-list">
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <p class="game-day">
+                            <strong>Friday 09/05</strong>
+                          </p>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <p class="game-day">
+                            <strong>Saturday 09/06</strong>
+                          </p>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <p class="game-day">
+                            <strong>Sunday 09/07</strong>
+                          </p>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                          <p class="game-day">
+                            <strong>Monday 09/08</strong>
+                          </p>
+                          <li class="game-item">
+                            <p class="game-item-time"><span class="glyphicon glyphicon-time"></span>7:30p</p>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/cowboys.png">Dallas Cowboys (0-1) <strong>+5.5</strong></p>
+                            <br>
+                            <p class="game-item-team btn btn-primary" data-helmeturl="../images/helmets/jets.png">New York Jets (1-0) <strong>-5.5</strong></p>
+                          </li>
+                        </ul>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                    </div><!-- /.game-wrapper -->
-                    <div class="game-wrapper won game-over">
-                      <p class="point-value">150</p>
-                      <div class="helmet-wrapper">
-                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                        <div class="star"><span class="glyphicon glyphicon-star"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="panel-extras">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-6 col-xs-6">
+                        <h2>Countdown</h2>
                       </div>
-                      <div class="game-scores">
-                        <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                        <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-sm-6 col-xs-6">
+                        <div class="panel-actions pull-right clearfix">
+                          <button class="btn btn-default pull-left">Random</button>
+                          <button class="btn btn-default pull-left">Save Picks</button>
+                        </div>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                    </div><!-- /.game-wrapper -->
-                    <div class="game-wrapper losing">
-                      <p class="point-value">100</p>
-                      <div class="helmet-wrapper">
-                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                      </div>
-                      <div class="game-scores">
-                        <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                        <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
-                      </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                    </div><!-- /.game-wrapper -->
-                    <div class="game-wrapper lost game-over">
-                      <p class="point-value">50</p>
-                      <div class="helmet-wrapper">
-                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                      </div>
-                      <div class="game-scores">
-                        <p class="clearfix"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                        <p class="clearfix"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
-                      </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                    </div><!-- /.game-wrapper -->
-                  </div><!-- /.player-games-wrapper -->
-                </div><!-- /.player-wrapper -->
-              </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.player-wrapper -->
             </div>
           </div>
 
