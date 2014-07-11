@@ -55,6 +55,10 @@
   max-width: 108px;
   margin-right: 5%;
   float: left;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .helmet-wrapper.draggable-over {
   -webkit-transform: scale(0.8);
