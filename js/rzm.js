@@ -138,7 +138,30 @@ function randomizePlayers(e){
   }
   //shuffle array
   arr = shuffle(arr);
-  movePlayers(arr);
+  updatePlayers(arr);
+}
+
+// takes array of html, add class flipOutX, once done, remove flipOutX and add flipInX
+function updatePlayers(new_order){
+  // to fake http response, get html of players
+  var $players = $('.player-wrapper');
+  var $new_players = [];
+  new_order.forEach(function(id,index, new_order){
+    var $player = $('.player-wrapper[data-player='+id+']').clone();
+    $new_players.push($player);
+  });
+  $players.each(function(index, player){
+    $(player).addClass('animated flipOutX');
+    $(player).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+      var $new_player = $new_players[index];
+      $('#players-wrapper').append($new_player);
+      $(player).remove();
+      $new_player.addClass('animated flipInX');
+      $new_player.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+        $new_player.removeClass('flipInX');
+      });
+    });
+  });
 }
 
 

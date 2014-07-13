@@ -1,4 +1,11 @@
 $(document).on('ready', function(){
+  // Show loading screen
+  startLoading();
+  // Hide loading when all images are loaded
+  imagesLoaded();
+  // Initialize popovers with focus trigger type
+  $('[data-toggle="tooltip"]').tooltip();
+
   // TODO
   // Add game after drop
   // If replaced, enable team
@@ -41,6 +48,38 @@ $(document).on('ready', function(){
       // Set placeholder img src with helper's src
       $(this).find('img').attr('src',$(ui.helper).find('img').attr('src'));
     }
-  })
+  });
+
+  // var header_clock = $('.header-countdown').FlipClock(3600 * 24 * 7,{
+  //   countdown: true,
+  //   clockFace: "DailyCounter",
+  //   showSeconds: false
+  // });
+  // var rzm_clock = $('.rzm-countdown').FlipClock(3600 * 24 * 7,{
+  //   countdown: true,
+  //   clockFace: "DailyCounter",
+  //   showSeconds: false
+  // });
 
 });
+
+function imagesLoaded(){
+  var $images = $('img'), images_loaded = 0;
+  $images.each(function(index, image){
+    image.onload = function(){
+      images_loaded++;
+      if(images_loaded >= $images.length){
+        finishedLoading();
+      }
+    };
+  });
+}
+
+function startLoading(){
+  $('.loading').show();
+}
+function finishedLoading(){
+  $('.loading').fadeOut('fast',function(){
+    $('#main-container').show();
+  });
+}

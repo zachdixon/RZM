@@ -2,11 +2,11 @@
    xs : 767px
 */
 
-#pickem-panel {
+.rzm-section {
   box-shadow: inset 0 0 3px rgba(255,255,255,0.5), 0 0 3px rgba(0,0,0,0.7);
   border: 1px solid #000000;
   border-radius: 10px;
-  padding: 0;
+  padding: 0 0 15px 0;
 }
 
 .main-footer {
@@ -15,6 +15,9 @@
 
 #pickem-panel h2 {
   text-align: center;
+}
+#pickem-panel h2 span {
+  font-size: 16px;
 }
 
 .player-games-wrapper {
@@ -145,7 +148,6 @@ p.game-time {
 
 .rzm-games {
   max-height: 600px;
-  margin-bottom: 15px;
   overflow-y: scroll;
 }
 .game-day {
@@ -202,4 +204,48 @@ p.game-time {
 
 .game-item-team:hover {
   cursor: move;
+}
+
+/* Last Man Standing Section */
+
+#lms-panel {
+  margin-top: 15px;
+}
+
+.lms-section {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 0px #000,0 0 4px 0px rgba(255, 255, 255, 0.3);
+  border: 1px solid #000;
+}
+@media (max-width: 767px) {
+  .lms-section {
+    margin-bottom: 15px;
+  }
+}
+
+.lms-section.lock-of-the-week {
+  background: #00A5D2;
+}
+.lms-section.upset-special {
+  background: #6400C8;
+}
+.lms-section.survivor {
+  background: #E60000;
+}
+.lms-section.monday-football-at-night {
+  background: #663300;
+}
+
+.lms-section h3 {
+  margin: 5px 0;
+  color: #FFF;
+  text-shadow: none;
+  font-size: 16px;
+}
+.lms-section h3 span {
+  margin-right: 5px;
+}
+.lms-section .flaticon-american21 {
+  font-size: 15px;
 }
