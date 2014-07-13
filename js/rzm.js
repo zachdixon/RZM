@@ -153,9 +153,12 @@ function updatePlayers(new_order){
   $players.each(function(index, player){
     $(player).addClass('animated flipOutX');
     $(player).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+
       var $new_player = $new_players[index];
       $('#players-wrapper').append($new_player);
       $(player).remove();
+      positionPlayers();
+
       $new_player.addClass('animated flipInX');
       $new_player.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
         $new_player.removeClass('flipInX');
