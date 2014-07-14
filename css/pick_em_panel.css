@@ -146,13 +146,6 @@ p.game-time {
   margin: 0 -7px;
 }
 
-.rzm-games {
-  max-height: 600px;
-  overflow-y: scroll;
-}
-.game-day {
-  text-align: right;
-}
 
 .game-list {
   margin: 0;
@@ -165,15 +158,17 @@ p.game-time {
   background: rgba(0, 0, 0, 0.5);
   padding: 7px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin: 0 2px 10px;
+  float: left;
 }
 
 .game-item p {
-  margin: 0;
+  font-size: 12px;
 }
 
 .game-item-time {
   float: right;
+  margin: 0 0 0 5px;
 }
 
 .game-item-time .glyphicon-time {
