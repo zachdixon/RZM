@@ -1,0 +1,27 @@
+.rzm-section {
+  padding: 15px;
+  width: 50%;
+  min-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .rzm-section {
+    width: 100%;
+    min-width: 100%;
+    
+  }
+}
+#create-league .league-name {
+  width: 100%;
+  text-align: center;
+}
+
+
+button[name="create-league-submit"] {
+  margin: 0 auto;
+  display: block;
+  font-size: 30px;
+  box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.5);
+}
