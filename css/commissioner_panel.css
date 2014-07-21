@@ -1,13 +1,14 @@
-#commissioner-panel {
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
 #commissioner-panel hr {
   box-shadow: 0 1px 1px #999;
 }
 
+.rzm-section {
+  padding: 0 15px 15px;
+}
+
+.league-details {
+  margin-bottom: 15px;
+}
 .league-details .control-label {
   width: 100%
 }

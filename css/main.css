@@ -243,6 +243,10 @@ img.avatar {
 
 
 /* Footer */
+.main-footer {
+  padding: 15px 0;
+}
+
 .footer-nav a:not(:last-of-type) {
   border-right: 1px solid #fff;
   padding-right: 10px;
