@@ -16,6 +16,10 @@
   margin: 10px 0;
 }
 
+.league-number {
+  font-size: 14px;
+}
+
 .league-type-wrapper {
   display: inline-block;
   padding: 15px;
