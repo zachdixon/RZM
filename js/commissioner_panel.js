@@ -4,6 +4,7 @@ $(function(){
   imagesLoaded(function(){
     finishedLoading();
   });
+  $('.select2').select2({tags: [], dropdownCssClass: 'hide'});
 });
 
 function imagesLoaded(){

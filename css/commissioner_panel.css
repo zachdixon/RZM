@@ -1,12 +1,11 @@
-#commissioner-panel hr {
-  box-shadow: 0 1px 1px #999;
+h2 {
+  color: #fff;
 }
-
 .rzm-section {
   padding: 0 15px 15px;
 }
 
-.league-details {
+.league-details, .payment-details {
   margin-bottom: 15px;
 }
 .league-details .control-label {
@@ -75,6 +74,19 @@
 }
 .save-button {
   text-align: right;
+}
+
+.select2-container.form-control {
+  padding: 10px;
+  min-height: 55px;
+  height: auto;
+}
+.select2-container-multi.form-control .select2-choices {
+  border: none;
+  background: none;
+}
+.select2-container-multi.form-control .select2-choices .select2-search-field {
+  width: 100%;
 }
 
 
