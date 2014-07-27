@@ -1,0 +1,67 @@
+#player-select {
+  width: auto;
+}
+.options-wrapper {
+  padding-top: 25px;
+}
+.options-wrapper select {
+  margin-right: 10px;
+}
+
+.player-wrapper {
+  padding: 10px 10px 5px 10px;
+  margin-bottom: 10px;
+  min-width: 645px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.player-wrapper .player-position {
+  display: block;
+  position: absolute;
+  text-align: right;
+  right: 5px;
+  bottom: 0;
+  font-size: 55px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1em;
+  color: #272B30;
+  text-shadow: 0 0 2px #AAA;
+}
+.player-wrapper .position-superscript:after {
+  content: "TH";
+  font-size: 15px;
+  line-height: 35px;
+  vertical-align: top;
+}
+
+.player-wrapper:first-of-type .position-number:after {
+  content: "1";
+  color: #1a1a1a;
+}
+.player-wrapper:first-of-type .position-superscript:after {
+  content: "ST";
+}
+
+.game-scores p {
+  font-size: 1em !important;
+}
+p.game-time {
+  border-bottom: 1px solid #fff !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+.game-score-team.dashed-border {
+  border-bottom: 1px dashed #999 !important;
+}
+.game-score-pq {
+  background: #058;
+  text-shadow: 0 1px 1px #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+.player-wrapper .pqt {
+  display: block;
+}
