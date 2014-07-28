@@ -214,7 +214,16 @@ p.game-time {
 .lms-section .flaticon-american21 {
   font-size: 15px;
 }
+.lms-section .helmet-wrapper {
+  max-width: 100px;
+  width: 100%;
+  display: inline-block;
+  margin: 10px 0;
+}
 
+.dashboard-wrapper .helmet-wrapper {
+  padding: 20px 10px;
+}
 .ytd-stat {
   text-align: center;
   display: block;
@@ -232,4 +241,20 @@ p.game-time {
 .ytd-stat p {
   font-size: 40px;
   font-weight: bold;
+}
+
+.lms-out {
+  display: inline-block;
+  background: #232323;
+  border-radius: 50%;
+  width: 100px;
+  padding: 35px 0;
+  margin: 10px 0;
+}
+.lms-out p {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #F00;
+  font-weight: bold;
+  margin: 0;
 }
