@@ -10,7 +10,7 @@ $(function(){
   });
 
   // Initialize tooltips
-  $('.pqt').tooltip();
+  $('.pqt-wrapper').tooltip();
 
   // Wait a little to account for height so absolute positions are calculated correctly
   window.setTimeout(function(){

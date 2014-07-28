@@ -321,20 +321,27 @@
 .game-over .game-scores p {
   color: #afafaf;
 }
-
-.player-wrapper .pqt {
-  background: #058;
+.player-wrapper .pqt-wrapper {
   position: absolute;
   right: 10px;
   top: 45px;
+  display: none;
+}
+.player-wrapper .pqt-label {
+  color: #232323;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+.player-wrapper .pqt {
+  background: #058;
   font-size: 14px;
   text-shadow: 0 1px 1px #000;
-  display: none;
   border: 1px solid #000;
   padding: 2px 4px;
 }
 
-.player-wrapper.players-tied .pqt {
+.player-wrapper.players-tied .pqt-wrapper {
   display: block;
 }
 

@@ -8,6 +8,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/slate.bootstrap.min.css" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    <link href="../css/flaticon.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/rzm.css" rel="stylesheet">
     <link href="../css/dashboard.css" rel="stylesheet">
@@ -137,7 +138,10 @@
                 <div class="player-wrapper clearfix rzm-section bg-tweed">
                   <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
                   <p class="player-total-score score-positive">200</p>
-                  <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">+10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
+                  <div class="pqt-wrapper" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">
+                    <p class="pqt-label">PQT</p>
+                    <p class="pqt label label-primary">+10.5</p>
+                  </div><!-- /.pqt-wrapper -->
                   <div class="player-info-wrapper pull-left">
                     <div class="player-avatar-wrapper">
                       <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
@@ -227,38 +231,55 @@
                       <div class="row">
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section lock-of-the-week">
-                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span></h3>
-                            <select class="lms-select form-control btn btn-default" title="">
-                              <option value="" disabled selected>Pick your team</option>
-                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                            </select>
+                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week</h3>
+                            <div class="game-wrapper">
+                              <div class="text-align-center">
+                                <div class="helmet-wrapper">
+                                  <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                                </div>
+                              </div>
+                              <div class="game-scores">
+                                <p class="text-align-center game-time">Live</p>
+                                <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+                                <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+                              </div>
+                            </div><!-- /.game-wrapper -->
                           </div><!-- /lms-section -->
                         </div><!-- /.col-sm-3 -->
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section upset-special">
-                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span></h3>
-                            <select class="lms-select form-control btn btn-default" title="">
-                              <option value="" disabled selected>Pick your team</option>
-                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                            </select>
+                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special</h3>
+                            <div class="game-wrapper">
+                              <div class="text-align-center">
+                                <div class="helmet-wrapper">
+                                  <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                                </div>
+                              </div>
+                            </div><!-- /.game-wrapper -->
                           </div><!-- /lms-section -->
                         </div><!-- /.col-sm-3 -->
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section survivor">
-                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span></h3>
-                            <select class="lms-select form-control btn btn-default" title="">
-                              <option value="" disabled selected>Pick your team</option>
-                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                            </select>
+                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor</h3>
+                            <div class="game-wrapper">
+                              <div class="text-align-center">
+                                <div class="lms-out">
+                                  <p>Out</p>
+                                </div>
+                              </div>
+                            </div><!-- /.game-wrapper -->
                           </div><!-- /lms-section -->
                         </div><!-- /.col-sm-3 -->
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section monday-football-at-night">
-                            <h3><span class="flaticon-american21"></span>Monday Football @ Night<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span></h3>
-                            <select class="lms-select form-control btn btn-default" title="">
-                              <option value="" disabled selected>Pick your team</option>
-                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                            </select>
+                            <h3><span class="flaticon-american21"></span>Monday Football @ Night</h3>
+                            <div class="game-wrapper">
+                              <div class="text-align-center">
+                                <div class="lms-out">
+                                  <p>Out</p>
+                                </div>
+                              </div>
+                            </div><!-- /.game-wrapper -->
                           </div><!-- /lms-section -->
                         </div><!-- /.col-sm-3 -->
                       </div><!-- /.row -->
@@ -301,7 +322,10 @@
                 <div class="player-wrapper clearfix rzm-section bg-tweed">
                   <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
                   <p class="player-total-score score-positive">200</p>
-                  <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">+10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
+                  <div class="pqt-wrapper" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">
+                    <p class="pqt-label">PQT</p>
+                    <p class="pqt label label-primary">+10.5</p>
+                  </div><!-- /.pqt-wrapper -->
                   <div class="player-info-wrapper pull-left">
                     <div class="player-avatar-wrapper">
                       <img src="../images/players/1.png" alt="Player 2" class="img-player-avatar">
@@ -397,7 +421,7 @@
                       <div class="row">
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section lock-of-the-week">
-                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span></h3>
+                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week</h3>
                             <div class="game-wrapper">
                               <div class="text-align-center">
                                 <div class="helmet-wrapper">
@@ -414,7 +438,7 @@
                         </div><!-- /.col-sm-3 -->
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section upset-special">
-                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span></h3>
+                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special</h3>
                             <div class="game-wrapper">
                               <div class="text-align-center">
                                 <div class="helmet-wrapper">
@@ -426,7 +450,7 @@
                         </div><!-- /.col-sm-3 -->
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section survivor">
-                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span></h3>
+                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor</h3>
                             <div class="game-wrapper">
                               <div class="text-align-center">
                                 <div class="lms-out">
@@ -438,7 +462,7 @@
                         </div><!-- /.col-sm-3 -->
                         <div class="col-sm-3 col-xs-12">
                           <div class="lms-section monday-football-at-night">
-                            <h3><span class="flaticon-american21"></span>Monday Football @ Night<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span></h3>
+                            <h3><span class="flaticon-american21"></span>Monday Football @ Night</h3>
                             <div class="game-wrapper">
                               <div class="text-align-center">
                                 <div class="lms-out">

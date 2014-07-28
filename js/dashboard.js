@@ -3,6 +3,9 @@ $(function(){
   $.fn.editable.defaults.placement = 'bottom';
   $('.x-editable').editable();
 
+  // Initialize tooltips
+  $('.pqt-wrapper').tooltip();
+
   $('.show-player-details').on('click', togglePlayerDetails);
   $('.my-dashboard .show-player-details').trigger('click');
 
