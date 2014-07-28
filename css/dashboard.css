@@ -10,10 +10,20 @@
 
 .player-wrapper {
   padding: 10px 10px 5px 10px;
-  margin-bottom: 10px;
-  min-width: 645px;
+  /*min-width: 645px;*/
   overflow: hidden;
   width: 100%;
+  position: relative;
+  margin-bottom: 0;
+}
+.dashboard-wrapper:not(.my-dashboard) {
+  display: none;
+}
+.dashboard-wrapper:first-of-type .player-wrapper {
+  background: url('../images/backgrounds/gold-texture-2-brushed.jpg') 0 0 no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid #ffc888;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.5),0px 0px 10px 1px rgba(255, 200, 136, 0.7);
 }
 
 .player-wrapper .player-position {
@@ -36,12 +46,55 @@
   vertical-align: top;
 }
 
-.player-wrapper:first-of-type .position-number:after {
+.dashboard-wrapper:first-of-type .position-number:after {
   content: "1";
   color: #1a1a1a;
 }
-.player-wrapper:first-of-type .position-superscript:after {
+.dashboard-wrapper:first-of-type .position-superscript:after {
   content: "ST";
+}
+
+.dashboard-wrapper:nth-of-type(2) .position-number:after {
+  content: "2";
+}
+.dashboard-wrapper:nth-of-type(2) .position-superscript:after {
+  content: "ND";
+}
+
+.dashboard-wrapper:nth-of-type(3) .position-number:after {
+  content: "3";
+}
+.dashboard-wrapper:nth-of-type(3) .position-superscript:after {
+  content: "RD";
+}
+
+.dashboard-wrapper:nth-of-type(4) .position-number:after {
+  content: "4";
+}
+.dashboard-wrapper:nth-of-type(5) .position-number:after {
+  content: "5";
+}
+.dashboard-wrapper:nth-of-type(6) .position-number:after {
+  content: "6";
+}
+.dashboard-wrapper:nth-of-type(7) .position-number:after {
+  content: "7";
+}
+.dashboard-wrapper:nth-of-type(8) .position-number:after {
+  content: "8";
+}
+.dashboard-wrapper:nth-of-type(9) .position-number:after {
+  content: "9";
+}
+.dashboard-wrapper:nth-of-type(10) .position-number:after {
+  content: "LAST";
+  font-size: 25px;
+  bottom: 3px;
+  color: #C60000;
+  text-shadow: 0 -1px 3px #000, 1px 0 3px #000,0 1px 3px #000,-1px 0 3px #000;
+}
+.dashboard-wrapper:nth-of-type(10) .position-superscript:after {
+  content: "";
 }
 
 .game-scores p {
@@ -64,4 +117,119 @@ p.game-time {
 }
 .player-wrapper .pqt {
   display: block;
+}
+
+.player-details-wrapper {
+  margin: 0 15px 15px;
+  padding: 15px;
+  background: #393939;
+  border: 1px solid #333;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 0 5px #000;
+}
+.show-player-details {
+  display: block;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin: 0 auto;
+  width: 150px;
+}
+.show-player-details:hover {
+  color: #ddd;
+}
+.show-player-details:before, .show-player-details:after {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+}
+.show-player-details:before {
+  top: 3px;
+  left: -10px;
+}
+.show-player-details:after {
+  top: 3px;
+  right: -10px;
+}
+.show-player-details.closed:before, .show-player-details.closed:after {
+  content:"\e114";
+}
+.show-player-details.open:before, .show-player-details.open:after {
+  content:"\e113";
+}
+
+
+.player-details {
+  display: none;
+  margin-bottom: 15px;
+}
+.player-details h4 {
+  text-shadow: none;
+  color: #fff;
+}
+
+.free-pass-wrapper p {
+  margin: 10px 10px 0 0;
+}
+.lms-section {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 0px #000,0 0 4px 0px rgba(255, 255, 255, 0.3);
+  border: 1px solid #000;
+}
+@media (max-width: 767px) {
+  .lms-section {
+    margin-bottom: 15px;
+  }
+}
+
+.lms-section.lock-of-the-week {
+  background: #00A5D2;
+}
+.lms-section.upset-special {
+  background: #6400C8;
+}
+.lms-section.survivor {
+  background: #E60000;
+}
+.lms-section.monday-football-at-night {
+  background: #663300;
+}
+
+.lms-section h3 {
+  margin: 5px 0;
+  color: #FFF;
+  text-shadow: none;
+  font-size: 16px;
+}
+.lms-section h3 span {
+  margin-right: 5px;
+}
+.lms-section .flaticon-american21 {
+  font-size: 15px;
+}
+
+.ytd-stat {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 170px;
+  padding: 20px 0;
+  border-radius: 50%;
+  height: 170px;
+  color: #000;
+  border: 5px solid #000;
+}
+.ytd-stat h5 {
+  text-shadow: none;
+}
+.ytd-stat p {
+  font-size: 40px;
+  font-weight: bold;
 }

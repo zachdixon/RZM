@@ -97,8 +97,8 @@
                 <div class="options-wrapper pull-right">
                   <select id="player-select" name="player-select" class="form-control pull-left btn btn-default">
                     <option value="all">All Players</option>
-                    <option value="1" selected="">Commish</option>
-                    <option value="2">Player 2</option>
+                    <option value="1">Player 1</option>
+                    <option value="2" selected="">Commish</option>
                   </select>
                   <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
                     <option value="1" selected="">Week 1</option>
@@ -133,87 +133,340 @@
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <div class="player-wrapper clearfix rzm-section bg-tweed">
-                <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
-                <p class="player-total-score score-positive">200</p>
-                <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">+10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
-                <div class="player-info-wrapper pull-left">
-                  <div class="player-avatar-wrapper">
-                    <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
-                    <p class="player-name">Player 1</p>
+              <div class="dashboard-wrapper" id="player-1">
+                <div class="player-wrapper clearfix rzm-section bg-tweed">
+                  <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
+                  <p class="player-total-score score-positive">200</p>
+                  <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">+10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
+                  <div class="player-info-wrapper pull-left">
+                    <div class="player-avatar-wrapper">
+                      <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
+                      <p class="player-name">Player 1</p>
+                    </div>
+                    <p class="player-name mobile-show">Player 1</p>
                   </div>
-                  <p class="player-name mobile-show">Player 1</p>
+                  <div class="player-wrapper-divider"></div>
+                  <div class="player-games-wrapper pull-left">
+                    <div class="game-wrapper">
+                      <p class="point-value">250</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">Live</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper winning">
+                      <p class="point-value">200</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">+3.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper won game-over">
+                      <p class="point-value">150</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                        <div class="star"><span class="glyphicon glyphicon-star"></span></div>
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper losing">
+                      <p class="point-value">100</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper lost game-over">
+                      <p class="point-value">50</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                  </div><!-- /.player-games-wrapper -->
+                </div><!-- /.player-wrapper -->
+                <div class="player-details-wrapper">
+                  <div class="player-details clearfix">
+                    <div class="col-xs-12">
+                      <h4>Player 1 says:</h4>
+                      <p><span class="large-quotes">&#8220;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia dui quis lectus vulputate, et lacinia massa varius. Donec non felis consectetur, ullamcorper libero sed, malesuada elit.<span class="large-quotes">&#8221;</span></p>
+                      <hr>
+                    </div>
+                    <div class="col-xs-12">
+                      <h4>Last Man Standing</h4>
+                      <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section lock-of-the-week">
+                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section upset-special">
+                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section survivor">
+                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section monday-football-at-night">
+                            <h3><span class="flaticon-american21"></span>Monday Football @ Night<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                      </div><!-- /.row -->
+                      <hr>
+                    </div><!-- /.col-xs-12 -->
+                    <div class="col-xs-12">
+                      <h4>YTD Stats</h4>
+                      <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>Monkey Points</h5>
+                            <p>1440</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>Game Points</h5>
+                            <p>+12,750</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>PQT</h5>
+                            <p>+325</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>Position</h5>
+                            <p>1st</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                      </div><!-- /.row -->
+                    </div><!-- /.col-xs-12 -->
+                  </div>
+                  <a href="#" class="show-player-details closed">Show More</a>
                 </div>
-                <div class="player-wrapper-divider"></div>
-                <div class="player-games-wrapper pull-left">
-                  <div class="game-wrapper">
-                    <p class="point-value">250</p>
-                    <div class="helmet-wrapper">
-                      <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+              </div><!-- /.dashboard-wrapper -->
+              <div class="dashboard-wrapper my-dashboard" id="player-2">
+                <div class="player-wrapper clearfix rzm-section bg-tweed">
+                  <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
+                  <p class="player-total-score score-positive">200</p>
+                  <p class="pqt label label-primary" data-toggle="tooltip" data-trigger="hover" data-placement="left" title="Pick Quality Total (PQT) - Your PQT is based on how well your picks do. This score is used to settle ties between players.">+10.5</p><!-- style like a button that has tooltip with pqt explanation of ties -->
+                  <div class="player-info-wrapper pull-left">
+                    <div class="player-avatar-wrapper">
+                      <img src="../images/players/1.png" alt="Player 2" class="img-player-avatar">
+                      <p class="player-name">Commish</p>
                     </div>
-                    <div class="game-scores">
-                      <p class="text-align-center game-time">Live</p>
-                      <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
-                      <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
-                      <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                    <p class="player-name mobile-show">Commish</p>
+                  </div>
+                  <div class="player-wrapper-divider"></div>
+                  <div class="player-games-wrapper pull-left">
+                    <div class="game-wrapper">
+                      <p class="point-value">250</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">Live</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper winning">
+                      <p class="point-value">200</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">+3.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper won game-over">
+                      <p class="point-value">150</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                        <div class="star"><span class="glyphicon glyphicon-star"></span></div>
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper losing">
+                      <p class="point-value">100</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                    <div class="game-wrapper lost game-over">
+                      <p class="point-value">50</p>
+                      <div class="helmet-wrapper">
+                        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                      </div>
+                      <div class="game-scores">
+                        <p class="text-align-center game-time">3:25 pm</p>
+                        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
+                        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
+                        <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
+                      </div>
+                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
+                    </div><!-- /.game-wrapper -->
+                  </div><!-- /.player-games-wrapper -->
+                </div><!-- /.player-wrapper -->
+                <div class="player-details-wrapper">
+                  <div class="player-details clearfix">
+                    <div class="col-xs-12 clearfix">
+                      <div class="free-pass-wrapper pull-right clearfix">
+                        <p class="pull-left">Used on: September, 5 2014</p>
+                        <button class="btn btn-success use-free-pass pull-left" disabled="">Use Free Pass</button>
+                      </div>
                     </div>
-                    <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                  </div><!-- /.game-wrapper -->
-                  <div class="game-wrapper winning">
-                    <p class="point-value">200</p>
-                    <div class="helmet-wrapper">
-                      <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                    <div class="col-xs-12">
+                      <h4>Commish says:</h4>
+                      <p><span class="large-quotes">&#8220;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia dui quis lectus vulputate, et lacinia massa varius. Donec non felis consectetur, ullamcorper libero sed, malesuada elit.<span class="large-quotes">&#8221;</span></p>
+                      <hr>
                     </div>
-                    <div class="game-scores">
-                      <p class="text-align-center game-time">3:25 pm</p>
-                      <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                      <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
-                      <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">+3.5</span></p>
-                    </div>
-                    <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                  </div><!-- /.game-wrapper -->
-                  <div class="game-wrapper won game-over">
-                    <p class="point-value">150</p>
-                    <div class="helmet-wrapper">
-                      <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                      <div class="star"><span class="glyphicon glyphicon-star"></span></div>
-                    </div>
-                    <div class="game-scores">
-                      <p class="text-align-center game-time">3:25 pm</p>
-                      <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                      <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
-                      <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
-                    </div>
-                    <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                  </div><!-- /.game-wrapper -->
-                  <div class="game-wrapper losing">
-                    <p class="point-value">100</p>
-                    <div class="helmet-wrapper">
-                      <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                    </div>
-                    <div class="game-scores">
-                      <p class="text-align-center game-time">3:25 pm</p>
-                      <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                      <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
-                      <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
-                    </div>
-                    <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                  </div><!-- /.game-wrapper -->
-                  <div class="game-wrapper lost game-over">
-                    <p class="point-value">50</p>
-                    <div class="helmet-wrapper">
-                      <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                    </div>
-                    <div class="game-scores">
-                      <p class="text-align-center game-time">3:25 pm</p>
-                      <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">24</span></p>
-                      <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
-                      <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
-                    </div>
-                    <p class="pick-quality label label-primary mobile-show">-0.5</p>
-                  </div><!-- /.game-wrapper -->
-                </div><!-- /.player-games-wrapper -->
-              </div><!-- /.player-wrapper -->
+                    <div class="col-xs-12">
+                      <h4>Last Man Standing</h4>
+                      <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section lock-of-the-week">
+                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section upset-special">
+                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section survivor">
+                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="lms-section monday-football-at-night">
+                            <h3><span class="flaticon-american21"></span>Monday Football @ Night<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span></h3>
+                            <select class="lms-select form-control btn btn-default" title="">
+                              <option value="" disabled selected>Pick your team</option>
+                              <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
+                            </select>
+                          </div><!-- /lms-section -->
+                        </div><!-- /.col-sm-3 -->
+                      </div><!-- /.row -->
+                      <hr>
+                    </div><!-- /.col-xs-12 -->
+                    <div class="col-xs-12">
+                      <h4>YTD Stats</h4>
+                      <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>Monkey Points</h5>
+                            <p>1440</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>Game Points</h5>
+                            <p>+12,750</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>PQT</h5>
+                            <p>+325</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-3 col-xs-12">
+                          <div class="ytd-stat">
+                            <h5>Position</h5>
+                            <p>1st</p>
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                      </div><!-- /.row -->
+                    </div><!-- /.col-xs-12 -->
+                  </div>
+                  <a href="#" class="show-player-details closed">Show More</a>
+                </div>
+              </div><!-- /.dashboard-wrapper -->
             </div><!-- /.col-xs-12 -->
           </div><!-- /.row -->
         </div><!-- /#dashboard.container -->
