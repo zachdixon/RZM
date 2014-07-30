@@ -258,3 +258,38 @@ p.game-time {
   font-weight: bold;
   margin: 0;
 }
+
+.btn-edit-images {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0,0,0,0);
+  color: #FFF;
+  border-radius: 50%;
+  outline: none;
+}
+.btn-edit-images:hover {
+  background: #232323;
+  border-color: #fff;
+}
+
+#edit-images-modal .profile-image {
+  width: 100%;
+}
+.profile-image-wrapper {
+  position: relative;
+  max-width: 200px;
+  text-align: center;
+  margin: 15px auto;
+}
+.upload-image-label {
+  margin-top: 5px;
+  width: 100%;
+}
+#game-face-upload,#winning-face-choose, #winning-face-upload {
+  display: none;
+}
+.winning-face-wrapper p {
+  margin: 10px 0 0;
+}

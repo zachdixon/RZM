@@ -329,6 +329,7 @@
                   <div class="player-info-wrapper pull-left">
                     <div class="player-avatar-wrapper">
                       <img src="../images/players/1.png" alt="Player 2" class="img-player-avatar">
+                      <button class="btn-edit-images" data-toggle="modal" data-target="#edit-images-modal"><span class="glyphicon glyphicon-pencil"></span></button>
                       <p class="player-name">Commish</p>
                     </div>
                     <p class="player-name mobile-show">Commish</p>
@@ -513,5 +514,56 @@
         </div><!-- /#dashboard.container -->
       </div><!-- /#main-container -->
     </div>
+
+    <div id="edit-images-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Customize Your Player</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12">
+                <h5>Status</h5>
+                <textarea class="form-control" name="player-status" rows="3"></textarea>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6 col-xs-12">
+                <h5>Game Face</h5>
+                <div class="game-face-wrapper profile-image-wrapper">
+                  <img class="img-game-face profile-image" src="../images/players/1.png">
+                  <label for="game-face-upload" class="btn btn-default upload-image-label">
+                    Upload Image
+                    <input type="file" id="game-face-upload" name="player-game-face">
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                <h5>Winning Face</h5>
+                <div class="winning-face-wrapper profile-image-wrapper">
+                  <img class="img-winning-face profile-image" src="../images/players/1.png">
+                  <label for="winning-face-choose" class="btn btn-default upload-image-label">
+                    Choose one of our images
+                    <input type="file" id="winning-face-choose" name="player-winning-face-choose">
+                  </label>
+                  <p>Or</p>
+                  <label for="winning-face-upload" class="btn btn-default upload-image-label">
+                    Upload Image
+                    <input type="file" id="winning-face-upload" name="player-winning-face-upload">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   </body>
 </html>
