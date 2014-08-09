@@ -259,19 +259,50 @@ p.game-time {
   margin: 0;
 }
 
-.btn-edit-images {
+.btn-edit-images, .btn-status {
   position: absolute;
   top: 5px;
   left: 5px;
   background: rgba(0, 0, 0, 0.5);
   border-color: rgba(0,0,0,0);
+  outline: 0 0 1px 1px #000;
   color: #FFF;
   border-radius: 50%;
   outline: none;
 }
-.btn-edit-images:hover {
+.btn-edit-images:hover, .btn-status:hover {
   background: #232323;
   border-color: #fff;
+}
+.btn-status {
+  padding: 3px 9px;
+}
+.btn-status.unread {
+  -webkit-animation: unreadStatus 1.5s ease-in-out 0 infinite; /* Safari 4+ */
+  -moz-animation:    unreadStatus 1.5s ease-in-out 0 infinite; /* Fx 5+ */
+  -o-animation:      unreadStatus 1.5s ease-in-out 0 infinite; /* Opera 12+ */
+  animation:         unreadStatus 1.5s ease-in-out 0 infinite; /* IE 10+ */
+}
+
+@-webkit-keyframes unreadStatus {
+  0%   { box-shadow: 0 0 10px 1px #000; }
+  50% { box-shadow: 0 0 10px 1px #f00; }
+  100% { box-shadow: 0 0 10px 1px #000; }
+}
+@-moz-keyframes unreadStatus {
+  0%   { box-shadow: 0 0 10px 1px #000; }
+  50% { box-shadow: 0 0 10px 1px #f00; }
+  100% { box-shadow: 0 0 10px 1px #000; }
+}
+@-o-keyframes unreadStatus {
+  0%   { box-shadow: 0 0 10px 1px #000; }
+  50% { box-shadow: 0 0 10px 1px #f00; }
+  100% { box-shadow: 0 0 10px 1px #000; }
+}
+@keyframes unreadStatus {
+  0%   { box-shadow: 0 0 10px 1px #000; }
+  50% { box-shadow: 0 0 10px 1px #f00; }
+  100% { box-shadow: 0 0 10px 1px #000; }
 }
 
 #edit-images-modal .profile-image {

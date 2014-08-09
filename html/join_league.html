@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RedZone Mania</title>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/slate.bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    <link href="../css/flaticon.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/rzm.css" rel="stylesheet">
+    <link href="../css/join_league.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="../js/imagesloaded.min.js" type="text/javascript"></script>
+
+    <script src="../js/global.js" type="text/javascript"></script>
+    <script src="../js/join_league.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="loading">
+      <img class="loading-image" src="../images/backgrounds/loading_monkey.png">
+    </div>
+    <div id="main-wrapper">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logo.png" alt="Red Mania Zone" width="100%"></a>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+      <!-- Main Container -->
+      <div id="main-container">
+        <div id="join-league" class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <header class="join-league-header">
+                <h1>Welcome to RedZone Mania!</h1>
+                <h4>
+                  You've been invited by Commish to join their league "Beat the Monkey" Classic.
+                  <br>
+                  Register or log in now to be a part of the mania!
+                </h4>
+              </header>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-sm-6 col-xs-12 pull-right">
+              <header>
+                <h2 class="text-align-center">
+                  Learn More
+                </h2>
+              </header>
+              <div class="about-video">
+                <iframe src="http://www.youtube.com/embed/ScMzIvxBSi4?rel=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <h3>RedZone Mania</h3>
+              <p>An exciting, web and app/based game with lots of bells, whistles and new additions that will help make your NFL football Sundays the most exciting day of the week.</p>
+              <p>5 picks per week, that's all it takes. Enjoy the game as your scores update live and watch the mania!</p>
+            </div><!-- /.col-xs-12 -->
+            <div class="col-sm-6 col-xs-12">
+              <header class="form-header">
+                <h2 data-form="register" class="form-header">
+                  Register
+                  <span>
+                    or
+                    <a href="#" class="btn-toggle-form" data-form="login">Log in</a>
+                  </span>
+                </h2>
+                <h2 data-form="login" class="form-header">
+                  Log In
+                  <span>
+                    or
+                    <a href="#" class="btn-toggle-form" data-form="register">Register</a>
+                  </span>
+                </h2>
+              </header>
+              <div class="rzm-section bg-tweed form-wrapper">
+                <form novalidate="novalidate" method="post" id="new_user" class="simple_form new_user" action="/users" accept-charset="UTF-8" data-form="register">
+                  <div class="form-group">
+                    <div class="control-group string required user_first_name">
+                      <label for="user_first_name" class="string required control-label"><abbr title="required">*</abbr> First name</label>
+                      <div class="controls">
+                        <input type="text" size="50" name="user[first_name]" id="user_first_name" class="string required form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="control-group string required user_last_name">
+                      <label for="user_last_name" class="string required control-label"><abbr title="required">*</abbr> Last name</label>
+                      <div class="controls">
+                        <input type="text" size="50" name="user[last_name]" id="user_last_name" class="string required form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="control-group email required user_email">
+                      <label for="user_email" class="email required control-label"><abbr title="required">*</abbr> Email</label>
+                      <div class="controls">
+                        <input type="email" value="" size="50" name="user[email]" id="user_email" class="string email required form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="control-group password required user_password">
+                      <label for="user_password" class="password required control-label"><abbr title="required">*</abbr> Password</label>
+                      <div class="controls">
+                        <input type="password" size="50" placeholder="At least 8 characters" name="user[password]" id="user_password" class="password required form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="control-group password required user_password_confirmation">
+                      <label for="user_password_confirmation" class="password required control-label"><abbr title="required">*</abbr> Password Confirmation</label>
+                      <div class="controls">
+                        <input type="password" size="50" placeholder="At least 8 characters" name="user[password_confirmation]" id="user_password_confirmation" class="password required form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <p data-form="register" class="text-align-center">By clicking register you agree to RedZone Mania's
+                    <br>
+                    <a href="#">terms of service</a>
+                    and
+                    <a href="#">privacy poliicy</a>
+                  </p>
+                  <div class="text-align-center">
+                    <button type="submit" name="commit" class="btn btn-large btn-primary btn-register-submit">Register and Join League</button>
+                  </div>
+                </form>
+                <form method="post" id="login-form" class="new_user" action="" accept-charset="UTF-8" data-form="login">
+                  <div class="form-group">
+                    <label for="user_email" class="control-label">Email</label>
+                    <input type="email" value="" name="user[email]" id="user_email" autofocus="autofocus" placeholder="Email" required="" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="user_password" class="control-label">Password <a href="#" tabindex="-1" class="forgot-password-link">Forgot?</a></label>
+                    <input type="password" name="user[password]" id="user_password" placeholder="Password" required="" class="form-control">
+                  </div>
+                  <div class="text-align-center">
+                    <button type="submit" class="btn btn-large btn-primary">Log In and Join League</button>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.col-xs-12 -->
+          </div><!-- /.row -->
+
+          <footer class="main-footer">
+            <div class="row">
+              <div class="col-md-12 clearfix">
+                <div class="footer-logo pull-left"><img src="../images/logo.png" alt="Logo" width="100px"/>&copy; 2014</div>
+                <div class="footer-details pull-right">
+                  <nav class="footer-nav">
+                    <a href="#">FAQ</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div><!-- /#dashboard.container -->
+      </div><!-- /#main-container -->
+    </div>
+  </body>
+</html>

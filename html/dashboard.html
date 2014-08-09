@@ -145,6 +145,7 @@
                   <div class="player-info-wrapper pull-left">
                     <div class="player-avatar-wrapper">
                       <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
+                      <button class="btn-status unread" data-toggle="modal" data-target="#status-modal">S</button>
                       <p class="player-name">Player 1</p>
                     </div>
                     <p class="player-name mobile-show">Player 1</p>
@@ -221,11 +222,6 @@
                 </div><!-- /.player-wrapper -->
                 <div class="player-details-wrapper">
                   <div class="player-details clearfix">
-                    <div class="col-xs-12">
-                      <h4>Player 1 says:</h4>
-                      <p><span class="large-quotes">&#8220;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia dui quis lectus vulputate, et lacinia massa varius. Donec non felis consectetur, ullamcorper libero sed, malesuada elit.<span class="large-quotes">&#8221;</span></p>
-                      <hr>
-                    </div>
                     <div class="col-xs-12">
                       <h4>Last Man Standing</h4>
                       <div class="row">
@@ -413,11 +409,6 @@
                       </div>
                     </div>
                     <div class="col-xs-12">
-                      <h4>Commish says:</h4>
-                      <p><span class="large-quotes">&#8220;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia dui quis lectus vulputate, et lacinia massa varius. Donec non felis consectetur, ullamcorper libero sed, malesuada elit.<span class="large-quotes">&#8221;</span></p>
-                      <hr>
-                    </div>
-                    <div class="col-xs-12">
                       <h4>Last Man Standing</h4>
                       <div class="row">
                         <div class="col-sm-3 col-xs-12">
@@ -561,6 +552,24 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="status-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Player 1</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12">
+                <textarea class="form-control" name="player-status" rows="3"></textarea>
+              </div>
+            </div>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
