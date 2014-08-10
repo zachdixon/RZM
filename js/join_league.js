@@ -1,5 +1,5 @@
 (function(window, document, $) {
-  var JoinLeague = function() {
+  window.JoinLeagueView = function() {
 
     this.init();
   }
@@ -24,10 +24,8 @@
       $('[data-form="'+data_form+'"]:not(a)').fadeIn();
     });
   }
-
-  window.JoinLeague = JoinLeague;
 })(window, document, jQuery);
 
 $(function() {
-  var joinleague = new JoinLeague();
+  var joinleagueview = new JoinLeagueView();
 });
