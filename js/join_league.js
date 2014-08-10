@@ -4,11 +4,11 @@
     this.init();
   }
 
-  JoinLeague.prototype.init = function() {
+  JoinLeagueView.prototype.init = function() {
     this.attachEventHandlers();
   }
 
-  JoinLeague.prototype.attachEventHandlers = function() {
+  JoinLeagueView.prototype.attachEventHandlers = function() {
     var that = this;
     $('.btn-toggle-form').on('click', changeForm.bind(that));
   }
