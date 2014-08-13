@@ -8,6 +8,8 @@ $(function(){
 
   $('.show-player-details').on('click', togglePlayerDetails);
   $('.my-dashboard .show-player-details').trigger('click');
+  $('#game-face-upload').on('change', changeGameFace);
+  $('#winning-face-upload').on('change', changeWinningFace);
 
   $('#player-select').on('change', changeDashboard);
 });
@@ -38,4 +40,28 @@ function changeDashboard(e) {
     });
 
   }
+}
+function getImage(e, img, input) {
+  var files = e.target.files, f = undefined, reader, i = 0;
+
+  while (f = files[i]) {
+    if (!f.type.match("image.*")) {
+      continue;
+    }
+    reader = new FileReader();
+    reader.onload = (function(theFile) {
+      return function(e) {
+        $(img).attr('src', e.target.result);
+        $(input).val(e.target.result);
+      };
+    })(f);
+    reader.readAsDataURL(f);
+    i++;
+  }
+}
+function changeGameFace(e) {
+  var image = getImage(e, '.img-game-face', '#game-face-hidden');
+}
+function changeWinningFace(e) {
+  var image = getImage(e, '.img-winning-face', '#winning-face-hidden');
 }
