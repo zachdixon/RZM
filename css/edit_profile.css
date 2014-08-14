@@ -1,3 +1,124 @@
-#edit-profile {
-  padding: 15px 30px;
+#edit-profile, #edit-account-settings {
+  padding: 15px;
+}
+
+.main-container-header .game-face-wrapper {
+  max-width: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 30px;
+  position: relative;
+}
+
+.main-container-header .game-face-image {
+  width: 100%;
+}
+
+.btn-edit-images {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 40px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+}
+.game-face-wrapper:hover .btn-edit-images {
+  display: block;
+}
+
+.user-info h1 {
+  font-weight: 100;
+  margin-top: 15px;
+}
+
+.main-sub-nav-wrapper {
+  padding: 10px 0;
+  background: #311;
+  margin-bottom: 15px;
+}
+
+.main-sub-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-sub-nav > ul > li {
+  display: inline-block;
+  font-size: 16px;
+  padding: 0 10px;
+  border-right: 1px solid #BBB;
+}
+.main-sub-nav > ul > li:last-of-type {
+  border-right: none;
+}
+.main-sub-nav > ul > li > a {
+  color: #BBB;
+  -webkit-transition: color 300ms ease-in-out;
+  -moz-transition: color 300ms ease-in-out;
+  -ie-transition: color 300ms ease-in-out;
+  -o-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+.main-sub-nav > ul > li > a:hover {
+  color: #fff;
+}
+.main-sub-nav > ul > li.active > a {
+  color: #fff;
+}
+.leagues-wrapper {
+  display: none;
+}
+.btn-join-league {
+  margin-top: 15px;
+}
+#my-leagues {
+  padding: 15px;
+}
+.leagues-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.league-item {
+  background: #232323;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.league-item:last-of-type {
+  margin-bottom: 0;
+}
+.league-item .league-icon {
+  font-size: 30px;
+  margin: 20px;
+}
+.league-info h3 {
+  margin: 15px 0 5px;
+}
+.btn-leave-league {
+  margin: 21px;
+}
+
+#edit-images-modal .profile-image {
+  width: 100%;
+}
+.profile-image-wrapper {
+  position: relative;
+  max-width: 200px;
+  text-align: center;
+  margin: 15px auto;
+}
+.upload-image-label {
+  margin-top: 5px;
+  width: 100%;
+}
+#game-face-upload,#winning-face-choose, #winning-face-upload {
+  display: none;
+}
+.winning-face-wrapper p {
+  margin: 10px 0 0;
 }

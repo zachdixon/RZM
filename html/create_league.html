@@ -46,15 +46,36 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="rzm.html">RZM Gameboard</a></li>
-              <li><a href="pick_em_panel.html">Pick'em Panel</a></li>
-              <li><a href="league_index.html">Leagues</a></li>
+              <li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
+              <li><a href="rzm.html"><span class="glyphicon glyphicon-th-large"></span>Gameboard</a></li>
+              <li><a href="pick_em_panel.html"><span class="glyphicon glyphicon-tasks"></span>Pick'em Panel</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-tower"></span>
+                  LMS Games
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Lock of the week</a></li>
+                  <li><a href="#">Upset Special</a></li>
+                  <li><a href="#">Survivor</a></li>
+                  <li><a href="#">Monday Football at Night</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-stats"></span>
+                  Stats
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Stats 1</a></li>
+                  <li><a href="#">Stats 2</a></li>
+                </ul>
+              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="header-countdown"></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
                   <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
                   <span>Commish</span>
                   <b class="caret"></b>

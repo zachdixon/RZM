@@ -33,6 +33,11 @@ body {
   background-image: url('../images/backgrounds/dark_brick_wall.png');
   padding-top: 52px;
 }
+@media (min-width: 768px) {
+  body {
+    padding-top: 85px;
+  }
+}
 
 .loading {
   position: fixed;
@@ -88,6 +93,7 @@ body {
 /*
   Bootstrap Override
 */
+
 
 .caret {
   margin-left: 5px;
@@ -173,10 +179,33 @@ input.form-control[type="email"]:focus, input.form-control[type="password"]:focu
   box-shadow: 0 0 3px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.5);
   border: 2px solid #000;
 }
-
 .navbar-brand .logo {
   width: 130px;
   max-width: 130px;
+}
+@media (min-width: 768px) {
+  .navbar-brand {
+    padding: 30px 15px;
+    height: 80px;
+  }
+
+  .navbar-nav > li > a {
+    text-align: center;
+    font-weight: 200;
+  }
+  .navbar-nav > li > a > .glyphicon {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 2em;
+  }
+  .navbar-nav .no-icon {
+    padding: 32px 10px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-nav > li > a > .glyphicon {
+    margin-right: 5px;
+  }
 }
 
 .avatar-wrapper {
@@ -231,6 +260,12 @@ img.avatar {
 }
 
 /* Page headers */
+
+.main-container-header {
+  padding: 30px 0;
+  background: #511;
+  color: #FFF;
+}
 
 .league-name {
   color: #666;

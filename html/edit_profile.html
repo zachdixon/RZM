@@ -78,7 +78,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="header-countdown"></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
                   <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
                   <span>Commish</span>
                   <b class="caret"></b>
@@ -110,83 +110,110 @@
       </nav>
       <!-- Main Container -->
       <div id="main-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-header clearfix">
-                <h1 class="league-name pull-left">Edit Profile</h1>
-                <div class="options-wrapper pull-right">
-
+        <div class="main-container-header">
+          <div class="container">
+            <div class="row user-wrapper">
+              <div class="col-md-12 clearfix">
+                <div class="game-face-wrapper pull-left">
+                  <img class="game-face-image" src="../images/players/1.png">
+                  <a href="#" class="btn-edit-images" data-toggle="modal" data-target="#edit-images-modal">Edit</a>
+                </div>
+                <div class="user-info pull-left">
+                  <h1>Commish</h1>
+                  <p class="status">This is a random status</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div id="edit-profile" class="rzm-section bg-tweed">
-              <form class="form-horizontal" role="form">
-                <!-- <div class="form-group">
-                  <label for="player-game-face" class="col-sm-2 control-label">Game Face: </label>
-                  <div class="col-md-4 col-sm-6">
-                    <input type="file" id="player-game-face" class="form-control" accept="image/*">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-winning-game-face" class="col-sm-2 control-label">Winning Game Face: </label>
-                  <div class="col-md-4 col-sm-6">
-                    <input type="file" id="player-winning-game-face" class="form-control" accept="image/*">
-                  </div>
-                </div> -->
-                <div class="form-group">
-                  <label for="player-game-name" class="col-sm-2 control-label">Game Name: </label>
-                  <div class="col-md-4 col-sm-6">
+        </div>
+        <div class="main-sub-nav-wrapper">
+          <div class="container">
+            <nav class="main-sub-nav">
+              <ul>
+                <li class="active"><a href="#" class="sub-nav-link" data-section="account-wrapper">Account</a></li>
+                <li><a href="#" class="sub-nav-link" data-section="leagues-wrapper">Leagues</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row account-wrapper settings-section">
+            <div class="col-sm-6 col-xs-12">
+              <h2>Profile</h2>
+              <div id="edit-profile" class="rzm-section bg-tweed">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="player-game-name" class="control-label">Game Name: </label>
                     <input type="text" id="player-game-name" class="form-control" placeholder="Game name">
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-email" class="col-sm-2 control-label">Email: </label>
-                  <div class="col-md-4 col-sm-6">
-                    <input type="text" id="player-email" class="form-control" placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-first-name" class="col-sm-2 control-label">First Name: </label>
-                  <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label for="player-first-name" class="control-label">First Name: </label>
                     <input type="text" id="player-first-name" class="form-control" placeholder="First Name">
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-last-name" class="col-sm-2 control-label">Last Name: </label>
-                  <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label for="player-last-name" class="control-label">Last Name: </label>
                     <input type="text" id="player-last-name" class="form-control" placeholder="Last Name">
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-new-password" class="col-sm-2 control-label">New Password: </label>
-                  <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <div class="clearfix">
+                      <button type="submit" class="btn btn-primary pull-right">Save Changes</button>
+                    </div>
+                  </div>
+                </form>
+              </div><!-- /#edit-profile.rzm-section -->
+            </div><!-- /.col-md-6 -->
+            <div class="col-sm-6 col-xs-12">
+              <h2>Account Settings</h2>
+              <div id="edit-account-settings" class="rzm-section bg-tweed">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="player-email" class="control-label">Email: </label>
+                    <input type="text" id="player-email" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="player-new-password" class="control-label">New Password: </label>
                     <input type="text" id="player-new-password" class="form-control" placeholder="New Password">
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-new-password-confirmation" class="col-sm-2 control-label">New Password Confirmation: </label>
-                  <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label for="player-new-password-confirmation" class="control-label">New Password Confirmation: </label>
                     <input type="text" id="player-new-password-confirmation" class="form-control" placeholder="New Password Confirmation">
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="player-current-password" class="col-sm-2 control-label">Current Password: </label>
-                  <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label for="player-current-password" class="control-label">Current Password: </label>
                     <input type="text" id="player-current-password" class="form-control" placeholder="Required for email and new password changes">
                   </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-md-4 col-sm-6 col-sm-offset-2 clearfix">
-                    <a href="javascript:history.back()" class="btn btn-default pull-left">Cancel</a>
-                    <button type="submit" class="btn btn-primary pull-right">Save Changes</button>
+                  <div class="form-group">
+                    <div class="clearfix">
+                      <button type="submit" class="btn btn-primary pull-right">Save Changes</button>
+                    </div>
                   </div>
-                </div>
-              </form>
-            </div><!-- /#edit-profile.rzm-section -->
+                </form>
+              </div>
+            </div>
           </div><!-- /.row -->
+          <div class="row leagues-wrapper settings-section">
+            <div class="col-md-12">
+              <header class="clearfix">
+                <h2 class="pull-left">My Leagues</h2>
+                <a href="leagues_index.html" class="btn btn-default pull-right btn-join-league">Join/Create a League</a>
+              </header>
+              <div id="my-leagues" class="rzm-section bg-tweed">
+                <ul class="leagues-list">
+                  <li class="league-item clearfix">
+                    <span class="league-icon pull-left flaticon-american21"></span>
+                    <div class="league-info pull-left">
+                      <h3>Beat The Monkey</h3>
+                      <p>
+                        Owned By:
+                        <a href="mailto:email@email.com">Commish</a>
+                      </p>
+                    </div>
+                    <button class="btn-leave-league btn btn-danger pull-right">Leave</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div><!-- /.container -->
       </div>
     </div>
@@ -206,5 +233,58 @@
         </div>
       </div>
     </footer>
+
+    <div id="edit-images-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Customize Your Player</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12">
+                <h5>Status</h5>
+                <textarea class="form-control" name="player-status" rows="3"></textarea>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6 col-xs-12">
+                <h5>Game Face</h5>
+                <div class="game-face-wrapper profile-image-wrapper">
+                  <img class="img-game-face profile-image" src="../images/players/1.png">
+                  <label for="game-face-upload" class="btn btn-default upload-image-label">
+                    Upload Image
+                    <input type="file" id="game-face-upload" name="player-game-face" accept="image/*">
+                    <input type="hidden" id="game-face-hidden" name="game-face-hidden">
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                <h5>Winning Face</h5>
+                <div class="winning-face-wrapper profile-image-wrapper">
+                  <img class="img-winning-face profile-image" src="../images/players/1.png">
+                  <label for="winning-face-choose" class="btn btn-default upload-image-label">
+                    Choose one of our images
+                    <input type="file" id="winning-face-choose" name="player-winning-face-choose">
+                  </label>
+                  <p>Or</p>
+                  <label for="winning-face-upload" class="btn btn-default upload-image-label">
+                    Upload Image
+                    <input type="file" id="winning-face-upload" name="player-winning-face-upload" accept="image/*">
+                    <input type="hidden" id="winning-face-hidden" name="winning-face-hidden">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   </body>
 </html>
