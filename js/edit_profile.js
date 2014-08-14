@@ -1,6 +1,4 @@
 $(function(){
-  $('#player-game-face').on('change', changeGameFace);
-  $('#player-winning-game-face').on('change', changeWinningGameFace);
 });
 
 function changeGameFace(e) {

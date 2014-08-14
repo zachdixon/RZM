@@ -10,6 +10,7 @@
     <link href="../css/slate.bootstrap.min.css" rel="stylesheet">
     <link href="../css/flaticon.css" rel="stylesheet">
     <link href="../css/select2.css" rel="stylesheet">
+    <!-- <link href="../css/ladda.min.css" rel="stylesheet"> -->
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/commissioner_panel.css" rel="stylesheet">
 
@@ -20,6 +21,8 @@
     <!-- // <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script> -->
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="../js/spin.min.js" type="text/javascript"></script>
+    <script src="../js/ladda.jquery.min.js" type="text/javascript"></script>
     <script src="../js/select2.min.js" type="text/javascript"></script>
 
 
@@ -50,7 +53,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Send Invites</button>
+              <button type="submit" class="btn btn-primary ladda-button" data-style="contract"><span class="ladda-label">Send Invites</span></button>
             </div>
           </form>
         </div><!-- /.modal-content -->

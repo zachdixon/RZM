@@ -5,6 +5,7 @@ $(function(){
     finishedLoading();
   });
   $('.select2').select2({tags: [], dropdownCssClass: 'hide'});
+  $('.ladda-button').ladda('bind');
 });
 
 function imagesLoaded(){
