@@ -68,7 +68,8 @@ body {
   background: url('../images/backgrounds/brickwall.png');
 }
 .bg-tweed {
-  background: url('../images/backgrounds/tweed.png');
+  background: url('../images/backgrounds/tweed.png') !important;
+  color: #fff !important;
 }
 
 .dark-half-rule {
@@ -88,6 +89,20 @@ body {
 
 .underline {
   text-decoration: underline;
+}
+
+.table {
+  color: #fff;
+}
+
+.w10 {
+  width: 10%;
+}
+.w90 {
+  width: 90%;
+}
+.w100 {
+  width: 100%;
 }
 
 /*
@@ -153,6 +168,13 @@ body {
 .page-header {
   margin: 20px 0;
   border: none;
+}
+
+label {
+  font-weight: normal;
+}
+.control-label {
+  font-weight: bold;
 }
 
 /*
@@ -228,13 +250,36 @@ img.avatar {
 }
 
 .rzm-section {
+  color: #232323;
   box-shadow: inset 0 0 3px rgba(255,255,255,0.5), 0 0 3px rgba(0,0,0,0.7);
   border: 1px solid #000000;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0 0 15px 0;
+  background: rgb(238,238,238);
 }
 .rzm-section hr {
-  box-shadow: 0 1px 1px #999;
+  box-shadow: 0 1px 1px #fff;
+}
+.rzm-section header {
+  margin: 0 -15px 15px -15px;
+  padding: 0 15px 10px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid #999;
+  background: rgb(238,238,238);
+  background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1)));
+  background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+  background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+  background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+  background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+}
+.rzm-section header > h2 {
+  color: #232323;
+  text-shadow: 1px 1px 1px #fff;
+}
+.rzm-section header > h2 .label {
+  text-shadow: none;
 }
 
 /* Placement Line */
@@ -265,6 +310,45 @@ img.avatar {
   padding: 30px 0;
   background: #511;
   color: #FFF;
+}
+
+.main-sub-nav-wrapper {
+    padding: 10px 0;
+    background: #311;
+    margin-bottom: 15px;
+  border: 5px solid #211;
+  border-left: none;
+  border-right: none;
+}
+
+.main-sub-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-sub-nav > ul > li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 10px;
+    border-right: 1px solid #BBB;
+}
+.main-sub-nav > ul > li:last-of-type {
+    border-right: none;
+}
+.main-sub-nav > ul > li > a {
+    color: #BBB;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ie-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+}
+.main-sub-nav > ul > li > a:hover {
+    color: #fff;
+}
+.main-sub-nav > ul > li.active > a {
+    color: #fff;
 }
 
 .league-name {

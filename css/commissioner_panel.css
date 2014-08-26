@@ -1,11 +1,37 @@
 h2 {
   color: #fff;
 }
+input.form-control[type="text"] {
+  background: #fff;
+  color: #232323;
+  border: 2px solid #ccc;
+  box-shadow: none;
+}
 .rzm-section {
   padding: 0 15px 15px;
 }
+.rzm-section hr {
+  border-top: 1px solid #ccc;
+}
 
-.league-details, .payment-details {
+.main-container-header {
+  background: #116A8C;
+}
+.main-container-header .user-info h1 {
+  font-family: 'destroyregular', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.main-sub-nav-wrapper {
+  background: #082837;
+  border: 5px solid #112233;
+  border-left: none;
+  border-right: none;
+}
+.status-wrapper {
+  display: none;
+}
+.league-details, .payment-details, .league-settings {
   margin-bottom: 15px;
 }
 .league-details .control-label {
@@ -17,6 +43,68 @@ h2 {
 
 .league-number {
   font-size: 14px;
+}
+
+.league-settings label {
+  width: 100%;
+}
+
+.lms-section {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 0px #000,0 0 4px 0px rgba(255, 255, 255, 0.3);
+  border: 1px solid #000;
+}
+.lms-section:first-of-type, .lms-section:nth-of-type(2) {
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .lms-section {
+    margin-bottom: 15px;
+  }
+}
+
+.lms-section.lock-of-the-week {
+  background: #00A5D2;
+}
+.lms-section.upset-special {
+  background: #6400C8;
+}
+.lms-section.survivor {
+  background: #E60000;
+}
+.lms-section.monday-football-at-night {
+  background: #663300;
+}
+
+.lms-section h3 {
+  margin: 5px 0;
+  color: #FFF;
+  text-shadow: none;
+  font-size: 14px;
+}
+.lms-section h3 span {
+  margin-right: 5px;
+}
+.lms-section .flaticon-american21 {
+  font-size: 15px;
+}
+
+.lms-section .glyphicon-info-sign {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+.lms-games input[type="checkbox"] {
+  margin: 18px 0 0 5px;
+}
+
+.monkey-points p:first-of-type {
+  margin: 2px 10px 0 0;
+}
+.monkey-points p:last-of-type {
+  margin: 2px 0 0 10px;
 }
 
 .league-type-wrapper {

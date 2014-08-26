@@ -35,41 +35,6 @@
   margin-top: 15px;
 }
 
-.main-sub-nav-wrapper {
-  padding: 10px 0;
-  background: #311;
-  margin-bottom: 15px;
-}
-
-.main-sub-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.main-sub-nav > ul > li {
-  display: inline-block;
-  font-size: 16px;
-  padding: 0 10px;
-  border-right: 1px solid #BBB;
-}
-.main-sub-nav > ul > li:last-of-type {
-  border-right: none;
-}
-.main-sub-nav > ul > li > a {
-  color: #BBB;
-  -webkit-transition: color 300ms ease-in-out;
-  -moz-transition: color 300ms ease-in-out;
-  -ie-transition: color 300ms ease-in-out;
-  -o-transition: color 300ms ease-in-out;
-  transition: color 300ms ease-in-out;
-}
-.main-sub-nav > ul > li > a:hover {
-  color: #fff;
-}
-.main-sub-nav > ul > li.active > a {
-  color: #fff;
-}
 .leagues-wrapper {
   display: none;
 }

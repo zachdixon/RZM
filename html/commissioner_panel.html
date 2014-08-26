@@ -137,136 +137,224 @@
       </nav>
       <!-- Main Container -->
       <div id="main-container">
+        <div class="main-container-header">
+          <div class="container">
+            <div class="row user-wrapper">
+              <div class="col-md-12 clearfix">
+                <div class="user-info pull-left">
+                  <h1>"Beat the Monkey" Classic</h1>
+                  <h2>Commissioner Panel</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-sub-nav-wrapper">
+          <div class="container">
+            <nav class="main-sub-nav">
+              <ul>
+                <li class="active"><a href="#" class="sub-nav-link" data-section="details-wrapper">League Details</a></li>
+                <li><a href="#" class="sub-nav-link" data-section="status-wrapper">Billing</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <div id="commissioner-panel" class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-header clearfix">
-                <h1 class="league-name pull-left">Commissioner Panel</h1>
+          <div class="details-wrapper tab-section">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="league-details rzm-section clearfix">
+                  <header class="clearfix">
+                    <h2>League Details</h2>
+                  </header>
+                  <p><strong>Commissioner:</strong> Commish</p>
+                  <p><strong>League Number:</strong> <span class="label label-default league-number">1234</span></p>
+                  <hr>
+                  <form id="league-details-form" action="#" method="post">
+                    <label for="league-name" class="control-label">*League Name: <input type="text" name="league_name" id="league-name" class="form-control" placeholder="6-24 characters" value='"Beat the Monkey" Classic'></label>
+                    <label for="league-password" class="control-label">*League Password: <input type="text" name="league_password" id="league-password" class="form-control" placeholder="6-8 characters" value="12341234"></label>
+                    <button type="submit" class="btn btn-default pull-right" disabled="">Save Changes</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="league-settings rzm-section clearfix">
+                  <header class="clearfix">
+                    <h2>League Settings</h2>
+                  </header>
+                  <form id="league-settings-form" action="#">
+                    <div class="form-group league-type">
+                      <label class="control-label">*League Type:</label>
+                      <label><input class="radio-league-type" type="radio" value="basic" name="league-type" /> RedZone Mania Basic</label>
+                      <label><input class="radio-league-type" type="radio" value="plus" name="league-type" checked="" /> RedZone Mania Plus</label>
+                    </div>
+                    <div class="form-group lms-games">
+                      <hr/>
+                      <label class="control-label">Last Man Standing Games:</label>
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-12 clearfix">
+                          <div class="pull-left w10"><input type="checkbox" name="lms-games" value="lock_of_the_week" /></div>
+                          <div class="pull-left w90">
+                            <div class="lms-section lock-of-the-week">
+                              <h3>
+                                <span class="glyphicon glyphicon-lock"></span>
+                                Lock of the Week
+                                <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span>
+                              </h3>
+                            </div><!-- /lms-section -->
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-6 col-xs-12 clearfix">
+                          <div class="pull-left w10"><input type="checkbox" name="lms-games" value="upset_special" /></div>
+                          <div class="pull-left w90">
+                            <div class="lms-section upset-special">
+                              <h3>
+                                <span class="glyphicon glyphicon-thumbs-down"></span>
+                                Upset Special
+                                <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span>
+                              </h3>
+                            </div><!-- /lms-section -->
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-6 col-xs-12 clearfix">
+                          <div class="pull-left w10"><input type="checkbox" name="lms-games" value="survivor" /></div>
+                          <div class="pull-left w90">
+                            <div class="lms-section survivor">
+                              <h3>
+                                <span class="glyphicon glyphicon-fire"></span>
+                                Survivor
+                                <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span>
+                              </h3>
+                            </div><!-- /lms-section -->
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                        <div class="col-sm-6 col-xs-12 clearfix">
+                          <div class="pull-left w10"><input type="checkbox" name="lms-games" value="monday-football-at-night" /></div>
+                          <div class="pull-left w90">
+                            <div class="lms-section monday-football-at-night">
+                              <h3>
+                                <span class="flaticon-american21"></span>
+                                Monday Football @ Night
+                                <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span>
+                              </h3>
+                            </div><!-- /lms-section -->
+                          </div>
+                        </div><!-- /.col-sm-3 -->
+                      </div>
+                    </div>
+                    <div class="form-group monkey-points">
+                      <hr/>
+                      <label class="control-label">Monkey Points:</label>
+                      <div class="clearfix">
+                        <p class="pull-left">Denomination (1-1000):</p>
+                        <input type="number" min="1" max="1000" value="10" name="monkey_points" class="pull-left"/>
+                        <p class="pull-left">points per game</p>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-default pull-right" disabled="">Save Changes</button>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="league-details rzm-section bg-tweed clearfix">
-                <header>
-                  <h2>League Details</h2>
-                </header>
-                <p><strong>Commissioner:</strong> Commish</p>
-                <p><strong>League Number:</strong> <span class="label label-default league-number">1234</span></p>
-                <hr>
-                <form id="league-details-form" action="#" method="post">
-                  <label for="league-name" class="control-label">*League Name: <input type="text" name="league_name" id="league-name" class="form-control" placeholder="6-24 characters" value='"Beat the Monkey" Classic'></label>
-                  <label for="league-password" class="control-label">*League Password: <input type="text" name="league_password" id="league-password" class="form-control" placeholder="6-8 characters" value="12341234"></label>
-                  <button type="submit" class="btn btn-default pull-right" disabled="">Save Changes</button>
-                </form>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="payment-details rzm-section bg-tweed clearfix">
-                <header class="clearfix">
-                  <h2>League Status <span class="pull-right label label-warning">Trial</span></h2>
-                </header>
-                <p>Your trial period will end on <span class="underline">October 5, 2014</span></p>
-                <p><strong>Total amount due:</strong> <span class="pull-right">$5.90 ($2.95/person)</span></p>
-                <p><strong>Payment due by:</strong> <span class="pull-right">October 5, 2014</span></p>
-                <p class="alert alert-info"><span class="glyphicon glyphicon-info-sign"></span> We will collect your payment method at a later date</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="rzm-section bg-tweed league-players clearfix">
-                <header>
-                  <h2>League Members <button class="btn btn-default" data-toggle="modal" data-target="#invite-modal">Invite <span class="badge">2/10</span></button></h2>
-                  <p class="text-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> You need at least 2 more players to play with this league</p>
-                </header>
-                <table class="table table-striped-table-hover">
-                  <thead>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="rzm-section league-players clearfix">
+                  <header class="clearfix">
+                    <h2>League Members <button class="btn btn-default" data-toggle="modal" data-target="#invite-modal">Invite <span class="badge">2/10</span></button></h2>
+                  </header>
+                  <div class="errors">
+                    <p class="text-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> You need at least 2 more players to play with this league</p>
+                  </div>
+                  <table class="table table-striped-table-hover">
+                    <thead>
                     <tr>
                       <th>#</th>
                       <th>Name</th>
                       <th>Email</th>
                     </tr>
-                  </thead>
-                  <tbody>
+                    </thead>
+                    <tbody>
                     <tr>
                       <td>1</td>
                       <td>Zachary Dixon</td>
                       <td><a href="mailto:zach@domain.com?Subject=RedZone%20Mania" target="_top">
-  zach@domain.com</a></td>
+                        zach@domain.com</a></td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Wes Robinson</td>
                       <td><a href="mailto:wes@domain.com?Subject=RedZone%20Mania" target="_top">
-  wes@domain.com</a></td>
+                        wes@domain.com</a></td>
                     </tr>
-                  </tbody>
-                </table>
-                <a href="mailto:zach@domain.com,wes@domain.com?Subject=RedZone%20Mania" target="_top" class="btn btn-default pull-right">Email All</a>
+                    </tbody>
+                  </table>
+                  <a href="mailto:zach@domain.com,wes@domain.com?Subject=RedZone%20Mania" target="_top" class="btn btn-default pull-right">Email All</a>
+                </div>
+                <!--<hr>-->
+                <!--<div class="row league-type">-->
+                  <!--<div class="col-md-12">-->
+                    <!--<header class="clearfix">-->
+                      <!--<h2>League Type</h2>-->
+                      <!--<p class="">Choose your league package. You can change this at any time, and will be charged for the league you have selected at the end of your 5 week free trial.</p>-->
+                      <!--<p class="">If you're not sure, go with the Basic league and you can always change later if you feel like you need more</p>-->
+                    <!--</header>-->
+                  <!--</div>-->
+                  <!--<div class="league-types">-->
+                    <!--<div class="col-sm-5 col-xs-12 text-align-center">-->
+                      <!--<div class="league-type-basic league-type-wrapper">-->
+                        <!--<h3>Basic</h3>-->
+                        <!--<ul class="league-type-details">-->
+                          <!--<li>Access to the RedZone Mania game</li>-->
+                          <!--<li>Personal Dashboard</li>-->
+                          <!--<li>Recommended for beginners</li>-->
+                        <!--</ul>-->
+                        <!--<p class="league-price"><span>$29.95</span><br>per season</p>-->
+                        <!--<label for="league-type-basic" class="btn btn-default disabled">-->
+                          <!--SELECTED-->
+                          <!--<input type="radio" name="league-type" value="basic" id="league-type-basic" class="hide" checked="">-->
+                        <!--</label>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-2 text-align-center hidden-xs">-->
+                      <!--<p class="league-or">-->
+                        <!--OR-->
+                      <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-5 col-xs-12 text-align-center">-->
+                      <!--<div class="league-type-plus league-type-wrapper">-->
+                        <!--<h3>Plus</h3>-->
+                        <!--<ul class="league-type-details">-->
+                          <!--<li>Access to Basic features</li>-->
+                          <!--<li>Additional last man standing games</li>-->
+                          <!--<li>Monkey Points system</li>-->
+                        <!--</ul>-->
+                        <!--<p class="league-price"><span>$49.95</span><br>per season</p>-->
+                        <!--<label for="league-type-basic" class="btn btn-success">-->
+                          <!--SELECT-->
+                          <!--<input type="radio" name="league-type" value="basic" id="league-type-basic" class="hide" checked="">-->
+                        <!--</label>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
               </div>
-              <!-- <hr> -->
-              <!-- <div class="row league-type">
-                <div class="col-md-12">
-                  <header>
-                    <h2>League Type</h2>
-                    <p class="">Choose your league package. You can change this at any time, and will be charged for the league you have selected at the end of your 5 week free trial.</p>
-                    <p class="">If you're not sure, go with the Basic league and you can always change later if you feel like you need more</p>
+            </div><!-- /.row -->
+          </div>
+          <div class="status-wrapper tab-section">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="payment-details rzm-section clearfix">
+                  <header class="clearfix">
+                    <h2>League Status <span class="pull-right label label-warning">Trial</span></h2>
                   </header>
-                </div>
-                <div class="league-types">
-                  <div class="col-sm-5 col-xs-12 text-align-center">
-                    <div class="league-type-basic league-type-wrapper">
-                      <h3>Basic</h3>
-                      <ul class="league-type-details">
-                        <li>Access to the RedZone Mania game</li>
-                        <li>Personal Dashboard</li>
-                        <li>Recommended for beginners</li>
-                      </ul>
-                      <p class="league-price"><span>$29.95</span><br>per season</p>
-                      <label for="league-type-basic" class="btn btn-default disabled">
-                        SELECTED
-                        <input type="radio" name="league-type" value="basic" id="league-type-basic" class="hide" checked="">
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-2 text-align-center hidden-xs">
-                    <p class="league-or">
-                      OR
-                    </p>
-                  </div>
-                  <div class="col-sm-5 col-xs-12 text-align-center">
-                    <div class="league-type-plus league-type-wrapper">
-                      <h3>Plus</h3>
-                      <ul class="league-type-details">
-                        <li>Access to Basic features</li>
-                        <li>Additional last man standing games</li>
-                        <li>Monkey Points system</li>
-                      </ul>
-                      <p class="league-price"><span>$49.95</span><br>per season</p>
-                      <label for="league-type-basic" class="btn btn-success">
-                        SELECT
-                        <input type="radio" name="league-type" value="basic" id="league-type-basic" class="hide" checked="">
-                      </label>
-                    </div>
-                  </div>
+                  <p>Your trial period will end on <span class="underline">October 5, 2014</span></p>
+                  <p><strong>Total amount due:</strong> <span class="pull-right">$5.90 ($2.95/person)</span></p>
+                  <p><strong>Payment due by:</strong> <span class="pull-right">October 5, 2014</span></p>
+                  <p class="alert alert-info"><span class="glyphicon glyphicon-info-sign"></span> We will collect your payment method at a later date</p>
                 </div>
               </div>
-              <hr> -->
-              <!-- <div class="row league-actions">
-                <div class="col-md-6 payment-info">
-                  <button class="btn btn-default">Pay League Fees</button>
-                  <p class="text-info">Total due by October 12, 2014: <strong>$29.95</strong></p>
-                </div>
-                <div class="col-md-6 save-button">
-                  <button name="submit" class="btn btn-default" disabled="">Save League</button>
-                  <p class="text-danger">
-                    * Required to save league settings
-                  </p>
-                </div>
-              </div> -->
             </div>
-          </div><!-- /.row -->
+          </div>
         </div><!-- /.container -->
       </div>
     </div>
