@@ -274,7 +274,7 @@ img.avatar {
   background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
 }
-.rzm-section header > h2 {
+.rzm-section header > h3 {
   color: #232323;
   text-shadow: 1px 1px 1px #fff;
 }
