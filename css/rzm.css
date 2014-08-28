@@ -171,9 +171,19 @@
   box-shadow: inset 2px -2px 3px rgba(0, 0, 0, 0.4), 0px 0px 3px rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
+.player-avatar-wrapper:after {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
 
 .img-player-avatar {
   width: 100%;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 }
 
 .player-avatar-wrapper p.player-name {
