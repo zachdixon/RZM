@@ -1,7 +1,12 @@
-#edit-profile, #edit-account-settings {
-  padding: 15px;
+#edit-profile, #edit-account-settings, #my-leagues {
+  padding: 0 15px;
 }
-
+input.form-control[type="text"] {
+  background: #fff;
+  color: #232323;
+  border: 2px solid #ccc;
+  box-shadow: none;
+}
 .main-container-header .game-face-wrapper {
   max-width: 100px;
   overflow: hidden;
@@ -41,9 +46,6 @@
 .btn-join-league {
   margin-top: 15px;
 }
-#my-leagues {
-  padding: 15px;
-}
 .leagues-list {
   margin: 0;
   padding: 0;
@@ -52,20 +54,22 @@
 .league-item {
   background: #232323;
   border-radius: 10px;
-  margin-bottom: 10px;
-}
-.league-item:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 15px;
+  color: #fff;
 }
 .league-item .league-icon {
-  font-size: 30px;
+  font-size: 26px;
   margin: 20px;
 }
 .league-info h3 {
   margin: 15px 0 5px;
 }
-.btn-leave-league {
+.btn-activate-league {
   margin: 21px;
+}
+.label-active-league {
+  margin-right: 21px;
+  margin-top: 4px;
 }
 
 #edit-images-modal .profile-image {

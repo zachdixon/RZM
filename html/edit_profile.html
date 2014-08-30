@@ -139,8 +139,10 @@
         <div class="container">
           <div class="row account-wrapper settings-section">
             <div class="col-sm-6 col-xs-12">
-              <h2>Profile</h2>
-              <div id="edit-profile" class="rzm-section bg-tweed">
+              <div id="edit-profile" class="rzm-section">
+                <header class="clearfix">
+                  <h3>Profile <span class="pull-right glyphicon glyphicon-user"></span></h3>
+                </header>
                 <form role="form">
                   <div class="form-group">
                     <label for="player-game-name" class="control-label">Game Name: </label>
@@ -163,8 +165,10 @@
               </div><!-- /#edit-profile.rzm-section -->
             </div><!-- /.col-md-6 -->
             <div class="col-sm-6 col-xs-12">
-              <h2>Account Settings</h2>
-              <div id="edit-account-settings" class="rzm-section bg-tweed">
+              <div id="edit-account-settings" class="rzm-section">
+                <header class="clearfix">
+                  <h3>Account Settings <span class="pull-right glyphicon glyphicon-cog"></span></h3>
+                </header>
                 <form role="form">
                   <div class="form-group">
                     <label for="player-email" class="control-label">Email: </label>
@@ -193,11 +197,11 @@
           </div><!-- /.row -->
           <div class="row leagues-wrapper settings-section">
             <div class="col-md-12">
-              <header class="clearfix">
-                <h2 class="pull-left">My Leagues</h2>
-                <a href="leagues_index.html" class="btn btn-default pull-right btn-join-league">Join/Create a League</a>
-              </header>
-              <div id="my-leagues" class="rzm-section bg-tweed">
+              <div id="my-leagues" class="rzm-section">
+                <header class="clearfix">
+                  <h3 class="pull-left">My Leagues</h3>
+                  <a href="leagues_index.html" class="btn btn-primary pull-right btn-join-league">Create a League</a>
+                </header>
                 <ul class="leagues-list">
                   <li class="league-item clearfix">
                     <span class="league-icon pull-left flaticon-american21"></span>
@@ -208,7 +212,18 @@
                         <a href="mailto:email@email.com">Commish</a>
                       </p>
                     </div>
-                    <button class="btn-leave-league btn btn-danger pull-right">Leave</button>
+                    <h3><span class="label-active-league label label-success pull-right">Current League</span></h3>
+                  </li>
+                  <li class="league-item clearfix">
+                    <span class="league-icon pull-left flaticon-american21"></span>
+                    <div class="league-info pull-left">
+                      <h3>Beat The Monkey</h3>
+                      <p>
+                        Owned By:
+                        <a href="mailto:email@email.com">Commish</a>
+                      </p>
+                    </div>
+                    <button class="btn-activate-league btn btn-default pull-right">Make Current League</button>
                   </li>
                 </ul>
               </div>
