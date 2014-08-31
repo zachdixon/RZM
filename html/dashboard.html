@@ -102,6 +102,20 @@
       </nav>
       <!-- Main Container -->
       <div id="main-container">
+        <div class="main-container-header">
+          <div class="container">
+            <div class="row user-wrapper">
+              <div class="col-md-12">
+                <div class="user-info">
+                  <h1>
+                    Commish's Dashboard
+                    <button class="btn btn-success use-free-pass pull-right" disabled="">Use Free Pass</button>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="dashboard" class="container">
           <div class="row">
             <div class="col-md-12">
@@ -141,6 +155,64 @@
                     </label>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="league-players-wrapper">
+                <ul>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 1">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 2">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper active">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Commish">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 4">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 5">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 6">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 7">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 8">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 9">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                  <li class="league-player-avatar-wrapper">
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Player 10">
+                      <img src="../images/players/1.png" alt="" class="img-league-player" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -412,105 +484,194 @@
                     </div><!-- /.game-wrapper -->
                   </div><!-- /.player-games-wrapper -->
                 </div><!-- /.player-wrapper -->
-                <div class="player-details-wrapper">
-                  <div class="player-details clearfix">
-                    <div class="col-xs-12 clearfix">
-                      <div class="free-pass-wrapper pull-right clearfix">
-                        <p class="pull-left">Used on: September, 5 2014</p>
-                        <button class="btn btn-success use-free-pass pull-left" disabled="">Use Free Pass</button>
-                      </div>
-                    </div>
-                    <div class="col-xs-12">
-                      <h4>Last Man Standing</h4>
-                      <div class="row">
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="lms-section lock-of-the-week">
-                            <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week</h3>
-                            <div class="game-wrapper">
-                              <div class="text-align-center">
-                                <div class="helmet-wrapper">
-                                  <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                                </div>
+                <hr/>
+                <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                    <h2>Last Man Standing Games</h2>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="lms-section lock-of-the-week clearfix">
+                          <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week <span class="pull-right label label-default text-success">IN</span></h3>
+                          <div class="game-wrapper">
+                            <div class="helmet-wrapper pull-left">
+                              <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                            </div>
+                            <div class="game-scores">
+                              <p class="text-align-center game-time">Live</p>
+                              <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">3</span></p>
+                              <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">7</span></p>
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                        </div><!-- /lms-section -->
+                      </li>
+                      <li class="list-group-item">
+                        <div class="lms-section upset-special clearfix">
+                          <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special <span class="pull-right label label-default text-success">IN</span></h3>
+                          <div class="game-wrapper">
+                            <div class="text-align-center">
+                              <div class="helmet-wrapper pull-left">
+                                <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
                               </div>
                               <div class="game-scores">
-                                <p class="text-align-center game-time">Live</p>
+                                <p class="game-time not-started"><span class="glyphicon glyphicon-time"></span> Game begins 10/24/14 7:00 pm</p>
                                 <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
                                 <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
                               </div>
-                            </div><!-- /.game-wrapper -->
-                          </div><!-- /lms-section -->
-                        </div><!-- /.col-sm-3 -->
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="lms-section upset-special">
-                            <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special</h3>
-                            <div class="game-wrapper">
-                              <div class="text-align-center">
-                                <div class="helmet-wrapper">
-                                  <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                                </div>
-                              </div>
-                            </div><!-- /.game-wrapper -->
-                          </div><!-- /lms-section -->
-                        </div><!-- /.col-sm-3 -->
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="lms-section survivor">
-                            <h3><span class="glyphicon glyphicon-fire"></span>Survivor</h3>
-                            <div class="game-wrapper">
-                              <div class="text-align-center">
-                                <div class="lms-out">
-                                  <p>Out</p>
-                                </div>
-                              </div>
-                            </div><!-- /.game-wrapper -->
-                          </div><!-- /lms-section -->
-                        </div><!-- /.col-sm-3 -->
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="lms-section monday-football-at-night">
-                            <h3><span class="flaticon-american21"></span>Monday Football @ Night</h3>
-                            <div class="game-wrapper">
-                              <div class="text-align-center">
-                                <div class="lms-out">
-                                  <p>Out</p>
-                                </div>
-                              </div>
-                            </div><!-- /.game-wrapper -->
-                          </div><!-- /lms-section -->
-                        </div><!-- /.col-sm-3 -->
-                      </div><!-- /.row -->
-                      <hr>
-                    </div><!-- /.col-xs-12 -->
-                    <div class="col-xs-12">
-                      <h4>YTD Stats</h4>
-                      <div class="row">
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="ytd-stat">
-                            <h5>Monkey Points</h5>
-                            <p>1440</p>
-                          </div>
-                        </div><!-- /.col-sm-3 -->
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="ytd-stat">
-                            <h5>Game Points</h5>
-                            <p>+12,750</p>
-                          </div>
-                        </div><!-- /.col-sm-3 -->
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="ytd-stat">
-                            <h5>PQT</h5>
-                            <p>+325</p>
-                          </div>
-                        </div><!-- /.col-sm-3 -->
-                        <div class="col-sm-3 col-xs-12">
-                          <div class="ytd-stat">
-                            <h5>Position</h5>
-                            <p>1st</p>
-                          </div>
-                        </div><!-- /.col-sm-3 -->
-                      </div><!-- /.row -->
-                    </div><!-- /.col-xs-12 -->
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                        </div><!-- /lms-section -->
+                      </li>
+                      <li class="list-group-item">
+                        <div class="lms-section survivor clearfix">
+                          <h3><span class="glyphicon glyphicon-fire"></span>Survivor <span class="pull-right label label-default text-danger">OUT</span></h3>
+                        </div><!-- /lms-section -->
+                      </li>
+                      <li class="list-group-item">
+                        <div class="lms-section monday-football-at-night">
+                          <h3><span class="flaticon-american21"></span>Monday Football @ Night <span class="pull-right label label-default text-danger">OUT</span></h3>
+                        </div><!-- /lms-section -->
+                      </li>
+                    </ul>
                   </div>
-                  <a href="#" class="show-player-details closed">Show More</a>
+                  <div class="col-sm-6 col-xs-12">
+                    <h2>Commish's Stats YTD</h2>
+                    <div class="col-xs-6 ytd-stat">
+                      <header class="clearfix">
+                        <div class="pull-left img-wrapper"><img src="http://placehold.it/30x30" alt=""/></div>
+                        <h3 class="pull-left">Monkey Money</h3>
+                      </header>
+                      <p>+30</p>
+                    </div>
+                    <div class="col-xs-6 ytd-stat">
+                      <header class="clearfix">
+                        <div class="pull-left img-wrapper"><img src="http://placehold.it/30x30" alt=""/></div>
+                        <h3 class="pull-left">Game Points</h3>
+                      </header>
+                      <p>+1400</p>
+                    </div>
+                    <div class="col-xs-6 ytd-stat">
+                      <header class="clearfix">
+                        <div class="pull-left img-wrapper"><img src="http://placehold.it/30x30" alt=""/></div>
+                        <h3 class="pull-left">PQT</h3>
+                      </header>
+                      <p>-350</p>
+                    </div>
+                    <div class="col-xs-6 ytd-stat">
+                      <header class="clearfix">
+                        <div class="pull-left img-wrapper"><img src="http://placehold.it/30x30" alt=""/></div>
+                        <h3 class="pull-left">Position</h3>
+                      </header>
+                      <p>3rd</p>
+                    </div>
+                  </div>
                 </div>
+                <!--<div class="player-details-wrapper">-->
+                  <!--<div class="player-details clearfix">-->
+                    <!--<div class="col-sm-6 col-xs-12 clearfix">-->
+                      <!--<div class="monkey-points-wrapper">-->
+                        <!--<p>-->
+                          <!--<span>30</span>-->
+                           <!--Monkey Points-->
+                        <!--</p>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-6 col-xs-12 clearfix">-->
+                      <!--<div class="free-pass-wrapper pull-right clearfix">-->
+                        <!--<p class="pull-left">Used on: September, 5 2014</p>-->
+                        <!--<button class="btn btn-success use-free-pass pull-left" disabled="">Use Free Pass</button>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-12">-->
+                      <!--<h4>Last Man Standing</h4>-->
+                      <!--<div class="row">-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="lms-section lock-of-the-week">-->
+                            <!--<h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week</h3>-->
+                            <!--<div class="game-wrapper">-->
+                              <!--<div class="text-align-center">-->
+                                <!--<div class="helmet-wrapper">-->
+                                  <!--<img src="../images/helmets/cowboys.png" alt="" class="img-helmet">-->
+                                <!--</div>-->
+                              <!--</div>-->
+                              <!--<div class="game-scores">-->
+                                <!--<p class="text-align-center game-time">Live</p>-->
+                                <!--<p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>-->
+                                <!--<p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>-->
+                              <!--</div>-->
+                            <!--</div>&lt;!&ndash; /.game-wrapper &ndash;&gt;-->
+                          <!--</div>&lt;!&ndash; /lms-section &ndash;&gt;-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="lms-section upset-special">-->
+                            <!--<h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special</h3>-->
+                            <!--<div class="game-wrapper">-->
+                              <!--<div class="text-align-center">-->
+                                <!--<div class="helmet-wrapper">-->
+                                  <!--<img src="../images/helmets/cowboys.png" alt="" class="img-helmet">-->
+                                <!--</div>-->
+                              <!--</div>-->
+                            <!--</div>&lt;!&ndash; /.game-wrapper &ndash;&gt;-->
+                          <!--</div>&lt;!&ndash; /lms-section &ndash;&gt;-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="lms-section survivor">-->
+                            <!--<h3><span class="glyphicon glyphicon-fire"></span>Survivor</h3>-->
+                            <!--<div class="game-wrapper">-->
+                              <!--<div class="text-align-center">-->
+                                <!--<div class="lms-out">-->
+                                  <!--<p>Out</p>-->
+                                <!--</div>-->
+                              <!--</div>-->
+                            <!--</div>&lt;!&ndash; /.game-wrapper &ndash;&gt;-->
+                          <!--</div>&lt;!&ndash; /lms-section &ndash;&gt;-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="lms-section monday-football-at-night">-->
+                            <!--<h3><span class="flaticon-american21"></span>Monday Football @ Night</h3>-->
+                            <!--<div class="game-wrapper">-->
+                              <!--<div class="text-align-center">-->
+                                <!--<div class="lms-out">-->
+                                  <!--<p>Out</p>-->
+                                <!--</div>-->
+                              <!--</div>-->
+                            <!--</div>&lt;!&ndash; /.game-wrapper &ndash;&gt;-->
+                          <!--</div>&lt;!&ndash; /lms-section &ndash;&gt;-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                      <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
+                      <!--<hr>-->
+                    <!--</div>&lt;!&ndash; /.col-xs-12 &ndash;&gt;-->
+                    <!--<div class="col-xs-12">-->
+                      <!--<h4>YTD Stats</h4>-->
+                      <!--<div class="row">-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="ytd-stat">-->
+                            <!--<h5>Monkey Points</h5>-->
+                            <!--<p>1440</p>-->
+                          <!--</div>-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="ytd-stat">-->
+                            <!--<h5>Game Points</h5>-->
+                            <!--<p>+12,750</p>-->
+                          <!--</div>-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="ytd-stat">-->
+                            <!--<h5>PQT</h5>-->
+                            <!--<p>+325</p>-->
+                          <!--</div>-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                        <!--<div class="col-sm-3 col-xs-12">-->
+                          <!--<div class="ytd-stat">-->
+                            <!--<h5>Position</h5>-->
+                            <!--<p>1st</p>-->
+                          <!--</div>-->
+                        <!--</div>&lt;!&ndash; /.col-sm-3 &ndash;&gt;-->
+                      <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; /.col-xs-12 &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--<a href="#" class="show-player-details closed">Show More</a>-->
+                <!--</div>-->
               </div><!-- /.dashboard-wrapper -->
             </div><!-- /.col-xs-12 -->
           </div><!-- /.row -->

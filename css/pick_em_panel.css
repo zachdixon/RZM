@@ -215,6 +215,19 @@ p.game-time {
 }
 
 
+.lms-section.lock-of-the-week {
+  background: #1369bf;
+}
+.lms-section.upset-special {
+  background: #6400C8;
+}
+.lms-section.survivor {
+  background: #ff9d00;
+}
+.lms-section.monday-football-at-night {
+  background: #663300;
+}
+
 
 .lms-section h3 {
   margin: 5px 0;

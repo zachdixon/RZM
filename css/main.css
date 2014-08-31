@@ -20,6 +20,7 @@
 */
 
 @import url('../fonts/destroy_regular_macroman/stylesheet.css');
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900);
 
 
 
@@ -108,7 +109,9 @@ body {
 /*
   Bootstrap Override
 */
-
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 .caret {
   margin-left: 5px;
@@ -175,6 +178,11 @@ label {
 }
 .control-label {
   font-weight: bold;
+}
+
+.list-group {
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 /*
@@ -367,22 +375,7 @@ img.avatar {
   width: 100px;
 }
 
-/* Last Man Standing Games */
 
-.lms-section.lock-of-the-week {
-  background: #1369bf;
-}
-.lms-section.upset-special {
-  background: #6400C8;
-}
-.lms-section.survivor {
-  background: #ff9d00;
-}
-.lms-section.monday-football-at-night {
-  background: #663300;
-}
-
-/* END Last Man Standing Games */
 
 
 /* Footer */

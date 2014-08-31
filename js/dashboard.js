@@ -4,7 +4,7 @@ $(function(){
   $('.x-editable').editable();
 
   // Initialize tooltips
-  $('.pqt-wrapper').tooltip();
+  $('[data-toggle="tooltip"').tooltip();
 
   $('.show-player-details').on('click', togglePlayerDetails);
   $('.my-dashboard .show-player-details').trigger('click');

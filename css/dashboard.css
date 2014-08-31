@@ -1,3 +1,33 @@
+body {
+  background: #131313;
+}
+
+hr {
+  border-color: #000;
+  box-shadow: 0 1px #232323;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h2 {
+  font-family: 'source sans pro';
+  font-weight: 200;
+  color: #fff;
+}
+h3 {
+  font-family: 'source sans pro';
+  font-weight: 700;
+  color: #fff;
+}
+
+.main-container-header {
+  background: #157752;
+  border-bottom: 5px solid #054422;
+}
+
+
 #player-select {
   width: auto;
 }
@@ -6,6 +36,50 @@
 }
 .options-wrapper select {
   margin-right: 10px;
+}
+
+.league-players-wrapper {
+  padding-bottom: 30px;
+}
+
+.league-players-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.league-player-avatar-wrapper {
+  display: inline-block;
+  width: calc(10% - 4px);
+  padding: 15px;
+  position: relative;
+}
+
+.league-player-avatar-wrapper a {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #232323;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
+.league-player-avatar-wrapper.active a, .league-player-avatar-wrapper:hover a {
+  border-color: #fff;
+}
+.league-player-avatar-wrapper.active:after {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  left: 49%;
+  border: 2px dotted #fff;
+  height: 30px;
+}
+
+.img-league-player {
+  width: 100%;
 }
 
 .player-wrapper {
@@ -177,16 +251,14 @@ p.game-time {
 .free-pass-wrapper p {
   margin: 10px 10px 0 0;
 }
-.lms-section {
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: inset 0 0 5px 0px #000,0 0 4px 0px rgba(255, 255, 255, 0.3);
-  border: 1px solid #000;
+.list-group {
+  padding: 0;
 }
-@media (max-width: 767px) {
-  .lms-section {
-    margin-bottom: 15px;
-  }
+.list-group-item {
+  padding: 0;
+}
+.lms-section {
+  padding: 15px;
 }
 
 .lms-section h3 {
@@ -198,36 +270,74 @@ p.game-time {
 .lms-section h3 span {
   margin-right: 5px;
 }
+.lms-section h3 .label {
+  padding-top: .3em;
+}
+/*.lms-section.lock-of-the-week h3 {*/
+  /*color: #1369bf;*/
+/*}*/
+/*.lms-section.upset-special h3 {*/
+  /*color: #6400C8;*/
+/*}*/
+/*.lms-section.survivor h3 {*/
+  /*color: #ff9d00;*/
+/*}*/
+/*.lms-section.monday-football-at-night h3 {*/
+  /*color: #663300;*/
+/*}*/
 .lms-section .flaticon-american21 {
   font-size: 15px;
 }
 .lms-section .helmet-wrapper {
   max-width: 100px;
-  width: 100%;
+  width: 20%;
   display: inline-block;
   margin: 10px 0;
+  padding: 3% 2% !important;
+}
+.lms-section .game-scores {
+  display: inline-block;
+  width: calc(80% - 10px);
+  margin-left: 10px;
+  min-height: 102px;
+}
+.lms-section.lock-of-the-week {
+  background: #1369bf;
+}
+.lms-section.upset-special {
+  background: #6400C8;
+}
+.lms-section.survivor {
+  background: #ff9d00;
+}
+.lms-section.monday-football-at-night {
+  background: #663300;
 }
 
 .dashboard-wrapper .helmet-wrapper {
   padding: 20px 10px;
 }
 .ytd-stat {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  width: 170px;
-  padding: 20px 0;
-  border-radius: 50%;
-  height: 170px;
-  color: #000;
-  border: 5px solid #000;
+  margin: 30px 0;
 }
-.ytd-stat h5 {
-  text-shadow: none;
+.ytd-stat .img-wrapper {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #232323;
+}
+.ytd-stat h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 6px 10px 20px;
 }
 .ytd-stat p {
-  font-size: 40px;
-  font-weight: bold;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 200;
+  font-family: 'source sans pro';
+  line-height: 30px;
 }
 
 .lms-out {
