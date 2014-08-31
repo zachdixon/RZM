@@ -367,6 +367,23 @@ img.avatar {
   width: 100px;
 }
 
+/* Last Man Standing Games */
+
+.lms-section.lock-of-the-week {
+  background: #1369bf;
+}
+.lms-section.upset-special {
+  background: #6400C8;
+}
+.lms-section.survivor {
+  background: #ff9d00;
+}
+.lms-section.monday-football-at-night {
+  background: #663300;
+}
+
+/* END Last Man Standing Games */
+
 
 /* Footer */
 .main-footer {

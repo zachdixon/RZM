@@ -151,50 +151,90 @@
                 <div class="col-xs-4">
                   <div class="row">
                     <div class="col-xs-12">
-                      <h2>RZM Picks</h2>
+                      <h2>Your Picks</h2>
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#rzm-picks" role="tab" data-toggle="tab">RZM</a></li>
+                        <li><a href="#lms-picks" role="tab" data-toggle="tab">LMS</a></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-xs-12">
-                      <div class="player-games-wrapper pull-left">
-                        <div class="game-wrapper clearfix">
-                          <p class="point-value">250</p>
-                          <div class="helmet-wrapper accept-rzm">
-                            <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
-                          </div>
-                          <div class="scoreboard-wrapper hidden-sm hidden-xs">
-                            <p class="game-time">Thursday 9/04 - 7:30pm</p>
-                            <p class="scoreboard-team">Green Bay Packers (0-1) <strong>+5.5</strong></p>
-                            <p class="scoreboard-team">SEATLLE SEAHAWKS (1-0) <strong>-5.5</strong></p>
-                          </div>
-                        </div><!-- /.game-wrapper -->
-                        <div class="game-wrapper clearfix">
-                          <p class="point-value">200</p>
-                          <div class="helmet-wrapper empty accept-rzm">
-                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
-                          </div>
-                        </div><!-- /.game-wrapper -->
-                        <div class="game-wrapper clearfix">
-                          <p class="point-value">150</p>
-                          <div class="helmet-wrapper empty accept-rzm">
-                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
-                          </div>
-                        </div><!-- /.game-wrapper -->
-                        <div class="game-wrapper clearfix">
-                          <p class="point-value">100</p>
-                          <div class="helmet-wrapper empty accept-rzm">
-                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
-                          </div>
-                        </div><!-- /.game-wrapper -->
-                        <div class="game-wrapper clearfix">
-                          <p class="point-value">50</p>
-                          <div class="helmet-wrapper empty accept-rzm">
-                            <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
-                          </div>
-                        </div><!-- /.game-wrapper -->
-                      </div><!-- /.player-games-wrapper -->
+                      <div class="tab-content">
+                        <div id="rzm-picks" class="player-games-wrapper pull-left tab-pane fade in active">
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">250</p>
+                            <div class="helmet-wrapper accept-rzm">
+                              <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+                            </div>
+                            <div class="scoreboard-wrapper hidden-sm hidden-xs">
+                              <p class="game-time">Thursday 9/04 - 7:30pm</p>
+                              <p class="scoreboard-team">Green Bay Packers (0-1) <strong>+5.5</strong></p>
+                              <p class="scoreboard-team">SEATLLE SEAHAWKS (1-0) <strong>-5.5</strong></p>
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">200</p>
+                            <div class="helmet-wrapper empty accept-rzm">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">150</p>
+                            <div class="helmet-wrapper empty accept-rzm">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">100</p>
+                            <div class="helmet-wrapper empty accept-rzm">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                          <div class="game-wrapper clearfix">
+                            <p class="point-value">50</p>
+                            <div class="helmet-wrapper empty accept-rzm">
+                              <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                            </div>
+                          </div><!-- /.game-wrapper -->
+                        </div><!-- /#rzm-picks.player-games-wrapper -->
+                        <div id="lms-picks" class="player-games-wrapper pull-left tab-pane fade">
+                          <div class="col-xs-12">
+                            <div class="lms-section lock-of-the-week clearfix">
+                              <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span></h3>
+                              <div class="helmet-wrapper empty accept-rzm">
+                                <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                              </div>
+                            </div><!-- /lms-section -->
+                          </div><!-- /.col-sm-3 -->
+                          <div class="col-xs-12">
+                            <div class="lms-section upset-special clearfix">
+                              <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span></h3>
+                              <div class="helmet-wrapper empty accept-rzm">
+                                <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                              </div>
+                            </div><!-- /lms-section -->
+                          </div><!-- /.col-sm-3 -->
+                          <div class="col-xs-12">
+                            <div class="lms-section survivor clearfix">
+                              <h3><span class="glyphicon glyphicon-fire"></span>Survivor<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span></h3>
+                              <div class="helmet-wrapper empty accept-rzm">
+                                <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                              </div>
+                            </div><!-- /lms-section -->
+                          </div><!-- /.col-sm-3 -->
+                          <div class="col-xs-12">
+                            <div class="lms-section monday-football-at-night clearfix">
+                              <h3><span class="flaticon-american21"></span>Monday Football @ Night<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span></h3>
+                              <div class="helmet-wrapper empty accept-rzm">
+                                <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+                              </div>
+                            </div><!-- /lms-section -->
+                          </div><!-- /.col-sm-3 -->
+                        </div>
+                      </div>
                     </div>
-
                   </div>
                 </div>
 
@@ -337,76 +377,10 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="col-md-4 col-sm-12 col-xs-12">
-                  <div class="panel-extras">
-                    <div class="row">
-                      <div class="col-md-12 col-sm-6 col-xs-6">
-                        <h2>Countdown</h2>
-                        <div class="rzm-countdown"></div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 col-sm-6 col-xs-6">
-                        <div class="panel-actions pull-right clearfix">
-                          <button class="btn btn-default pull-left">Random</button>
-                          <button class="btn btn-default pull-left">Save Picks</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div><!-- /.player-wrapper -->
             </div><!-- /#pickem-panel.rzm-section -->
           </div><!-- /.row -->
-          <div class="row">
-            <div id="lms-panel" class="rzm-section bg-tweed clearfix">
-              <div class="col-xs-12">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h2>Last Man Standing Games</h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-3 col-xs-12">
-                    <div class="lms-section lock-of-the-week">
-                      <h3><span class="glyphicon glyphicon-lock"></span>Lock of the Week<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Lock of the Week game here"></span></h3>
-                      <select class="lms-select form-control btn btn-default" title="">
-                        <option value="" disabled selected>Pick your team</option>
-                        <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                      </select>
-                    </div><!-- /lms-section -->
-                  </div><!-- /.col-sm-3 -->
-                  <div class="col-sm-3 col-xs-12">
-                    <div class="lms-section upset-special">
-                      <h3><span class="glyphicon glyphicon-thumbs-down"></span>Upset Special<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Upset Special game here"></span></h3>
-                      <select class="lms-select form-control btn btn-default" title="">
-                        <option value="" disabled selected>Pick your team</option>
-                        <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                      </select>
-                    </div><!-- /lms-section -->
-                  </div><!-- /.col-sm-3 -->
-                  <div class="col-sm-3 col-xs-12">
-                    <div class="lms-section survivor">
-                      <h3><span class="glyphicon glyphicon-fire"></span>Survivor<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Survivor game here"></span></h3>
-                      <select class="lms-select form-control btn btn-default" title="">
-                        <option value="" disabled selected>Pick your team</option>
-                        <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                      </select>
-                    </div><!-- /lms-section -->
-                  </div><!-- /.col-sm-3 -->
-                  <div class="col-sm-3 col-xs-12">
-                    <div class="lms-section monday-football-at-night">
-                      <h3><span class="flaticon-american21"></span>Monday Football @ Night<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="tooltip" data-placement="top" title="Explanation of Monday Football @ Night game here"></span></h3>
-                      <select class="lms-select form-control btn btn-default" title="">
-                        <option value="" disabled selected>Pick your team</option>
-                        <option value="cowboys">Dallas Cowboys (0-1) <strong>+5.5</strong></option>
-                      </select>
-                    </div><!-- /lms-section -->
-                  </div><!-- /.col-sm-3 -->
-                </div>
-              </div>
-            </div>
-          </div>
+
 
 
 
