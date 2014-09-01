@@ -56,4 +56,11 @@ $(document).on('ready', function(){
   //   showSeconds: false
   // });
 
+//  $('.your-picks').affix({
+//    target: $('.player-wrapper'),
+//    offset: {
+//      top: 300
+//    }
+//  });
+
 });

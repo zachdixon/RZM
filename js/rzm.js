@@ -9,6 +9,13 @@ $(function(){
     finishedLoading();
   });
 
+  // $.fn.editable.defaults.mode = 'inline';
+  $.fn.editable.defaults.placement = 'bottom';
+  $('.x-editable').editable();
+
+  // Initialize popovers with focus trigger type
+  $('[data-toggle="tooltip"]').tooltip();
+
   // Initialize tooltips
   $('.pqt-wrapper').tooltip();
 

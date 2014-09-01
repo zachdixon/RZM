@@ -8,12 +8,14 @@
 <!--     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/slate.bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
     <link href="../css/animate.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/rzm.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
     <!-- // <script src="../js/masonry.min.js" type="text/javascript"></script> -->
     <script src="../js/imagesloaded.min.js" type="text/javascript"></script>
 
@@ -102,52 +104,51 @@
       <div id="main-container" class="rzm-gameboard">
         <!-- Temp button -->
         <button class="btn btn-default randomize-players">Randomize</button>
-        <div id="placement-line">
-<!--           <ul class="placement-list">
-            <li class="placement-item" data-player="" data-place="1">
-              <span class="placement-number">1</span>
-              <span class="placement-score score-positive">450</span>
-              <img src="images/players/1.png" alt="" class="img-player" />
-              <p class="player-name">Commish</p>
-            </li>
-          </ul> -->
-        </div><!-- /#placement-line -->
-<!--         <div class="my-games mobile-show">
-          <h3>My Games</h3>
-        </div> -->
-        <div class="page-header clearfix">
-          <h1 class="league-name pull-left">"Beat the Monkey" Classic<span class="week-number">Week 1</span></h1>
-          <div class="options-wrapper pull-right">
-            <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
-              <option value="1" selected="">Week 1</option>
-              <option value="2">Week 2</option>
-              <option value="3">Week 3</option>
-              <option value="4">Week 4</option>
-              <option value="5">Week 5</option>
-              <option value="6">Week 6</option>
-              <option value="7">Week 7</option>
-              <option value="8">Week 8</option>
-              <option value="9">Week 9</option>
-              <option value="10">Week 10</option>
-              <option value="11">Week 11</option>
-              <option value="12">Week 12</option>
-              <option value="13">Week 13</option>
-              <option value="14">Week 14</option>
-              <option value="15">Week 15</option>
-              <option value="16">Week 16</option>
-              <option value="17">Week 17</option>
-            </select>
-            <div class="btn-group pull-left" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="radio" name="ats-options" value="even"> Even
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" name="ats-options" value="ats"> ATS
-              </label>
+        <div class="main-container-header">
+          <div class="row user-wrapper">
+            <div class="col-md-12">
+              <div class="user-info">
+                <h1><span class="league-name x-editable" data-type="select" data-title="Choose League" data-source="[{value: 1, text: '&quot;Beat the Monkey&quot; Classic'}]" data-value="1" data-inputclass="form-control btn btn-default pull-left">Beat the Monkey" Classic</span></h1>
+                <div>
+                  <h2 class="pull-left">
+                    Week 1
+                  </h2>
+                  <div class="options-wrapper pull-right">
+                    <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
+                      <option value="1" selected="">Week 1</option>
+                      <option value="2">Week 2</option>
+                      <option value="3">Week 3</option>
+                      <option value="4">Week 4</option>
+                      <option value="5">Week 5</option>
+                      <option value="6">Week 6</option>
+                      <option value="7">Week 7</option>
+                      <option value="8">Week 8</option>
+                      <option value="9">Week 9</option>
+                      <option value="10">Week 10</option>
+                      <option value="11">Week 11</option>
+                      <option value="12">Week 12</option>
+                      <option value="13">Week 13</option>
+                      <option value="14">Week 14</option>
+                      <option value="15">Week 15</option>
+                      <option value="16">Week 16</option>
+                      <option value="17">Week 17</option>
+                    </select>
+                    <div class="btn-group pull-left" data-toggle="buttons">
+                      <label class="btn btn-default active">
+                        <input type="radio" name="ats-options" value="even"> Even
+                      </label>
+                      <label class="btn btn-default">
+                        <input type="radio" name="ats-options" value="ats"> ATS
+                      </label>
+                    </div>
+                    <button class="pull-left btn btn-default btn-fullscreen"><span class="glyphicon glyphicon-fullscreen"></span></button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <button class="pull-left btn btn-default btn-fullscreen"><span class="glyphicon glyphicon-fullscreen"></span></button>
           </div>
         </div>
+
         <div id="players-wrapper" class="clearfix">
           <div class="player-wrapper clearfix" data-player="1" data-place="1">
             <p class="player-position"><span class="position-number"></span><span class="position-superscript"></span></p>
