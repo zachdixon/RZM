@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RedZone Mania</title>
+
+  <!--     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link href="../css/slate.bootstrap.min.css" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+  <link href="../css/animate.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/rzm.css" rel="stylesheet">
+  <link href="../css/lms.css" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+  <!-- // <script src="../js/masonry.min.js" type="text/javascript"></script> -->
+  <script src="../js/imagesloaded.min.js" type="text/javascript"></script>
+
+  <script src="../js/global.js" type="text/javascript"></script>
+  <script src="../js/lms.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="loading">
+  <img class="loading-image" src="../images/backgrounds/loading_monkey.png">
+</div>
+<div id="main-wrapper">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logo.png" alt="Red Mania Zone" width="100%"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
+        <li><a href="rzm.html"><span class="glyphicon glyphicon-th-large"></span>Gameboard</a></li>
+        <li><a href="pick_em_panel.html"><span class="glyphicon glyphicon-tasks"></span>Pick'em Panel</a></li>
+        <li class="dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-tower"></span>
+            LMS Games
+          </a>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="lock_of_the_week.html">Lock of the week</a></li>
+            <li><a href="upset_special.html">Upset Special</a></li>
+            <li><a href="survivor.html">Survivor</a></li>
+            <li><a href="monday_football.html">Monday Football at Night</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-stats"></span>
+            Stats
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Stats 1</a></li>
+            <li><a href="#">Stats 2</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
+            <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
+            <span>Commish</span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="edit_profile.html">My Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="commissioner_panel.html">Commissioner Panel</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Admin</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-submenu">
+              <a href="#">Monkey Business</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">About this site</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Glossary</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- Main Container -->
+<div id="main-container" class="upset-special">
+<div class="main-container-header">
+  <div class="container">
+    <div class="row user-wrapper">
+      <div class="col-md-12">
+        <div class="user-info">
+          <h1><span class="league-name x-editable" data-type="select" data-title="Choose League" data-source="[{value: 1, text: '&quot;Beat the Monkey&quot; Classic'}]" data-value="1" data-inputclass="form-control btn btn-default pull-left">Beat the Monkey" Classic</span></h1>
+          <h2>
+            Upset Special
+            <span>Round 4</span>
+          </h2>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="players-wrapper" class="clearfix">
+<div class="player-wrapper clearfix">
+  <div class="player-info-wrapper pull-left">
+    <div class="player-avatar-wrapper">
+      <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
+      <p class="player-name">Player 1</p>
+    </div>
+    <p class="player-name mobile-show">Player 1</p>
+  </div>
+  <div class="player-games-wrapper pull-left">
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 1</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 2</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 3</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 4</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 5</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 6</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 7</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 8</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 9</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 10</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 11</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 12</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 13</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 14</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 15</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">Live</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 16</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper empty-game">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/helmet-placeholder.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="game-score-pq text-align-center">Week 17</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+  </div><!-- /.player-games-wrapper -->
+</div><!-- /.player-wrapper -->
+
+<div class="player-wrapper clearfix">
+  <div class="player-info-wrapper pull-left">
+    <div class="player-avatar-wrapper">
+      <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
+      <p class="player-name">Player 2</p>
+    </div>
+    <p class="player-name mobile-show">Player 2</p>
+  </div>
+  <div class="player-games-wrapper pull-left">
+    <div class="game-wrapper won game-over">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">IN</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 1</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper won game-over">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">IN</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 2</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper won game-over">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">IN</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 3</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper won game-over">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">IN</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right"></span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
+        <p class="game-score-pq text-align-center">Week 4</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+    <div class="game-wrapper lost game-over">
+      <div class="helmet-wrapper">
+        <img src="../images/helmets/cowboys.png" alt="" class="img-helmet">
+      </div>
+      <div class="game-scores">
+        <p class="text-align-center game-time">OUT</p>
+        <p class="clearfix game-score-team dashed-border"><span class="pull-left">DAL</span><span class="pull-left spread-value">+3.5</span><span class="pull-right">5</span></p>
+        <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">14</span></p>
+        <p class="game-score-pq text-align-center">Week 5</p>
+      </div>
+    </div><!-- /.game-wrapper -->
+  </div><!-- /.player-games-wrapper -->
+</div><!-- /.player-wrapper -->
+</div><!-- /#players-wrapper -->
+</div>
+</div>
+</body>
+</html>
