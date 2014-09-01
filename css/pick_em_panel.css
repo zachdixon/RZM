@@ -2,7 +2,17 @@
    xs : 767px
 */
 
-
+.main-container-header {
+  background: #333;
+  border-bottom: 5px solid #111;
+  margin-bottom: 15px;
+}
+.league-name {
+  color: #fff;
+}
+.main-container-header h2 {
+  font-weight: 300;
+}
 #pickem-panel h2 {
   text-align: center;
 }
