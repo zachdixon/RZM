@@ -4,6 +4,9 @@
 .main-container-header .league-name {
   color: #fff;
 }
+.main-container-header h2 {
+  font-weight: 300;
+}
 .main-container-header h2 span {
   float: right;
   text-transform: uppercase;
