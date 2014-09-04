@@ -25,8 +25,51 @@
     <div class="loading">
       <img class="loading-image" src="../images/backgrounds/loading_monkey.png">
     </div>
+    <div class="side-nav left-nav hidden-xs">
+      <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logo.png" alt="Red Mania Zone" width="100%"></a>
+      <nav>
+        <ul class="side-nav-list">
+          <li class="active">
+            <a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span><span class="hidden-sm hidden-xs">Dashboard</span></a>
+            <p class="left-nav-tooltip">Dashboard</p>
+          </li>
+          <li>
+            <a href="rzm.html"><span class="glyphicon glyphicon-th-large"></span><span class="hidden-sm hidden-xs">Gameboard</span></a>
+            <p class="left-nav-tooltip">Gameboard</p>
+          </li>
+          <li>
+            <a href="pick_em_panel.html"><span class="glyphicon glyphicon-tasks"></span><span class="hidden-sm hidden-xs">Pick'em Panel</span></a>
+            <p class="left-nav-tooltip">Pick'em Panel</p>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-tower"></span>
+              <span class="hidden-sm hidden-xs">LMS Games</span>
+            </a>
+            <p class="left-nav-tooltip">LMS Games</p>
+            <ul class="dropdown-menu">
+              <li><a href="lock_of_the_week.html">Lock of the week</a></li>
+              <li><a href="upset_special.html">Upset Special</a></li>
+              <li><a href="survivor.html">Survivor</a></li>
+              <li><a href="monday_football.html">Monday Football at Night</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-stats"></span>
+              <span class="hidden-sm hidden-xs">Stats</span>
+            </a>
+            <p class="left-nav-tooltip">Stats</p>
+            <ul class="dropdown-menu">
+              <li><a href="#">Stats 1</a></li>
+              <li><a href="#">Stats 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div id="main-wrapper">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-md hidden-lg" role="navigation">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -102,63 +145,106 @@
       </nav>
       <!-- Main Container -->
       <div id="main-container">
+        <div class="top-nav clearfix">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="countdown-wrapper pull-left">
+                <p class="pull-left">
+                  <span class="glyphicon glyphicon-time"></span>
+                </p>
+                <div id="countbox1"></div>
+                <p class="deadline-type green pull-left">
+                  Spread<br>Revealed
+                </p>
+              </div>
+              <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
+                    <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
+                    <span>Commish</span>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="edit_profile.html">My Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="commissioner_panel.html">Commissioner Panel</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Admin</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Monkey Business</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">About this site</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#">Log Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="main-container-header">
           <div class="container">
             <div class="row user-wrapper">
               <div class="col-md-12">
                 <div class="user-info">
-                  <h1>
-                    Commish's Dashboard
+                  <div class="clearfix">
+                    <h1 class="pull-left"><span class="league-name x-editable" data-type="select" data-title="Choose League" data-source="[{value: 1, text: '&quot;Beat the Monkey&quot; Classic'}]" data-value="1" data-inputclass="form-control btn btn-default pull-left">Beat the Monkey" Classic</span></h1>
                     <button class="btn btn-success use-free-pass pull-right" disabled="">Use Free Pass</button>
-                  </h1>
+                  </div>
+                  <div class="clearfix">
+                    <h2 class="pull-left">
+                      Commish's Dashboard
+                    </h2>
+                    <div class="options-wrapper pull-right">
+                      <select id="player-select" name="player-select" class="form-control pull-left btn btn-default">
+                        <option value="all">All Players</option>
+                        <option value="1">Player 1</option>
+                        <option value="2" selected="">Commish</option>
+                      </select>
+                      <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
+                        <option value="1" selected="">Week 1</option>
+                        <option value="2">Week 2</option>
+                        <option value="3">Week 3</option>
+                        <option value="4">Week 4</option>
+                        <option value="5">Week 5</option>
+                        <option value="6">Week 6</option>
+                        <option value="7">Week 7</option>
+                        <option value="8">Week 8</option>
+                        <option value="9">Week 9</option>
+                        <option value="10">Week 10</option>
+                        <option value="11">Week 11</option>
+                        <option value="12">Week 12</option>
+                        <option value="13">Week 13</option>
+                        <option value="14">Week 14</option>
+                        <option value="15">Week 15</option>
+                        <option value="16">Week 16</option>
+                        <option value="17">Week 17</option>
+                      </select>
+                      <div class="btn-group pull-left" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                          <input type="radio" name="ats-options" value="even"> Even
+                        </label>
+                        <label class="btn btn-default">
+                          <input type="radio" name="ats-options" value="ats"> ATS
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div id="dashboard" class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-header clearfix">
-                <h1 class="pull-left"><span class="league-name x-editable" data-type="select" data-title="Choose League" data-source="[{value: 1, text: '&quot;Beat the Monkey&quot; Classic'}]" data-value="1" data-inputclass="form-control btn btn-default pull-left">Beat the Monkey" Classic</span></h1>
-                <div class="options-wrapper pull-right">
-                  <select id="player-select" name="player-select" class="form-control pull-left btn btn-default">
-                    <option value="all">All Players</option>
-                    <option value="1">Player 1</option>
-                    <option value="2" selected="">Commish</option>
-                  </select>
-                  <select id="week-select" name="week-select" class="form-control pull-left btn btn-default">
-                    <option value="1" selected="">Week 1</option>
-                    <option value="2">Week 2</option>
-                    <option value="3">Week 3</option>
-                    <option value="4">Week 4</option>
-                    <option value="5">Week 5</option>
-                    <option value="6">Week 6</option>
-                    <option value="7">Week 7</option>
-                    <option value="8">Week 8</option>
-                    <option value="9">Week 9</option>
-                    <option value="10">Week 10</option>
-                    <option value="11">Week 11</option>
-                    <option value="12">Week 12</option>
-                    <option value="13">Week 13</option>
-                    <option value="14">Week 14</option>
-                    <option value="15">Week 15</option>
-                    <option value="16">Week 16</option>
-                    <option value="17">Week 17</option>
-                  </select>
-                  <div class="btn-group pull-left" data-toggle="buttons">
-                    <label class="btn btn-default active">
-                      <input type="radio" name="ats-options" value="even"> Even
-                    </label>
-                    <label class="btn btn-default">
-                      <input type="radio" name="ats-options" value="ats"> ATS
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
+          <div class="row hidden-sm hidden-xs">
             <div class="col-xs-12">
               <div class="league-players-wrapper">
                 <ul>
@@ -486,7 +572,7 @@
                 </div><!-- /.player-wrapper -->
                 <hr/>
                 <div class="row">
-                  <div class="col-sm-6 col-xs-12">
+                  <div class="col-md-6 col-sm-7 col-xs-12">
                     <h2>Last Man Standing Games</h2>
                     <ul class="list-group">
                       <li class="list-group-item">
@@ -533,30 +619,30 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="col-sm-6 col-xs-12">
+                  <div class="col-md-6 col-sm-5 col-xs-12">
                     <h2>Commish's Stats YTD</h2>
-                    <div class="col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-usd"></span></div>
                         <h3 class="pull-left">Monkey Money</h3>
                       </header>
                       <p>+30</p>
                     </div>
-                    <div class="col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-star"></span></div>
                         <h3 class="pull-left">Game Points</h3>
                       </header>
                       <p>+1400</p>
                     </div>
-                    <div class="col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-certificate"></span></div>
                         <h3 class="pull-left">PQT</h3>
                       </header>
                       <p>-350</p>
                     </div>
-                    <div class="col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-stats"></span></div>
                         <h3 class="pull-left">Position</h3>
@@ -677,6 +763,22 @@
           </div><!-- /.row -->
         </div><!-- /#dashboard.container -->
       </div><!-- /#main-container -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 clearfix">
+              <div class="footer-logo pull-left"><img src="../images/logo.png" alt="Logo" width="100px"/>&copy; 2014</div>
+              <div class="footer-details pull-right">
+                <nav class="footer-nav">
+                  <a href="#">FAQ</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms and Conditions</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <div id="edit-images-modal" class="modal fade">

@@ -25,8 +25,12 @@ h3 {
 .main-container-header {
   background: #157752;
   border-bottom: 5px solid #054422;
+  border-top: 5px solid #054422;
 }
 
+.use-free-pass {
+  margin-top: 20px;
+}
 
 #player-select {
   width: auto;
@@ -317,6 +321,9 @@ p.game-time {
 .dashboard-wrapper .helmet-wrapper {
   padding: 20px 10px;
   width: 75%;
+}
+.lms-section .helmet-wrapper {
+  width: 20%;
 }
 .ytd-stat {
   margin: 30px 0;

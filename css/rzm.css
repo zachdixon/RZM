@@ -1,7 +1,8 @@
 
 .rzm-gameboard .main-container-header {
-  background: #333;
-  border-bottom: 5px solid #111;
+  background: #666;
+  border-top: 5px solid #333;
+  border-bottom: 5px solid #333;
   margin-bottom: 15px;
   padding: 15px;
 }
@@ -36,7 +37,7 @@
   padding: 10px 10px 5px 10px;
   margin-bottom: 10px;
   position: absolute;
-  min-width: 645px;
+  min-width: 550px;
   overflow: hidden;
 }
 
@@ -416,13 +417,10 @@
 
 /* Mobile */
 @media (max-width: 655px) {
-  body {
-    padding-top: 40px;
-  }
   .mobile-show {
     display: initial;
   }
-  #main-container {
+  #main-container > .container {
     padding: 0 10px;
   }
 

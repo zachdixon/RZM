@@ -16,11 +16,17 @@ input.form-control[type="text"] {
 
 .main-container-header {
   background: #116A8C;
+  border-top: 5px solid #112233;
 }
 .main-container-header .user-info h1 {
   font-family: 'destroyregular', "Helvetica Neue",Helvetica,Arial,sans-serif;
   text-transform: uppercase;
   font-size: 30px;
+}
+.main-container-header h2 {
+  font-family: 'source sans pro';
+  font-weight: 200;
+  color: #fff;
 }
 .main-sub-nav-wrapper {
   background: #082837;

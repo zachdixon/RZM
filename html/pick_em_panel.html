@@ -34,8 +34,51 @@
     <div class="loading">
       <img class="loading-image" src="../images/backgrounds/loading_monkey.png">
     </div>
+    <div class="side-nav left-nav hidden-xs">
+      <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logo.png" alt="Red Mania Zone" width="100%"></a>
+      <nav>
+        <ul class="side-nav-list">
+          <li>
+            <a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span><span class="hidden-sm hidden-xs">Dashboard</span></a>
+            <p class="left-nav-tooltip">Dashboard</p>
+          </li>
+          <li>
+            <a href="rzm.html"><span class="glyphicon glyphicon-th-large"></span><span class="hidden-sm hidden-xs">Gameboard</span></a>
+            <p class="left-nav-tooltip">Gameboard</p>
+          </li>
+          <li class="active">
+            <a href="pick_em_panel.html"><span class="glyphicon glyphicon-tasks"></span><span class="hidden-sm hidden-xs">Pick'em Panel</span></a>
+            <p class="left-nav-tooltip">Pick'em Panel</p>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-tower"></span>
+              <span class="hidden-sm hidden-xs">LMS Games</span>
+            </a>
+            <p class="left-nav-tooltip">LMS Games</p>
+            <ul class="dropdown-menu">
+              <li><a href="lock_of_the_week.html">Lock of the week</a></li>
+              <li><a href="upset_special.html">Upset Special</a></li>
+              <li><a href="survivor.html">Survivor</a></li>
+              <li><a href="monday_football.html">Monday Football at Night</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-stats"></span>
+              <span class="hidden-sm hidden-xs">Stats</span>
+            </a>
+            <p class="left-nav-tooltip">Stats</p>
+            <ul class="dropdown-menu">
+              <li><a href="#">Stats 1</a></li>
+              <li><a href="#">Stats 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div id="main-wrapper">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-md hidden-lg" role="navigation">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -78,7 +121,6 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="header-countdown"></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
                   <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
@@ -112,6 +154,50 @@
       </nav>
       <!-- Main Container -->
       <div id="main-container" class="pick-em-panel">
+        <div class="top-nav clearfix">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="countdown-wrapper pull-left">
+                <p class="pull-left">
+                  <span class="glyphicon glyphicon-time"></span>
+                </p>
+                <div id="countbox1"></div>
+                <p class="deadline-type green pull-left">
+                  Spread<br>Revealed
+                </p>
+              </div>
+              <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
+                    <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
+                    <span>Commish</span>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="edit_profile.html">My Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="commissioner_panel.html">Commissioner Panel</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Admin</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Monkey Business</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">About this site</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#">Log Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="main-container-header">
           <div class="container">
             <div class="row user-wrapper">
@@ -399,22 +485,23 @@
 
         </div><!-- /.container -->
       </div>
-    </div>
-    <footer class="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 clearfix">
-            <div class="footer-logo pull-left"><img src="../images/logo.png" alt="Logo" width="100px"/>&copy; 2014</div>
-            <div class="footer-details pull-right">
-              <nav class="footer-nav">
-                <a href="#">FAQ</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms and Conditions</a>
-              </nav>
+      <footer class="main-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 clearfix">
+              <div class="footer-logo pull-left"><img src="../images/logo.png" alt="Logo" width="100px"/>&copy; 2014</div>
+              <div class="footer-details pull-right">
+                <nav class="footer-nav">
+                  <a href="#">FAQ</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms and Conditions</a>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+
   </body>
 </html>

@@ -18,18 +18,22 @@
 }
 .lock-of-the-week .main-container-header {
   background: #1369bf;
+  border-top: 5px solid #03398f;
   border-bottom: 5px solid #03398f;
 }
 .upset-special .main-container-header {
   background: #6400C8;
+  border-top: 5px solid #340098;
   border-bottom: 5px solid #340098;
 }
 .survivor .main-container-header {
   background: #ff9d00;
+  border-top: 5px solid #cf6d00;
   border-bottom: 5px solid #cf6d00;
 }
 .monday-football-at-night .main-container-header {
   background: #663300;
+  border-top: 5px solid #360300;
   border-bottom: 5px solid #360300;
 }
 
