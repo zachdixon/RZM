@@ -12,6 +12,7 @@
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/rzm.css" rel="stylesheet">
     <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -157,7 +158,7 @@
                   Spread<br>Revealed
                 </p>
               </div>
-              <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+              <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
                     <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
@@ -196,7 +197,6 @@
                 <div class="user-info">
                   <div class="clearfix">
                     <h1 class="pull-left"><span class="league-name x-editable" data-type="select" data-title="Choose League" data-source="[{value: 1, text: '&quot;Beat the Monkey&quot; Classic'}]" data-value="1" data-inputclass="form-control btn btn-default pull-left">Beat the Monkey" Classic</span></h1>
-                    <button class="btn btn-success use-free-pass pull-right" disabled="">Use Free Pass</button>
                   </div>
                   <div class="clearfix">
                     <h2 class="pull-left">
@@ -513,7 +513,6 @@
                         <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right"></span></p>
                         <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
                     </div><!-- /.game-wrapper -->
                     <div class="game-wrapper winning">
                       <p class="point-value">200</p>
@@ -526,7 +525,6 @@
                         <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                         <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">+3.5</span></p>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
                     </div><!-- /.game-wrapper -->
                     <div class="game-wrapper won game-over">
                       <p class="point-value">150</p>
@@ -540,7 +538,6 @@
                         <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                         <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
                     </div><!-- /.game-wrapper -->
                     <div class="game-wrapper losing">
                       <p class="point-value">100</p>
@@ -553,7 +550,6 @@
                         <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                         <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
                     </div><!-- /.game-wrapper -->
                     <div class="game-wrapper lost game-over">
                       <p class="point-value">50</p>
@@ -566,10 +562,21 @@
                         <p class="clearfix game-score-team"><span class="pull-left">SD</span><span class="pull-left spread-value"></span><span class="pull-right">21</span></p>
                         <p class="clearfix game-score-pq"><span class="pull-left">Pick Quality</span><span class="pull-right">-7.5</span></p>
                       </div>
-                      <p class="pick-quality label label-primary mobile-show">-0.5</p>
                     </div><!-- /.game-wrapper -->
                   </div><!-- /.player-games-wrapper -->
                 </div><!-- /.player-wrapper -->
+                <div class="row">
+                  <div class="col-md-12 clearfix">
+                    <div class="pull-left">
+                      <h3>Have a bad week?</h3>
+                      <p>Use your free pass to ignore your score for this week. Use it wisely though, <strong>you only get one!</strong></p>
+                    </div>
+
+                    <div class="pull-right">
+                      <button class="btn btn-success use-free-pass pull-right" disabled="">Use Free Pass</button>
+                    </div>
+                  </div>
+                </div>
                 <hr/>
                 <div class="row">
                   <div class="col-md-6 col-sm-7 col-xs-12">
@@ -621,28 +628,28 @@
                   </div>
                   <div class="col-md-6 col-sm-5 col-xs-12">
                     <h2>Commish's Stats YTD</h2>
-                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-12 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-usd"></span></div>
                         <h3 class="pull-left">Monkey Money</h3>
                       </header>
                       <p>+30</p>
                     </div>
-                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-12 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-star"></span></div>
                         <h3 class="pull-left">Game Points</h3>
                       </header>
                       <p>+1400</p>
                     </div>
-                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-12 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-certificate"></span></div>
                         <h3 class="pull-left">PQT</h3>
                       </header>
                       <p>-350</p>
                     </div>
-                    <div class="col-lg-6 col-sm-12 col-xs-6 ytd-stat">
+                    <div class="col-lg-6 col-sm-12 col-xs-12 ytd-stat">
                       <header class="clearfix">
                         <div class="pull-left img-wrapper"><span class="glyphicon glyphicon-stats"></span></div>
                         <h3 class="pull-left">Position</h3>

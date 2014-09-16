@@ -97,9 +97,9 @@ function formPlayers(){
   var $player = $('.player-wrapper');
   var $clone;
   for(var x=2; x <= 10; x++){
-    $clone = $player.clone().attr('data-player',x).attr('data-place',x)
+    $clone = $player.clone().attr('data-player',x).attr('data-place',x);
     $clone.find('.player-name').text("Player " + x);
-    $clone.appendTo('#players-wrapper')
+    $clone.appendTo('#players-wrapper');
   }
 }
 
@@ -137,7 +137,7 @@ function shuffle(array) {
 }
 
 function randomizePlayers(e){
-  if(e){e.preventDefault()};
+  if(e){e.preventDefault()}
   var arr = [];
   //create array of 1..10
   for(var i=1;i<=10;i++){
@@ -203,10 +203,8 @@ function movePlayers(new_order){
 function toggleGames(e) {
   e.preventDefault();
   // If mobile UI
-  if($(window).width() <= 655){
-    var $player;
-    $player = $(e.currentTarget);
-    $player.find('.player-games-wrapper').toggle();
+  if($(window).width() <= 767){
+    $(e.currentTarget).find('.player-games-wrapper').toggle();
   } else {
     return false;
   }
@@ -222,7 +220,7 @@ function toggleFullscreen(e) {
     document.mozFullScreenElement ||
     document.msFullscreenElement
   ){} else {
-    $('#main-container').addClass('fullscreen')
+    $('#main-container').addClass('fullscreen');
     // go full-screen
     if (i.requestFullscreen) {
         i.requestFullscreen();

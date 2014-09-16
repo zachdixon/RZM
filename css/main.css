@@ -236,9 +236,13 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-@media (min-width: 1200px) {
+
+
+
+@media (min-width: 768px) {
   .container {
-    width: 1040px;
+    /*width: 680px;*/
+    width: 100%
   }
 }
 @media (min-width: 992px) {
@@ -246,9 +250,9 @@ h1,h2,h3,h4,h5,h6 {
     width: 830px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .container {
-    width: 680px;
+    width: 1040px;
   }
 }
 @media (min-width: 1250px) {
@@ -256,8 +260,6 @@ h1,h2,h3,h4,h5,h6 {
     width: 1080px;
   }
 }
-
-
 
 
 .navbar {
@@ -428,6 +430,11 @@ input.form-control[type="email"]:focus, input.form-control[type="password"]:focu
   font-size: 40px;
   margin-right: 15px;
 }
+@media (max-width: 767px) {
+  .countdown-wrapper .glyphicon-time {
+    font-size: 20px;
+  }
+}
 #countbox1 {
   float: left;
 }
@@ -593,10 +600,23 @@ img.avatar {
   padding-top: 15px;
 }
 
+@media (max-width: 767px) {
+  .options-wrapper {
+    float: none;
+    width: 100%;
+  }
+  .options-wrapper > * {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+  }
+  .options-wrapper .btn-group label {
+    width: 50%;
+  }
+}
+
 #week-select {
   width: 100px;
 }
-
 
 
 

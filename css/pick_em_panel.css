@@ -272,3 +272,9 @@ p.game-time {
   float: none;
   margin-top: 10px;
 }
+
+@media (max-width: 767px) {
+  .your-picks {
+    padding: 0;
+  }
+}

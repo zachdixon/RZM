@@ -386,6 +386,26 @@
 }
 
 
+
+
+
+.btn-fullscreen {
+  margin-left: 10px;
+}
+#main-container.fullscreen {
+  background-color: #000;
+  background-image: url('../images/backgrounds/dark_brick_wall.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fullscreen .btn-fullscreen {
+  display: none;
+}
+
+
 @media (max-width: 1560px) {
   .game-scores p {
     font-size: 0.8em;
@@ -393,7 +413,7 @@
 }
 
 @media (max-width: 1365px) {
-  .player-wrapper {
+  .rzm-gameboard .player-wrapper {
     float: none;
     margin: 10px auto;
     position: relative;
@@ -416,27 +436,7 @@
 }
 
 /* Mobile */
-@media (max-width: 655px) {
-  .mobile-show {
-    display: initial;
-  }
-  #main-container > .container {
-    padding: 0 10px;
-  }
-
-  .page-header {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 5px 0;
-  }
-
-  .league-name {
-    font-size: 20px;
-  }
-
-  .options-wrapper {
-    padding-top: 5px;
-  }
+@media (max-width: 991px) {
 
   .player-wrapper {
     width: 100%;
@@ -445,24 +445,24 @@
   }
 
   /* Used to slide toggle players on mobile */
-/*    max-height: 45px;
-    height: auto;
-    -webkit-transition: max-height 1s ease-in-out;
-    -moz-transition: max-height 1s ease-in-out;
-    -o-transition: max-height 1s ease-in-out;
-    transition: max-height 1s ease-in-out;
-  }
-  .player-wrapper.expanded {
-    max-height: 1000px;
-  }*/
+  /*    max-height: 45px;
+      height: auto;
+      -webkit-transition: max-height 1s ease-in-out;
+      -moz-transition: max-height 1s ease-in-out;
+      -o-transition: max-height 1s ease-in-out;
+      transition: max-height 1s ease-in-out;
+    }
+    .player-wrapper.expanded {
+      max-height: 1000px;
+    }*/
 
 
   .player-wrapper .player-position {
-    text-align: left;
+    text-align: left !important;
     left: 5px;
     top: -2px;
-    line-height: 18px;
-    position: relative;
+    line-height: 18px !important;
+    position: relative !important;
     float: left;
   }
   .player-wrapper .position-number:after {
@@ -513,15 +513,19 @@
     overflow: auto;
     white-space: nowrap;
   }
-  .player-wrapper:first-of-type p.player-name.mobile-show {
+  .rzm-gameboard .player-wrapper:first-of-type p.player-name.mobile-show {
     color: #272B30;
     font-weight: bold;
   }
 
   .player-games-wrapper {
-    display: none;
+
     width: 100%;
     margin-top: 15px;
+  }
+
+  .rzm-gameboard .player-games-wrapper {
+    display: none;
   }
 
   .player-games-wrapper .game-wrapper {
@@ -543,6 +547,7 @@
     width: 70px;
     float: left;
     margin-right: 10px;
+    padding: 10px;
   }
   .game-scores {
     margin-top: 10px;
@@ -550,21 +555,24 @@
     float: left;
     min-width: 90px;
   }
+  .btn-edit-images, .btn-status {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    opacity: 0;
+  }
 }
 
-
-.btn-fullscreen {
-  margin-left: 10px;
-}
-#main-container.fullscreen {
-  background-color: #000;
-  background-image: url('../images/backgrounds/dark_brick_wall.png');
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.fullscreen .btn-fullscreen {
-  display: none;
+@media (max-width: 767px) {
+  .main-container-header {
+    padding: 0 10px;
+  }
+  .main-container-header h1 {
+    margin: 5px 0;
+  }
+  #dashboard .player-games-wrapper .game-scores {
+    width: 100%;
+  }
 }
