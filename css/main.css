@@ -324,8 +324,9 @@ h1,h2,h3,h4,h5,h6 {
   box-shadow: 1px 1px 1px #666;
 }
 
-.navbar-nav.navbar-right:last-child {
+.navbar-nav.navbar-right {
   margin-right: 0;
+  background: #232323;
 }
 
 @media (max-width: 900px) and (min-width: 768px) {
@@ -543,6 +544,9 @@ img.avatar {
   z-index: -1;
   border-top: 5px solid #211;
 }
+.main-container-header h2 {
+  margin-top: 15px;
+}
 @media (max-width: 655px) {
   .main-container-header {
     padding: 5px 0;
@@ -587,7 +591,9 @@ img.avatar {
 .main-sub-nav > ul > li.active > a {
     color: #fff;
 }
-
+.league-name-wrapper {
+  margin-left: 20px;
+}
 .league-name {
   color: #fff;
   font-family: 'destroyregular', "Helvetica Neue",Helvetica,Arial,sans-serif;

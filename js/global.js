@@ -11,6 +11,8 @@ $(function(){
   imagesLoaded(function(){
     finishedLoading();
   });
+
+  $(window).on('resize', checkTopNav);
 });
 
 function imagesLoaded(){
@@ -32,6 +34,14 @@ function finishedLoading(){
   $('.loading').fadeOut('fast',function(){
     $('#main-container').show();
   });
+}
+
+function checkTopNav(e) {
+  if($('.top-nav').height() > 84) {
+    $('.countdown-wrapper').removeClass('pull-right').addClass('pull-left');
+  } else {
+    $('.countdown-wrapper').removeClass('pull-left').addClass('pull-right');
+  }
 }
 
 

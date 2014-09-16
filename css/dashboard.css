@@ -35,9 +35,6 @@ h3 {
 #player-select {
   width: auto;
 }
-.options-wrapper {
-  padding-top: 25px;
-}
 .options-wrapper select {
   margin-right: 10px;
 }
