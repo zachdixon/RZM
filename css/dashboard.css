@@ -22,11 +22,27 @@ h3 {
   color: #fff;
 }
 
-.main-container-header {
-  background: #157752;
-  border-bottom: 5px solid #054422;
-  border-top: 5px solid #054422;
+/*.main-container-header {*/
+  /*background: #157752;*/
+  /*border-bottom: 5px solid #054422;*/
+  /*border-top: 5px solid #054422;*/
+/*}*/
+
+.full-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: #000;
 }
+.full-bg img {
+  min-width: 100%;
+  min-height: 100%;
+}
+/*dashboard {*/
+  /*background: rgba(19,19,19,0.8);*/
+/*}*/
 
 .use-free-pass {
   margin-top: 20px;
