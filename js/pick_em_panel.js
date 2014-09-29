@@ -63,4 +63,24 @@ $(document).on('ready', function(){
 //    }
 //  });
 
+	hopscotch.startTour(tour);
+
 });
+
+var tour = {
+	id: "tour-pickem-panel",
+	steps: [
+		{
+			title: "My Header",
+			content: "This is the header of my page.",
+			target: ".top-nav",
+			placement: "bottom"
+		},
+		{
+			title: "My content",
+			content: "Here is where I put my content.",
+			target: document.querySelector("#content p"),
+			placement: "bottom"
+		}
+	]
+};
