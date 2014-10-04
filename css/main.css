@@ -639,6 +639,78 @@ img.avatar {
   width: 100px;
 }
 
+/* Scoreboard */
+
+.sortable {
+  cursor: move;
+}
+
+.sortable-placeholder {
+  display: inline-block;
+  margin-right: 10px;
+  width: 125px;
+  height: 1px;
+}
+
+.scoreboard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #dfdfdf;
+  z-index: 10;
+  box-shadow: 0 0 10px 5px #000;
+  border-top: 1px solid #fff;
+  overflow: auto;
+  overflow-x: scroll;
+}
+.btn-hide-scoreboard {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  border-radius: 5px 0 0 5px;
+  background: #fff;
+  text-align: center;
+  color: #232323;
+}
+.scoreboard-list {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  white-space: nowrap;
+}
+.scoreboard-item {
+  display: inline-block;
+  width: 125px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 1px 0px #aaa;
+  box-shadow: 0 0 1px 0px #aaa;
+  padding: 10px;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #000;
+}
+.scoreboard-header {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+.scoreboard-team {
+  margin: 0;
+}
+.scoreboard-team {
+  border-bottom: 1px dashed #ccc;
+}
+.scoreboard-team:last-of-type {
+  border: none;
+}
+.scoreboard-team.home-team {
+  font-weight: bold;
+}
+
+/* END Scoreboard */
+
 
 
 /* Footer */

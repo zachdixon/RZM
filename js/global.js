@@ -12,6 +12,15 @@ $(function(){
     finishedLoading();
   });
 
+  $('.sortable').sortable({
+    placeholder: 'sortable-placeholder',
+    tolerance: 'intersect',
+    axis: 'x',
+    start: function(event, ui) {
+    }
+  });
+  $('.sortable').disableSelection();
+
   $(window).on('resize', checkTopNav);
 });
 
