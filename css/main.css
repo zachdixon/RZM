@@ -61,7 +61,8 @@ h1,h2,h3,h4,h5,h6 {
   width: 150px;
   background: #232323;
   height: 100%;
-  box-shadow: 3px 0 5px 0px rgba(0,0,0,0.5);
+  border-right: 1px solid #000;
+  box-shadow: inset -1px 0px 1px #333;
   z-index: 1;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
@@ -664,6 +665,11 @@ img.avatar {
   overflow: auto;
   overflow-x: scroll;
 }
+.scoreboard.dark {
+  background: rgba(0,0,0,1);
+  border-top: 1px solid #333;
+  box-shadow: 0 0 3px #000;
+}
 .btn-hide-scoreboard {
   position: absolute;
   top: -15px;
@@ -690,6 +696,12 @@ img.avatar {
   border-radius: 5px;
   border: 1px solid #ccc;
   color: #000;
+}
+.scoreboard.dark .scoreboard-item {
+  background: #232323;
+  color: #fff;
+  border: 1px solid #000;
+  box-shadow: 0 0 1px #aaa, inset 0 0 1px #000;
 }
 .scoreboard-header {
   text-align: center;
