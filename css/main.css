@@ -653,13 +653,29 @@ img.avatar {
   height: 1px;
 }
 
-.scoreboard {
-  position: absolute;
+body.scoreboard-open {
+  padding-bottom: 115px;
+}
+
+.scoreboard-wrapper {
+  position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  background: #dfdfdf;
   z-index: 10;
+  -webkit-transform: translateY(115px);
+  transform: translateY(115px);
+  -webkit-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.scoreboard-open .scoreboard-wrapper {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.scoreboard {
+  background: #dfdfdf;
   box-shadow: 0 0 10px 5px #000;
   border-top: 1px solid #fff;
   overflow: auto;
@@ -672,12 +688,19 @@ img.avatar {
 }
 .btn-hide-scoreboard {
   position: absolute;
-  top: -15px;
+  bottom: 113px;
   right: 10px;
-  border-radius: 5px 0 0 5px;
-  background: #fff;
+  border-radius: 5px 5px 0 0;
+  background: #000;
   text-align: center;
-  color: #232323;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #f00;
+  border-bottom: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  z-index: 11;
 }
 .scoreboard-list {
   margin: 0;

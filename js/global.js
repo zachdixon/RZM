@@ -15,11 +15,11 @@ $(function(){
   $('.sortable').sortable({
     placeholder: 'sortable-placeholder',
     tolerance: 'intersect',
-    axis: 'x',
-    start: function(event, ui) {
-    }
+    axis: 'x'
   });
   $('.sortable').disableSelection();
+
+  $('.btn-hide-scoreboard').on('click', showHideScoreboard);
 
   $(window).on('resize', checkTopNav);
 });
@@ -50,6 +50,16 @@ function checkTopNav(e) {
     $('.countdown-wrapper').removeClass('pull-right').addClass('pull-left');
   } else {
     $('.countdown-wrapper').removeClass('pull-left').addClass('pull-right');
+  }
+}
+
+function showHideScoreboard(e) {
+  $body = $('body')
+  $body.toggleClass('scoreboard-open');
+  if($body.hasClass('scoreboard-open')) {
+    $(e.target).text('Hide');
+  } else {
+    $(e.target).text('Scoreboard');
   }
 }
 
