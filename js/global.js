@@ -19,7 +19,7 @@ $(function(){
   });
   $('.sortable').disableSelection();
 
-  $('.btn-hide-scoreboard').on('click', showHideScoreboard);
+  $('.btn-scoreboard').on('click', showHideScoreboard);
 
   $(window).on('resize', checkTopNav);
 });

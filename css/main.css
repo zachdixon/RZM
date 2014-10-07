@@ -558,9 +558,13 @@ img.avatar {
 .main-container-header h2 {
   margin-top: 15px;
 
-  color: #111;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  -moz-text-stroke: 1px #000;
+  -ms-text-stroke: 1px #000;
+  -o-text-stroke: 1px #000;
+  text-stroke: 1px #000;
   font-weight: 500;
-  text-shadow: 1px 1px 1px #484848;
   font-size: 40px;
 }
 @media (max-width: 655px) {
@@ -662,8 +666,8 @@ body.scoreboard-open {
   bottom: 0;
   width: 100%;
   z-index: 10;
-  -webkit-transform: translateY(115px);
-  transform: translateY(115px);
+  -webkit-transform: translateY(75px);
+  transform: translateY(75px);
   -webkit-transition: all 400ms;
   -o-transition: all 400ms;
   transition: all 400ms;
@@ -683,12 +687,12 @@ body.scoreboard-open {
 }
 .scoreboard.dark {
   background: rgba(0,0,0,1);
-  border-top: 1px solid #333;
+  border-top: 1px solid #f00;
   box-shadow: 0 0 3px #000;
 }
-.btn-hide-scoreboard {
+.btn-scoreboard {
   position: absolute;
-  bottom: 113px;
+  bottom: 74px;
   right: 10px;
   border-radius: 5px 5px 0 0;
   background: #000;
@@ -704,21 +708,23 @@ body.scoreboard-open {
 }
 .scoreboard-list {
   margin: 0;
-  padding: 10px;
+  padding: 5px 10px;
   list-style: none;
   white-space: nowrap;
+  font-size: 0px;
 }
 .scoreboard-item {
   display: inline-block;
-  width: 125px;
+  width: 115px;
   background: #fff;
   -webkit-box-shadow: 0 0 1px 0px #aaa;
   box-shadow: 0 0 1px 0px #aaa;
-  padding: 10px;
+  padding: 0 10px;
   margin: 0 10px 0 0;
   border-radius: 5px;
   border: 1px solid #ccc;
   color: #000;
+  font-size: 14px;
 }
 .scoreboard.dark .scoreboard-item {
   background: #232323;
@@ -730,6 +736,7 @@ body.scoreboard-open {
   text-align: center;
   border-bottom: 1px solid #ccc;
   font-weight: bold;
+  margin-bottom: 0;
 }
 .scoreboard-team {
   margin: 0;
