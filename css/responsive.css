@@ -45,4 +45,10 @@
   .nav-tabs > li > a {
     padding: 10px 5px;
   }
+  .league-name-wrapper h1 {
+    margin: 0 0 10px 0;
+  }
+  .league-name {
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,160 @@
+body {
+  background: #131313;
+}
+
+.your-rankings-wrapper {
+  background: #232323;
+  border-radius: 15px;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+.your-rankings-wrapper .user-info {
+  text-align: center;
+}
+
+.your-rankings-wrapper .player-avatar-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 125px;
+  margin: 15px auto;
+}
+
+.your-rankings-wrapper .img-player-avatar {
+  width: 100%;
+}
+
+.your-rankings-wrapper .player-name {
+  font-size: 18px;
+}
+
+.your-rankings-wrapper h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  background: rgb(153, 17, 17);
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.your-rankings-wrapper p.place {
+  font-size: 30px;
+  text-align: center;
+}
+
+p.place span {
+  display: block;
+  padding: 10px 0;
+}
+p.place span:first-of-type {
+  border-bottom: 2px solid #000;
+}
+p.place span:last-of-type {
+  border-top: 2px solid #343434;
+}
+p.place .positive {
+  color: #25A000;
+}
+p.place .negative {
+  color: #C60000;
+}
+
+.glyphicon-arrow-up {
+  color: #25A000;
+}
+.glyphicon-arrow-down {
+  color: #C60000;
+}
+
+.leaderboard-player {
+  background: #232323;
+  padding: 5px;
+  width: 85%;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.leaderboard-player .place {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.leaderboard-player.first {
+  color: #232323;
+  background: url('../images/backgrounds/gold-texture-2-brushed.jpg') 0 0 no-repeat;
+  background-size: 100% 100%;
+  padding: 15px 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+.leaderboard-player.first .place, .leaderboard-player.first .player-name, .leaderboard-player.first .stat {
+  font-size: 18px;
+}
+
+
+.leaderboard-player.second {
+  color: #232323;
+  background: url('../images/backgrounds/silver-texture.jpg') 0 0 no-repeat;
+  background-size: 100% 100%;
+  padding: 13px 5px;
+  width: 95%;
+  border-radius: 0 0 5px 5px;
+}
+.leaderboard-player.second .place, .leaderboard-player.second .player-name {
+  font-size: 17px;
+}
+
+.leaderboard-player.third {
+  color: #232323;
+  background: url('../images/backgrounds/bronze-texture.jpg') 0 0 no-repeat;
+  background-size: 100% 100%;
+  padding: 10px 5px;
+  width: 90%;
+  border-radius: 0 0 5px 5px;
+}
+.leaderboard-player.third .place, .leaderboard-player.third .player-name {
+  font-size: 16px;
+}
+
+.leaderboard-player.last .place {
+  color: #f00;
+  text-shadow: 0 -1px 1px #000, 0 1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
+}
+
+
+.leaderboard-player .player-avatar-wrapper {
+  width: 25px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 5px;
+  border: 1px solid #000;
+}
+.leaderboard-player .img-player-avatar {
+  width: 100%;
+}
+
+.leaderboard-player.first .stat.positive, .leaderboard-player.second .stat.positive, .leaderboard-player.third .stat.positive, 
+.leaderboard-player.first .stat.negative, .leaderboard-player.second .stat.negative, .leaderboard-player.third .stat.negative  {
+  text-shadow: 0 -1px 1px #000, 0 1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
+}
+.leaderboard-player .stat.positive {
+  color: #25A000;
+  font-weight: bold;
+}
+.leaderboard-player .stat.negative {
+  color: #C60000;
+}
+
+@media (max-width: 767px) {
+  .your-rankings-wrapper .player-avatar-wrapper {
+    margin: 15px;
+    float: left;
+    max-width: 50px;
+  }
+  .your-rankings-wrapper .player-name {
+    float: left;
+    margin-top: 25px;
+  }
+}

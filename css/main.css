@@ -679,16 +679,11 @@ body.scoreboard-open {
 }
 
 .scoreboard {
-  background: #dfdfdf;
-  box-shadow: 0 0 10px 5px #000;
-  border-top: 1px solid #fff;
-  overflow: auto;
-  overflow-x: scroll;
-}
-.scoreboard.dark {
   background: rgba(0,0,0,1);
   border-top: 1px solid #f00;
   box-shadow: 0 0 3px #000;
+  overflow: auto;
+  overflow-x: scroll;
 }
 .btn-scoreboard {
   position: absolute;
@@ -711,22 +706,23 @@ body.scoreboard-open {
   padding: 5px 10px;
   list-style: none;
   white-space: nowrap;
+  /* IMPORTANT - Gets rid of extra white space in list items from display:inline-block; */
   font-size: 0px;
 }
 .scoreboard-item {
   display: inline-block;
   width: 115px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 1px 0px #aaa;
-  box-shadow: 0 0 1px 0px #aaa;
   padding: 0 10px;
   margin: 0 10px 0 0;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  color: #000;
   font-size: 14px;
+  background: #232323;
+  color: #fff;
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 1px #aaa, inset 0 0 1px #000;
+  box-shadow: 0 0 1px #aaa, inset 0 0 1px #000;
 }
-.scoreboard.dark .scoreboard-item {
+.scoreboard .scoreboard-item {
   background: #232323;
   color: #fff;
   border: 1px solid #000;
@@ -756,6 +752,9 @@ body.scoreboard-open {
 
 
 /* Footer */
+.main-footer {
+  margin-bottom: 15px;
+}
 .main-footer .container {
   /*background: rgba(40,40,40,0.5);*/
   padding: 15px;

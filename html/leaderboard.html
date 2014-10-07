@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RedZone Mania</title>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/slate.bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    <link href="../css/flaticon.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/leaderboard.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="../js/imagesloaded.min.js" type="text/javascript"></script>
+
+    <script src="../js/global.js" type="text/javascript"></script>
+    <script src="../js/leaderboard.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="loading">
+      <img class="loading-image" src="../images/backgrounds/loading_monkey.png">
+    </div>
+    <!--<div class="full-bg">-->
+      <!--<img src="../images/backgrounds/football_bg.jpg" alt=""/>-->
+    <!--</div>-->
+    <div class="side-nav left-nav hidden-xs">
+      <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logo.png" alt="Red Mania Zone" width="100%"></a>
+      <nav>
+        <ul class="side-nav-list">
+          <li class="active">
+            <a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span><span class="hidden-sm hidden-xs">Dashboard</span></a>
+            <p class="left-nav-tooltip">Dashboard</p>
+          </li>
+          <li>
+            <a href="rzm.html"><span class="glyphicon glyphicon-th-large"></span><span class="hidden-sm hidden-xs">Gameboard</span></a>
+            <p class="left-nav-tooltip">Gameboard</p>
+          </li>
+          <li>
+            <a href="pick_em_panel.html"><span class="glyphicon glyphicon-tasks"></span><span class="hidden-sm hidden-xs">Pick'em Panel</span></a>
+            <p class="left-nav-tooltip">Pick'em Panel</p>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-tower"></span>
+              <span class="hidden-sm hidden-xs">LMS Games</span>
+            </a>
+            <p class="left-nav-tooltip">LMS Games</p>
+            <ul class="dropdown-menu">
+              <li><a href="lock_of_the_week.html">Lock of the week</a></li>
+              <li><a href="upset_special.html">Upset Special</a></li>
+              <li><a href="survivor.html">Survivor</a></li>
+              <li><a href="monday_football.html">Monday Football at Night</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-stats"></span>
+              <span class="hidden-sm hidden-xs">Stats</span>
+            </a>
+            <p class="left-nav-tooltip">Stats</p>
+            <ul class="dropdown-menu">
+              <li><a href="#">Stats 1</a></li>
+              <li><a href="#">Stats 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="main-wrapper">
+      <nav class="navbar navbar-default navbar-fixed-top hidden-sm hidden-md hidden-lg" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/logo.png" alt="Red Mania Zone" width="100%"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
+              <li><a href="rzm.html"><span class="glyphicon glyphicon-th-large"></span>Gameboard</a></li>
+              <li><a href="pick_em_panel.html"><span class="glyphicon glyphicon-tasks"></span>Pick'em Panel</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-tower"></span>
+                  LMS Games
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="lock_of_the_week.html">Lock of the week</a></li>
+                  <li><a href="upset_special.html">Upset Special</a></li>
+                  <li><a href="survivor.html">Survivor</a></li>
+                  <li><a href="monday_football.html">Monday Football at Night</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-stats"></span>
+                  Stats
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Stats 1</a></li>
+                  <li><a href="#">Stats 2</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
+                  <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
+                  <span>Commish</span>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="edit_profile.html">My Profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="commissioner_panel.html">Commissioner Panel</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Admin</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a href="#">Monkey Business</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">About this site</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Glossary</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a href="#">Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <!-- Main Container -->
+      <div id="main-container">
+        <div class="top-nav clearfix">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="league-name-wrapper pull-left">
+                <h1 class="pull-left"><span class="league-name x-editable" data-type="select" data-title="Choose League" data-source="[{value: 1, text: '&quot;Beat the Monkey&quot; Classic'}]" data-value="1" data-inputclass="form-control btn btn-default pull-left">Beat the Monkey" Classic</span></h1>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle no-icon" data-toggle="dropdown">
+                    <span class="avatar-wrapper"><img class="avatar" src="../images/avatar.png"></span>
+                    <span>Commish</span>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="edit_profile.html">My Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="commissioner_panel.html">Commissioner Panel</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Admin</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Monkey Business</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">About this site</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                      </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#">Log Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="countdown-wrapper pull-right">
+                <p class="pull-left">
+                  <span class="glyphicon glyphicon-time"></span>
+                </p>
+                <div id="countbox1"></div>
+                <p class="deadline-type green pull-left">
+                  Spread<br>Revealed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-container-header">
+          <div class="container">
+            <div class="row user-wrapper">
+              <div class="col-md-12">
+                <div class="user-info">
+                  <div class="clearfix">
+                  </div>
+                  <div class="clearfix">
+                    <h2 class="pull-left">
+                      Leaderboard
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="leaderboard" class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Your Rankings</h2>
+              <div class="your-rankings-wrapper clearfix">
+                <div class="user-info clearfix col-sm-3">
+                  <div class="player-avatar-wrapper">
+                    <img src="../images/players/1.png" alt="Player 1" class="img-player-avatar">
+                  </div>
+                  <p class="player-name">Commish</p>
+                </div>
+                <div class="col-sm-9 hidden-xs">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h3>Highest Score</h3>
+                    </div>
+                    <div class="col-sm-3">
+                      <h3>Best Position</h3>
+                    </div>
+                    <div class="col-sm-3">
+                      <h3>Best PQT</h3>
+                    </div>
+                    <div class="col-sm-3">
+                      <h3>Monkey Money</h3>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="place">
+                        <span class="gold-text"><i class="glyphicon glyphicon-arrow-up"></i> 1st</span>
+                        <span class="positive">2400</span>
+                      </p>
+                    </div>
+                    <div class="col-sm-3">
+                      <p class="place">
+                        <span class="silver-text"><i class="glyphicon glyphicon-arrow-down"></i> 2nd</span>
+                        <span>4</span>
+                      </p>
+                    </div>
+                    <div class="col-sm-3">
+                      <p class="place">
+                        <span class="bronze-text"><i class="glyphicon glyphicon-arrow-up"></i> 3rd</span>
+                        <span>+40.5</span>
+                      </p>
+                    </div>
+                    <div class="col-sm-3">
+                      <p class="place">
+                        <span><i class="glyphicon glyphicon-arrow-down"></i> 4th</span>
+                        <span>$90</span>
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div><!-- /.col-sm-9 END Large version -->
+                <div class="col-sm-9 hidden-sm hidden-md hidden-lg">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <h3>Highest Score</h3>
+                      <p class="place">
+                        <span class="gold-text"><i class="glyphicon glyphicon-arrow-up"></i> 1st</span>
+                        <span class="positive">2400</span>
+                      </p>
+                    </div>
+                    <div class="col-xs-6">
+                      <h3>Best Position</h3>
+                      <p class="place">
+                        <span class="silver-text"><i class="glyphicon glyphicon-arrow-down"></i> 2nd</span>
+                        <span>4</span>
+                      </p>
+                    </div>
+                    <div class="col-xs-6">
+                      <h3>Best PQT</h3>
+                      <p class="place">
+                        <span class="bronze-text"><i class="glyphicon glyphicon-arrow-up"></i> 3rd</span>
+                        <span>+40.5</span>
+                      </p>
+                    </div>
+                    <div class="col-xs-6">
+                      <h3>Monkey Money</h3>
+                      <p class="place">
+                        <span><i class="glyphicon glyphicon-arrow-down"></i> 4th</span>
+                        <span>$90</span>
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- /.col-sm-9 END Small version -->
+              </div><!-- /.your-rankings-wrapper -->
+            </div><!-- /.col-xs-12 -->
+          </div><!-- /.row -->
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <section class="leaderboard-section">
+                <h2>Highest Score</h2>
+                <div class="leaderboard-player first clearfix">
+                  <span class="place pull-left">1st</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat positive pull-right">2400</span>
+                </div>
+                <div class="leaderboard-player second clearfix">
+                  <span class="place pull-left">2nd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player third clearfix">
+                  <span class="place pull-left">3rd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">4th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">5th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">6th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">7th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">8th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">9th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">900</span>
+                </div>
+                <div class="leaderboard-player last clearfix">
+                  <span class="place pull-left">LAST</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-20000</span>
+                </div>
+              </section>
+            </div><!-- /.col-xs-12 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <section class="leaderboard-section">
+                <h2>Best Position</h2>
+                <div class="leaderboard-player first clearfix">
+                  <span class="place pull-left">1st</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">1</span>
+                </div>
+                <div class="leaderboard-player second clearfix">
+                  <span class="place pull-left">2nd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">2</span>
+                </div>
+                <div class="leaderboard-player third clearfix">
+                  <span class="place pull-left">3rd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">3</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">4th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">4</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">5th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">5</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">6th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">6</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">7th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">7</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">8th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">8</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">9th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">9</span>
+                </div>
+                <div class="leaderboard-player last clearfix">
+                  <span class="place pull-left">LAST</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">10</span>
+                </div>
+              </section>
+            </div><!-- /.col-xs-12 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <section class="leaderboard-section">
+                <h2>Best PQT</h2>
+                <div class="leaderboard-player first clearfix">
+                  <span class="place pull-left">1st</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat positive pull-right">+40</span>
+                </div>
+                <div class="leaderboard-player second clearfix">
+                  <span class="place pull-left">2nd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat positive pull-right">+15</span>
+                </div>
+                <div class="leaderboard-player third clearfix">
+                  <span class="place pull-left">3rd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-5.4</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">4th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-6</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">5th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-6</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">6th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-6</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">7th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-6</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">8th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-6</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">9th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-6</span>
+                </div>
+                <div class="leaderboard-player last clearfix">
+                  <span class="place pull-left">LAST</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">-264.13</span>
+                </div>
+              </section>
+            </div><!-- /.col-xs-12 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <section class="leaderboard-section">
+                <h2>Monkey Money</h2>
+                <div class="leaderboard-player first clearfix">
+                  <span class="place pull-left">1st</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat positive pull-right">$2000</span>
+                </div>
+                <div class="leaderboard-player second clearfix">
+                  <span class="place pull-left">2nd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat positive pull-right">$900</span>
+                </div>
+                <div class="leaderboard-player third clearfix">
+                  <span class="place pull-left">3rd</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat positive pull-right">500</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">4th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat pull-right">0</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">5th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">$-10</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">6th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">$-10</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">7th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">$-10</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">8th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">$-10</span>
+                </div>
+                <div class="leaderboard-player clearfix">
+                  <span class="place pull-left">9th</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">$-10</span>
+                </div>
+                <div class="leaderboard-player last clearfix">
+                  <span class="place pull-left">LAST</span>
+                  <span class="player-info pull-left">
+                    <span class="player-avatar-wrapper pull-left"><img src="../images/players/1.png" alt="Player 1" class="img-player-avatar"></span>
+                    <span class="player-name">Commish</span>
+                  </span>
+                  <span class="stat negative pull-right">$-20000</span>
+                </div>
+              </section>
+            </div><!-- /.col-xs-12 -->
+          </div><!-- /.row -->
+        </div><!-- /#dashboard.container -->
+      </div><!-- /#main-container -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 clearfix">
+              <div class="footer-logo pull-left"><img src="../images/logo.png" alt="Logo" width="100px"/>&copy; 2014</div>
+              <div class="footer-details pull-right">
+                <nav class="footer-nav">
+                  <a href="#">FAQ</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms and Conditions</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    
+    <div class="scoreboard-wrapper">
+      <a href="#" class="btn-scoreboard">Scoreboard</a>
+      <div class="scoreboard">
+        <ul class="sortable scoreboard-list clearfix">
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+          <li class="scoreboard-item">
+            <p class="scoreboard-header">7:00pm</p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">DAL</span>
+              <span class="scoreboard-team-score pull-right">14</span>
+            </p>
+            <p class="scoreboard-team clearfix">
+              <span class="scoreboard-team-name pull-left">SD</span>
+              <span class="scoreboard-team-score pull-right">7</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </body>
+</html>
