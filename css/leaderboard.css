@@ -68,12 +68,28 @@ p.place .negative {
   color: #C60000;
 }
 
+.stats-header {
+  text-align: center;
+}
+
 .leaderboard-player {
   background: #232323;
   padding: 5px;
   width: 85%;
   border: 1px solid #000;
   margin: 0 auto;
+}
+
+.stats-container .leaderboard-player {
+  width: 100%;
+}
+
+.stats-container h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0 10px;
 }
 
 .leaderboard-player .place {
@@ -145,6 +161,13 @@ p.place .negative {
 }
 .leaderboard-player .stat.negative {
   color: #C60000;
+}
+
+@media (max-width: 1199px) {
+  .center-col {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 767px) {
