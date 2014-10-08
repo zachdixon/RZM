@@ -36,8 +36,16 @@
 }
 
 @media (max-width: 767px) {
+  .countdown-wrapper {
+    display: none;
+  }
   .main-container-header {
     padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  .main-container-header h2 {
+    font-size: 24px;
+    font-weight: bold;
   }
   .main-container-header h1 {
     margin: 5px 0;

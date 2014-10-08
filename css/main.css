@@ -630,10 +630,7 @@ img.avatar {
   .options-wrapper {
     float: none;
     width: 100%;
-  }
-  .options-wrapper > * {
-    width: 100% !important;
-    margin: 0 0 10px 0 !important;
+    margin-bottom: 10px;
   }
   .options-wrapper .btn-group label {
     width: 50%;

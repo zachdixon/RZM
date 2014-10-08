@@ -180,4 +180,10 @@ p.place .negative {
     float: left;
     margin-top: 25px;
   }
+  .your-rankings-wrapper h3 {
+    font-size: 12px;
+  }
+  .your-rankings-wrapper p.place {
+    font-size: 16px;
+  }
 }
