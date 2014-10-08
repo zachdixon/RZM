@@ -663,8 +663,8 @@ body.scoreboard-open {
   bottom: 0;
   width: 100%;
   z-index: 10;
-  -webkit-transform: translateY(75px);
-  transform: translateY(75px);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
   -webkit-transition: all 400ms;
   -o-transition: all 400ms;
   transition: all 400ms;
