@@ -9,10 +9,20 @@
 	font-style: normal;
 }
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-	font-style: normal;
-}
-.flaticon-american21:before {
+        /*font-size: 20px;*/
+font-style: normal;
+/*margin-left: 20px;*/
+}.flaticon-american21:before {
 	content: "\e000";
+}
+.flaticon-dollar103:before {
+	content: "\e001";
+}
+.flaticon-star174:before {
+	content: "\e002";
+}
+.flaticon-winner11:before {
+	content: "\e003";
 }

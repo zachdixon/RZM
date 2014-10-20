@@ -1,0 +1,154 @@
+body {
+	background: #131313;
+}
+
+.positive {
+  color: #25A000 !important;
+}
+.negative {
+  color: #C60000 !important;
+}
+
+.main-container-header {
+	margin-bottom: 20px;
+}
+
+.week-section {
+	background: #232323;
+	border-radius: 10px;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+.week-section.no-lms {
+	display: inline-block;
+	width: calc(33% - 8px);
+	margin-right: 8px;
+}
+
+.week-section h2 {
+	margin: 0 0 10px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+}
+
+.rzm-winner {
+	padding-right: 30px;
+	width: 40%;
+	margin-top: 20px;
+}
+.no-lms .rzm-winner {
+	width: 100%;
+}
+
+.player-avatar-wrapper {
+	border-radius: 50%;
+	overflow: hidden;
+	max-width: 100px;
+	margin-right: 10px;
+}
+
+.img-player-avatar {
+	width: 100%;
+}
+
+.player-info {
+	margin-top: 15px;
+}
+.player-info p {
+	color: #fff;
+	font-size: 16px;
+}
+.player-info p span {
+	margin-right: 10px;
+}
+.player-info .player-name {
+	font-size: 20px;
+}
+.player-name span {
+	color: #FFD700;
+}
+
+.lms-winners {
+	width: 60%;
+	box-shadow: -2px 0 #000;
+	border-left: 2px solid #343434;
+}
+
+.lms-game {
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+
+.lms-game-type {
+	float: left;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	color: #fff;
+	margin-right: 10px;
+}
+.lms-game-type span {
+	font-size: 20px;
+	margin-bottom: 10px;
+	display: block;
+}
+.monday-football-at-night .lms-game-type span {
+	margin-bottom: 3px;
+}
+.lms-game-type p {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: 0;
+}
+.lock-of-the-week .lms-game-type {
+  background: #1369bf;
+}
+.upset-special .lms-game-type {
+  background: #6400C8;
+}
+.survivor .lms-game-type {
+  background: #ff9d00;
+}
+.monday-football-at-night .lms-game-type {
+  background: #663300;
+}
+.lms-game p {
+	color: #fff;
+	margin: 0;
+}
+
+.lms-players {
+	font-size: 18px;
+	margin: 5px 0 !important;
+}
+
+.flaticon-dollar103 {
+	margin-right: 10px;
+}
+
+
+
+@media (max-width: 767px) {
+	.rzm-winner {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.player-avatar-wrapper {
+		max-width: 50px;
+	}
+	.player-info {
+		margin: 0;
+	}
+	.player-info p {
+		margin: 0;
+	}
+	.lms-winners {
+		width: 100%;
+		border-left: none;
+		border-top: 2px solid #343434;
+		box-shadow: 0 -2px #000;
+	}
+}
