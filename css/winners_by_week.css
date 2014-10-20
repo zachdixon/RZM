@@ -48,6 +48,9 @@ body {
 	max-width: 100px;
 	margin-right: 10px;
 }
+.no-lms .player-avatar-wrapper {
+	width: 30%;
+}
 
 .img-player-avatar {
 	width: 100%;
@@ -130,8 +133,17 @@ body {
 }
 
 
+@media (max-width: 991px) {
+	/*.week-section.no-lms {
+		width: calc(50% - 10px);
+	}*/
+}
+
 
 @media (max-width: 767px) {
+	.week-section.no-lms {
+		width: calc(50% - 10px);
+	}
 	.rzm-winner {
 		width: 100%;
 		margin-bottom: 10px;
@@ -150,5 +162,11 @@ body {
 		border-left: none;
 		border-top: 2px solid #343434;
 		box-shadow: 0 -2px #000;
+	}
+}
+
+@media (max-width: 500px) {
+	.week-section.no-lms {
+		width: 100%;
 	}
 }
