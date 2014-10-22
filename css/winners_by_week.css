@@ -19,10 +19,10 @@ body {
 	padding: 15px;
 	margin-bottom: 10px;
 }
-.week-section.no-lms {
-	display: inline-block;
-	width: calc(33% - 8px);
-	margin-right: 8px;
+
+.no-lms .week-header {
+	float: left;
+	margin: 12px 15px 0 0;
 }
 
 .week-section h2 {
@@ -31,6 +31,10 @@ body {
 	font-weight: bold;
 	font-size: 20px;
 	color: #fff;
+	display: inline-block;
+	border: 1px solid #f00;
+	border-radius: 5px;
+	padding: 5px;
 }
 
 .rzm-winner {
@@ -38,9 +42,7 @@ body {
 	width: 40%;
 	margin-top: 20px;
 }
-.no-lms .rzm-winner {
-	width: 100%;
-}
+
 
 .player-avatar-wrapper {
 	border-radius: 50%;
@@ -48,9 +50,7 @@ body {
 	max-width: 100px;
 	margin-right: 10px;
 }
-.no-lms .player-avatar-wrapper {
-	width: 30%;
-}
+
 
 .img-player-avatar {
 	width: 100%;
@@ -59,10 +59,12 @@ body {
 .player-info {
 	margin-top: 15px;
 }
+
 .player-info p {
 	color: #fff;
 	font-size: 16px;
 }
+
 .player-info p span {
 	margin-right: 10px;
 }
@@ -133,6 +135,7 @@ body {
 }
 
 
+
 @media (max-width: 991px) {
 	/*.week-section.no-lms {
 		width: calc(50% - 10px);
@@ -141,9 +144,6 @@ body {
 
 
 @media (max-width: 767px) {
-	.week-section.no-lms {
-		width: calc(50% - 10px);
-	}
 	.rzm-winner {
 		width: 100%;
 		margin-bottom: 10px;
@@ -165,8 +165,29 @@ body {
 	}
 }
 
-@media (max-width: 500px) {
-	.week-section.no-lms {
-		width: 100%;
+@media (min-width: 500px) {
+	.no-lms .rzm-winner {
+		margin: 0;
+		width: auto;
+		padding: 0;
+	}
+	.no-lms .player-avatar-wrapper {
+		width: 30%;
+		max-width: 50px;
+	}
+	.no-lms .player-info {
+		margin-top: 15px;
+	}
+	.no-lms .player-info p {
+		float: left;
+		margin: 0;
+	}
+	.no-lms .player-info .player-points {
+		margin: 0 0 0 30px;
+		font-size: 20px;
+		padding: 0 30px 0 5px;
+	}
+	.no-lms .player-info .monkey-money {
+		font-size: 20px;
 	}
 }
