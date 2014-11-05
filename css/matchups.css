@@ -25,3 +25,10 @@
 .selected_star, .blank_star {
   cursor: pointer;
 }
+
+table.match_ups_table thead.game_spacer {
+  background: #232323 !important;
+}
+table.match_ups_table thead.game_spacer td {
+  padding: 2px;
+}
