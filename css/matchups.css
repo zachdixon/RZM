@@ -1,3 +1,13 @@
+.match_ups_filter {
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .match_ups_filter {
+    width: 100%;
+  }
+}
+
 .match_ups_table {
   margin-top: 30px;
 }
@@ -14,9 +24,13 @@
   letter-spacing: 1px;
 }
 
-.match_ups_team_box {
-  font-size: 16px;
-  font-weight: bold;
+.match_ups_game_row {
+  cursor: pointer;
+}
+.match_ups_game_row > td {
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
 }
 
 .match_ups_star_container {
@@ -25,6 +39,7 @@
 
 .selected_star {
   display: none;
+  color: #FFD700;
 }
 
 .selected_star, .blank_star {
@@ -32,8 +47,51 @@
 }
 
 table.match_ups_table thead.game_spacer {
-  background: #232323 !important;
+  background: rgba(255,0,0,1) !important;
 }
 table.match_ups_table thead.game_spacer td {
   padding: 2px;
+}
+
+td.match_ups_spread {
+  text-align: center;
+}
+
+td.match_ups_team_box, td.match_ups_spread {
+  font-size: 20px;
+  vertical-align: middle !important;
+}
+.match_ups_team_box {
+  font-weight: bold;
+}
+
+.match_ups_usernames_table {
+  width: 100%;
+  background: transparent;
+}
+.match_ups_usernames_table td {
+  width: 20px;
+  text-align: center;
+}
+.match_ups_usernames_table td p {
+  background: rgba(255,255,255,1);
+  border-radius: 3px;
+  color: #000;
+  margin: 1px;
+}
+.match_ups_usernames_table td p:empty {
+  background: rgba(255,255,255,0.5);
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+}
+
+.match_ups_usernames {
+  display: none;
+}
+.match_ups_game_row.active .match_ups_usernames_table {
+  display: none;
+}
+.match_ups_game_row.active .match_ups_usernames {
+  display: block;
 }

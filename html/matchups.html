@@ -219,8 +219,19 @@
         <div id="matchups" class="container">
           <div class="row">
             <div class="col-xs-12">
-            <h2 class="match_ups_table_header">Nov 6 - Nov 9, 2014</h2>
-            <table class="match_ups_table table table-bordered table-striped table-hover">
+            <div class="match_ups_table_header_wrapper clearfix">
+              <h2 class="match_ups_table_header pull-left">Nov 6 - Nov 9, 2014</h2>
+              <div class="match_ups_filter pull-right">
+                <form action="" class="form-inline">
+                  <div class="form-group">
+                    <label for="input_filter">Filter by username:</label>
+                    <input type="text" id="input_filter" class="form-control">
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <table class="match_ups_table table table-bordered table-hover">
               <tbody>
                 <thead class="match_ups_games_header thursday">
                   <td class="day_of_week_header">
@@ -263,8 +274,36 @@
                     -6
                   </td>
                   <td class="match_ups_slot">
-                    <table class="match_ups_usernames_table">
+                    <table class="match_ups_usernames_table abbreviated">
+                      <tbody>
+                        <tr>
+                          <td><p data-username="aa username">AA</p></td>
+                          <td><p data-username="ab username">AB</p></td>
+                          <td><p data-username="ac username">AC</p></td>
+                          <td><p data-username="ad username">AD</p></td>
+                          <td><p data-username="ae username">AE</p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username="ba username">BA</p></td>
+                          <td><p data-username="bb username">BB</p></td>
+                          <td><p data-username="bc username">BC</p></td>
+                          <td><p data-username="bd username">BD</p></td>
+                          <td><p data-username="be username">BE</p></td>
+                        </tr>
+                      </tbody>
                     </table>
+                    <div class="match_ups_usernames">
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                    </div>
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
@@ -433,10 +472,42 @@
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username="">AA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AE</p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BD</p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                      </tbody>
                     </table>
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AD</p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username="">BA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BE</p></td>
+                        </tr>
+                      </tbody>
                     </table>
                   </td>
                   <td class="match_ups_slot">
@@ -582,25 +653,82 @@
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username="">AA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BE</p></td>
+                        </tr>
+                      </tbody>
                     </table>
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
-                      <tbody><tr>
-                        <td>
-                          <div class="match_ups_username">
-
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody></table>
-                  </td>
-                  <td class="match_ups_slot">
-                    <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                      </tbody>
                     </table>
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AE</p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="match_ups_slot">
+                    <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AD</p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username="">BA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                      </tbody>
                     </table>
                   </td>
                   <td class="match_ups_slot">
@@ -699,6 +827,22 @@
                   <!-- =sheet_2.user.username if sheet_2.present? -->
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username="">BA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                      </tbody>
                     </table>
                   </td>
                   <!-- %td.match_ups_slot -->
@@ -754,7 +898,30 @@
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AD</p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username="">BA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BE</p></td>
+                        </tr>
+                      </tbody>
                     </table>
+                    <div class="match_ups_usernames">
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                    </div>
                   </td>
                 </tr>
                 <tr class="match_ups_game_row" data-game_id="1835">
@@ -830,7 +997,30 @@
                   <!-- =sheet_2.user.username if sheet_2.present? -->
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
+                      <tbody>
+                        <tr>
+                          <td><p data-username="">AA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">AE</p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BD</p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                      </tbody>
                     </table>
+                    <div class="match_ups_usernames">
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                      <p>A longer username</p>
+                    </div>
                   </td>
                   <!-- %td.match_ups_slot -->
                   <!-- -sheets = @pick_sheets.where( "redzone_#{pick_size}_team_id = ?", game.away_team_id ) -->
@@ -895,14 +1085,23 @@
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
-                      <tbody><tr>
-                        <td>
-                          <div class="match_ups_username">
-
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody></table>
+                      <tbody>
+                        <tr>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="ab username">AB</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="ad username">AD</p></td>
+                          <td><p data-username=""></p></td>
+                        </tr>
+                        <tr>
+                          <td><p data-username="">BA</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BC</p></td>
+                          <td><p data-username=""></p></td>
+                          <td><p data-username="">BE</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </td>
                   <td class="match_ups_slot">
                     <table class="match_ups_usernames_table">
